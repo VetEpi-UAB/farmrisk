@@ -47,6 +47,10 @@ set_up_simulation <- function(user_id,
   
   # Load and process input files
   load_input_files(user_id = user_id, envir = parent)
+ 
+  # List of mc inputs
+  assign("all_inputs",get_mc_inputs(),envir=parent)
+  
   # Process biosecurity survey dates and assign to parent
   bsg <- process_bsg(parent$bsg)
   assign("bsg", bsg, envir = parent)

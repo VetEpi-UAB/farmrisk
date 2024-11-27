@@ -14,6 +14,7 @@ character vector of key names
 }
 \description{
 Collection of functions for handling Monte Carlo Nodes using their metadata found in their mcmodule
+Get mcnode admin inputs key names
 }
 \examples{
 input_keys(mcnode = inf_dc)

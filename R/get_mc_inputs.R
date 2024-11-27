@@ -17,9 +17,12 @@
 #' }
 get_mc_inputs <- function(path = "input_files/", mctable = mcnode_admin) {
   # Load data files as list
-  data_list <- load_input_files(user_id = user_id, 
-                                path = path, 
-                                create_df = FALSE)
+  suppressMessages(
+    data_list <- load_input_files(user_id = user_id, 
+                                  path = path, 
+                                  create_df = FALSE)
+    
+  )
   
   # Get all column names from the data files
   col_names <- unlist(lapply(data_list, colnames))

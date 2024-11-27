@@ -83,7 +83,7 @@ get_node_list <- function(model_expression, param_names = NULL,
   input_nodes <- all_nodes[all_nodes %in% as.character(mctable$mcnode)]
   
   if(!exists("all_inputs")) {
-    all_inputs <<- get_mc_inputs(path)
+    assign("all_inputs",get_mc_inputs(path),envir=parent.frame())
   }
   
   if(length(input_nodes) > 0) {
