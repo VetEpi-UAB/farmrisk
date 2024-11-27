@@ -1,10 +1,15 @@
 Package: farmrisk
-Title: What the Package Does (One Line, Title Case)
+Title: Farm Stochastic Risk Analysis
 Version: 0.0.0.9000
-Authors@R: 
-    person("First", "Last", , "first.last@example.com", role = c("aut", "cre"),
-           comment = c(ORCID = "YOUR-ORCID-ID"))
-Description: What the package does (one paragraph).
+Authors@R: c(
+    person("Natalia", "Ciria", , "natalia.ciria@uab.cat", role = c("aut", "cre"),
+           comment = c(ORCID = "0009-0006-2669-6634")),
+    person("Alberto", "Allepuz", , "alberto.allepuz@uab.cat", role = c("ths"),
+           comment = c(ORCID = "0000-0003-3518-1991")),
+    person("Giovanna", "Ciaravino", , "giovanna.ciaravino@uab.cat", role = c("ths"),
+           comment = c(ORCID = "0000-0002-5796-8093"))
+           )
+Description: Tools for performing quantitative risk analysis to prioritize farm external biosecurity measures.
 License: GPL (>= 3)
 Encoding: UTF-8
 Roxygen: list(markdown = TRUE)
