@@ -1,0 +1,6947 @@
+{
+ "title": "Biosecurity Survey - Cattle",
+ "logoFit": "none",
+ "logoPosition": "right",
+ "completedHtml": "<p>Thank you for completing this biosecurity survey!</p>\n<p>If new animals were introduced to your farm in the last year, answer the <a href=\"https://nataliaciria.com/animal-movements-survey-cattle/\">Animal Movements Survey</a> to complete the risk assessment.</p>\n<p>To ensure an accurate risk assessment, please remember to update it if there are any changes on your farm.</p>",
+ "pages": [
+  {
+   "name": "gid_regions",
+   "elements": [
+    {
+     "type": "expression",
+     "name": "gid_version",
+     "visible": false,
+     "title": "Gid version",
+     "clearIfInvisible": "none",
+     "expression": "v1_1"
+    },
+    {
+     "type": "dropdown",
+     "name": "gid0",
+     "title": "Country",
+     "setValueIf": "{farm_gid0} notempty",
+     "setValueExpression": "{farm_gid0} ",
+     "choices": [
+      {
+       "value": "ESP",
+       "text": "Spain"
+      },
+      {
+       "value": "FRA",
+       "text": "France"
+      },
+      {
+       "value": "AND",
+       "text": "Andorra"
+      },
+      {
+       "value": "AUT",
+       "text": "Austria"
+      },
+      {
+       "value": "BEL",
+       "text": "Belgium"
+      },
+      {
+       "value": "DEU",
+       "text": "Germany"
+      },
+      {
+       "value": "FIN",
+       "text": "Finland"
+      },
+      {
+       "value": "EST",
+       "text": "Estonia"
+      },
+      {
+       "value": "GRC",
+       "text": "Greece"
+      },
+      {
+       "value": "ITA",
+       "text": "Italy"
+      },
+      {
+       "value": "LUX",
+       "text": "Luxembourg"
+      },
+      {
+       "value": "POL",
+       "text": "Poland"
+      },
+      {
+       "value": "PRT",
+       "text": "Portugal"
+      }
+     ]
+    },
+    {
+     "type": "dropdown",
+     "name": "gid1",
+     "visibleIf": "{gid0} notempty",
+     "title": "Region",
+     "setValueIf": "{farm_gid1} notempty",
+     "setValueExpression": "{farm_gid1} ",
+     "choices": [
+      {
+       "value": "AUT.1_1",
+       "text": "Burgenland",
+       "visibleIf": "{gid0}='AUT'"
+      },
+      {
+       "value": "AUT.2_1",
+       "text": "Kärnten",
+       "visibleIf": "{gid0}='AUT'"
+      },
+      {
+       "value": "AUT.3_1",
+       "text": "Niederösterreich",
+       "visibleIf": "{gid0}='AUT'"
+      },
+      {
+       "value": "AUT.4_1",
+       "text": "Oberösterreich",
+       "visibleIf": "{gid0}='AUT'"
+      },
+      {
+       "value": "AUT.5_1",
+       "text": "Salzburg",
+       "visibleIf": "{gid0}='AUT'"
+      },
+      {
+       "value": "AUT.6_1",
+       "text": "Steiermark",
+       "visibleIf": "{gid0}='AUT'"
+      },
+      {
+       "value": "AUT.7_1",
+       "text": "Tirol",
+       "visibleIf": "{gid0}='AUT'"
+      },
+      {
+       "value": "AUT.8_1",
+       "text": "Vorarlberg",
+       "visibleIf": "{gid0}='AUT'"
+      },
+      {
+       "value": "AUT.9_1",
+       "text": "Wien",
+       "visibleIf": "{gid0}='AUT'"
+      },
+      {
+       "value": "BEL.1_1",
+       "text": "Bruxelles",
+       "visibleIf": "{gid0}='BEL'"
+      },
+      {
+       "value": "BEL.2_1",
+       "text": "Vlaanderen",
+       "visibleIf": "{gid0}='BEL'"
+      },
+      {
+       "value": "BEL.3_1",
+       "text": "Wallonie",
+       "visibleIf": "{gid0}='BEL'"
+      },
+      {
+       "value": "DEU.1_1",
+       "text": "Baden-Württemberg",
+       "visibleIf": "{gid0}='DEU'"
+      },
+      {
+       "value": "DEU.2_1",
+       "text": "Bayern",
+       "visibleIf": "{gid0}='DEU'"
+      },
+      {
+       "value": "DEU.3_1",
+       "text": "Berlin",
+       "visibleIf": "{gid0}='DEU'"
+      },
+      {
+       "value": "DEU.4_1",
+       "text": "Brandenburg",
+       "visibleIf": "{gid0}='DEU'"
+      },
+      {
+       "value": "DEU.5_1",
+       "text": "Bremen",
+       "visibleIf": "{gid0}='DEU'"
+      },
+      {
+       "value": "DEU.6_1",
+       "text": "Hamburg",
+       "visibleIf": "{gid0}='DEU'"
+      },
+      {
+       "value": "DEU.7_1",
+       "text": "Hessen",
+       "visibleIf": "{gid0}='DEU'"
+      },
+      {
+       "value": "DEU.8_1",
+       "text": "Mecklenburg-Vorpommern",
+       "visibleIf": "{gid0}='DEU'"
+      },
+      {
+       "value": "DEU.9_1",
+       "text": "Niedersachsen",
+       "visibleIf": "{gid0}='DEU'"
+      },
+      {
+       "value": "DEU.10_1",
+       "text": "Nordrhein-Westfalen",
+       "visibleIf": "{gid0}='DEU'"
+      },
+      {
+       "value": "DEU.11_1",
+       "text": "Rheinland-Pfalz",
+       "visibleIf": "{gid0}='DEU'"
+      },
+      {
+       "value": "DEU.12_1",
+       "text": "Saarland",
+       "visibleIf": "{gid0}='DEU'"
+      },
+      {
+       "value": "DEU.14_1",
+       "text": "Sachsen",
+       "visibleIf": "{gid0}='DEU'"
+      },
+      {
+       "value": "DEU.13_1",
+       "text": "Sachsen-Anhalt",
+       "visibleIf": "{gid0}='DEU'"
+      },
+      {
+       "value": "DEU.15_1",
+       "text": "Schleswig-Holstein",
+       "visibleIf": "{gid0}='DEU'"
+      },
+      {
+       "value": "DEU.16_1",
+       "text": "Thüringen",
+       "visibleIf": "{gid0}='DEU'"
+      },
+      {
+       "value": "ESP.1_1",
+       "text": "Andalucía",
+       "visibleIf": "{gid0}='ESP'"
+      },
+      {
+       "value": "ESP.2_1",
+       "text": "Aragón",
+       "visibleIf": "{gid0}='ESP'"
+      },
+      {
+       "value": "ESP.3_1",
+       "text": "Cantabria",
+       "visibleIf": "{gid0}='ESP'"
+      },
+      {
+       "value": "ESP.4_1",
+       "text": "Castilla-La Mancha",
+       "visibleIf": "{gid0}='ESP'"
+      },
+      {
+       "value": "ESP.5_1",
+       "text": "Castilla y León",
+       "visibleIf": "{gid0}='ESP'"
+      },
+      {
+       "value": "ESP.6_1",
+       "text": "Cataluña",
+       "visibleIf": "{gid0}='ESP'"
+      },
+      {
+       "value": "ESP.7_1",
+       "text": "Ceuta y Melilla",
+       "visibleIf": "{gid0}='ESP'"
+      },
+      {
+       "value": "ESP.8_1",
+       "text": "Comunidad de Madrid",
+       "visibleIf": "{gid0}='ESP'"
+      },
+      {
+       "value": "ESP.9_1",
+       "text": "Comunidad Foral de Navarra",
+       "visibleIf": "{gid0}='ESP'"
+      },
+      {
+       "value": "ESP.10_1",
+       "text": "Comunidad Valenciana",
+       "visibleIf": "{gid0}='ESP'"
+      },
+      {
+       "value": "ESP.11_1",
+       "text": "Extremadura",
+       "visibleIf": "{gid0}='ESP'"
+      },
+      {
+       "value": "ESP.12_1",
+       "text": "Galicia",
+       "visibleIf": "{gid0}='ESP'"
+      },
+      {
+       "value": "ESP.13_1",
+       "text": "Islas Baleares",
+       "visibleIf": "{gid0}='ESP'"
+      },
+      {
+       "value": "ESP.14_1",
+       "text": "Islas Canarias",
+       "visibleIf": "{gid0}='ESP'"
+      },
+      {
+       "value": "ESP.15_1",
+       "text": "La Rioja",
+       "visibleIf": "{gid0}='ESP'"
+      },
+      {
+       "value": "ESP.16_1",
+       "text": "País Vasco",
+       "visibleIf": "{gid0}='ESP'"
+      },
+      {
+       "value": "ESP.17_1",
+       "text": "Principado de Asturias",
+       "visibleIf": "{gid0}='ESP'"
+      },
+      {
+       "value": "ESP.18_1",
+       "text": "Región de Murcia",
+       "visibleIf": "{gid0}='ESP'"
+      },
+      {
+       "value": "EST.1_1",
+       "text": "Harju",
+       "visibleIf": "{gid0}='EST'"
+      },
+      {
+       "value": "EST.2_1",
+       "text": "Hiiu",
+       "visibleIf": "{gid0}='EST'"
+      },
+      {
+       "value": "EST.3_1",
+       "text": "Ida-Viru",
+       "visibleIf": "{gid0}='EST'"
+      },
+      {
+       "value": "EST.4_1",
+       "text": "Järva",
+       "visibleIf": "{gid0}='EST'"
+      },
+      {
+       "value": "EST.5_1",
+       "text": "Jõgeva",
+       "visibleIf": "{gid0}='EST'"
+      },
+      {
+       "value": "EST.7_1",
+       "text": "Lääne",
+       "visibleIf": "{gid0}='EST'"
+      },
+      {
+       "value": "EST.6_1",
+       "text": "Lääne-Viru",
+       "visibleIf": "{gid0}='EST'"
+      },
+      {
+       "value": "EST.8_1",
+       "text": "Pärnu",
+       "visibleIf": "{gid0}='EST'"
+      },
+      {
+       "value": "EST.9_1",
+       "text": "Peipsi",
+       "visibleIf": "{gid0}='EST'"
+      },
+      {
+       "value": "EST.10_1",
+       "text": "Põlva",
+       "visibleIf": "{gid0}='EST'"
+      },
+      {
+       "value": "EST.11_1",
+       "text": "Rapla",
+       "visibleIf": "{gid0}='EST'"
+      },
+      {
+       "value": "EST.12_1",
+       "text": "Saare",
+       "visibleIf": "{gid0}='EST'"
+      },
+      {
+       "value": "EST.13_1",
+       "text": "Tartu",
+       "visibleIf": "{gid0}='EST'"
+      },
+      {
+       "value": "EST.14_1",
+       "text": "Valga",
+       "visibleIf": "{gid0}='EST'"
+      },
+      {
+       "value": "EST.15_1",
+       "text": "Viljandi",
+       "visibleIf": "{gid0}='EST'"
+      },
+      {
+       "value": "EST.16_1",
+       "text": "Võru",
+       "visibleIf": "{gid0}='EST'"
+      },
+      {
+       "value": "FIN.1_1",
+       "text": "Eastern Finland",
+       "visibleIf": "{gid0}='FIN'"
+      },
+      {
+       "value": "FIN.2_1",
+       "text": "Lapland",
+       "visibleIf": "{gid0}='FIN'"
+      },
+      {
+       "value": "FIN.3_1",
+       "text": "Oulu",
+       "visibleIf": "{gid0}='FIN'"
+      },
+      {
+       "value": "FIN.4_1",
+       "text": "Southern Finland",
+       "visibleIf": "{gid0}='FIN'"
+      },
+      {
+       "value": "FIN.5_1",
+       "text": "Western Finland",
+       "visibleIf": "{gid0}='FIN'"
+      },
+      {
+       "value": "FRA.1_1",
+       "text": "Auvergne-Rhône-Alpes",
+       "visibleIf": "{gid0}='FRA'"
+      },
+      {
+       "value": "FRA.2_1",
+       "text": "Bourgogne-Franche-Comté",
+       "visibleIf": "{gid0}='FRA'"
+      },
+      {
+       "value": "FRA.3_1",
+       "text": "Bretagne",
+       "visibleIf": "{gid0}='FRA'"
+      },
+      {
+       "value": "FRA.4_1",
+       "text": "Centre-Val de Loire",
+       "visibleIf": "{gid0}='FRA'"
+      },
+      {
+       "value": "FRA.5_1",
+       "text": "Corse",
+       "visibleIf": "{gid0}='FRA'"
+      },
+      {
+       "value": "FRA.6_1",
+       "text": "Grand Est",
+       "visibleIf": "{gid0}='FRA'"
+      },
+      {
+       "value": "FRA.7_1",
+       "text": "Hauts-de-France",
+       "visibleIf": "{gid0}='FRA'"
+      },
+      {
+       "value": "FRA.8_1",
+       "text": "Île-de-France",
+       "visibleIf": "{gid0}='FRA'"
+      },
+      {
+       "value": "FRA.9_1",
+       "text": "Normandie",
+       "visibleIf": "{gid0}='FRA'"
+      },
+      {
+       "value": "FRA.10_1",
+       "text": "Nouvelle-Aquitaine",
+       "visibleIf": "{gid0}='FRA'"
+      },
+      {
+       "value": "FRA.11_1",
+       "text": "Occitanie",
+       "visibleIf": "{gid0}='FRA'"
+      },
+      {
+       "value": "FRA.12_1",
+       "text": "Pays de la Loire",
+       "visibleIf": "{gid0}='FRA'"
+      },
+      {
+       "value": "FRA.13_1",
+       "text": "Provence-Alpes-Côte d'Azur",
+       "visibleIf": "{gid0}='FRA'"
+      },
+      {
+       "value": "GRC.1_1",
+       "text": "Aegean",
+       "visibleIf": "{gid0}='GRC'"
+      },
+      {
+       "value": "GRC.2_1",
+       "text": "Athos",
+       "visibleIf": "{gid0}='GRC'"
+      },
+      {
+       "value": "GRC.3_1",
+       "text": "Attica",
+       "visibleIf": "{gid0}='GRC'"
+      },
+      {
+       "value": "GRC.4_1",
+       "text": "Crete",
+       "visibleIf": "{gid0}='GRC'"
+      },
+      {
+       "value": "GRC.5_1",
+       "text": "Epirus and Western Macedonia",
+       "visibleIf": "{gid0}='GRC'"
+      },
+      {
+       "value": "GRC.6_1",
+       "text": "Macedonia and Thrace",
+       "visibleIf": "{gid0}='GRC'"
+      },
+      {
+       "value": "GRC.7_1",
+       "text": "Peloponnese, Western Greece and the Ionian Islands",
+       "visibleIf": "{gid0}='GRC'"
+      },
+      {
+       "value": "GRC.8_1",
+       "text": "Thessaly and Central Greece",
+       "visibleIf": "{gid0}='GRC'"
+      },
+      {
+       "value": "ITA.1_1",
+       "text": "Abruzzo",
+       "visibleIf": "{gid0}='ITA'"
+      },
+      {
+       "value": "ITA.2_1",
+       "text": "Apulia",
+       "visibleIf": "{gid0}='ITA'"
+      },
+      {
+       "value": "ITA.3_1",
+       "text": "Basilicata",
+       "visibleIf": "{gid0}='ITA'"
+      },
+      {
+       "value": "ITA.4_1",
+       "text": "Calabria",
+       "visibleIf": "{gid0}='ITA'"
+      },
+      {
+       "value": "ITA.5_1",
+       "text": "Campania",
+       "visibleIf": "{gid0}='ITA'"
+      },
+      {
+       "value": "ITA.6_1",
+       "text": "Emilia-Romagna",
+       "visibleIf": "{gid0}='ITA'"
+      },
+      {
+       "value": "ITA.7_1",
+       "text": "Friuli-Venezia Giulia",
+       "visibleIf": "{gid0}='ITA'"
+      },
+      {
+       "value": "ITA.8_1",
+       "text": "Lazio",
+       "visibleIf": "{gid0}='ITA'"
+      },
+      {
+       "value": "ITA.9_1",
+       "text": "Liguria",
+       "visibleIf": "{gid0}='ITA'"
+      },
+      {
+       "value": "ITA.10_1",
+       "text": "Lombardia",
+       "visibleIf": "{gid0}='ITA'"
+      },
+      {
+       "value": "ITA.11_1",
+       "text": "Marche",
+       "visibleIf": "{gid0}='ITA'"
+      },
+      {
+       "value": "ITA.12_1",
+       "text": "Molise",
+       "visibleIf": "{gid0}='ITA'"
+      },
+      {
+       "value": "ITA.13_1",
+       "text": "Piemonte",
+       "visibleIf": "{gid0}='ITA'"
+      },
+      {
+       "value": "ITA.14_1",
+       "text": "Sardegna",
+       "visibleIf": "{gid0}='ITA'"
+      },
+      {
+       "value": "ITA.15_1",
+       "text": "Sicily",
+       "visibleIf": "{gid0}='ITA'"
+      },
+      {
+       "value": "ITA.16_1",
+       "text": "Toscana",
+       "visibleIf": "{gid0}='ITA'"
+      },
+      {
+       "value": "ITA.17_1",
+       "text": "Trentino-Alto Adige",
+       "visibleIf": "{gid0}='ITA'"
+      },
+      {
+       "value": "ITA.18_1",
+       "text": "Umbria",
+       "visibleIf": "{gid0}='ITA'"
+      },
+      {
+       "value": "ITA.19_1",
+       "text": "Valle d'Aosta",
+       "visibleIf": "{gid0}='ITA'"
+      },
+      {
+       "value": "ITA.20_1",
+       "text": "Veneto",
+       "visibleIf": "{gid0}='ITA'"
+      },
+      {
+       "value": "LUX.1_1",
+       "text": "Diekirch",
+       "visibleIf": "{gid0}='LUX'"
+      },
+      {
+       "value": "LUX.2_1",
+       "text": "Grevenmacher",
+       "visibleIf": "{gid0}='LUX'"
+      },
+      {
+       "value": "LUX.3_1",
+       "text": "Luxembourg",
+       "visibleIf": "{gid0}='LUX'"
+      },
+      {
+       "value": "POL.1_1",
+       "text": "Dolnośląskie",
+       "visibleIf": "{gid0}='POL'"
+      },
+      {
+       "value": "POL.2_1",
+       "text": "Kujawsko-Pomorskie",
+       "visibleIf": "{gid0}='POL'"
+      },
+      {
+       "value": "POL.3_1",
+       "text": "Łódzkie",
+       "visibleIf": "{gid0}='POL'"
+      },
+      {
+       "value": "POL.4_1",
+       "text": "Lubelskie",
+       "visibleIf": "{gid0}='POL'"
+      },
+      {
+       "value": "POL.5_1",
+       "text": "Lubuskie",
+       "visibleIf": "{gid0}='POL'"
+      },
+      {
+       "value": "POL.6_1",
+       "text": "Małopolskie",
+       "visibleIf": "{gid0}='POL'"
+      },
+      {
+       "value": "POL.7_1",
+       "text": "Mazowieckie",
+       "visibleIf": "{gid0}='POL'"
+      },
+      {
+       "value": "POL.8_1",
+       "text": "Opolskie",
+       "visibleIf": "{gid0}='POL'"
+      },
+      {
+       "value": "POL.9_1",
+       "text": "Podkarpackie",
+       "visibleIf": "{gid0}='POL'"
+      },
+      {
+       "value": "POL.10_1",
+       "text": "Podlaskie",
+       "visibleIf": "{gid0}='POL'"
+      },
+      {
+       "value": "POL.11_1",
+       "text": "Pomorskie",
+       "visibleIf": "{gid0}='POL'"
+      },
+      {
+       "value": "POL.12_1",
+       "text": "Śląskie",
+       "visibleIf": "{gid0}='POL'"
+      },
+      {
+       "value": "POL.13_1",
+       "text": "Świętokrzyskie",
+       "visibleIf": "{gid0}='POL'"
+      },
+      {
+       "value": "POL.14_1",
+       "text": "Warmińsko-Mazurskie",
+       "visibleIf": "{gid0}='POL'"
+      },
+      {
+       "value": "POL.15_1",
+       "text": "Wielkopolskie",
+       "visibleIf": "{gid0}='POL'"
+      },
+      {
+       "value": "POL.16_1",
+       "text": "Zachodniopomorskie",
+       "visibleIf": "{gid0}='POL'"
+      },
+      {
+       "value": "PRT.1_1",
+       "text": "Aveiro",
+       "visibleIf": "{gid0}='PRT'"
+      },
+      {
+       "value": "PRT.2_1",
+       "text": "Azores",
+       "visibleIf": "{gid0}='PRT'"
+      },
+      {
+       "value": "PRT.3_1",
+       "text": "Beja",
+       "visibleIf": "{gid0}='PRT'"
+      },
+      {
+       "value": "PRT.4_1",
+       "text": "Braga",
+       "visibleIf": "{gid0}='PRT'"
+      },
+      {
+       "value": "PRT.5_1",
+       "text": "Bragança",
+       "visibleIf": "{gid0}='PRT'"
+      },
+      {
+       "value": "PRT.6_1",
+       "text": "Castelo Branco",
+       "visibleIf": "{gid0}='PRT'"
+      },
+      {
+       "value": "PRT.7_1",
+       "text": "Coimbra",
+       "visibleIf": "{gid0}='PRT'"
+      },
+      {
+       "value": "PRT.8_1",
+       "text": "Évora",
+       "visibleIf": "{gid0}='PRT'"
+      },
+      {
+       "value": "PRT.9_1",
+       "text": "Faro",
+       "visibleIf": "{gid0}='PRT'"
+      },
+      {
+       "value": "PRT.10_1",
+       "text": "Guarda",
+       "visibleIf": "{gid0}='PRT'"
+      },
+      {
+       "value": "PRT.11_1",
+       "text": "Leiria",
+       "visibleIf": "{gid0}='PRT'"
+      },
+      {
+       "value": "PRT.12_1",
+       "text": "Lisboa",
+       "visibleIf": "{gid0}='PRT'"
+      },
+      {
+       "value": "PRT.13_1",
+       "text": "Madeira",
+       "visibleIf": "{gid0}='PRT'"
+      },
+      {
+       "value": "PRT.14_1",
+       "text": "Portalegre",
+       "visibleIf": "{gid0}='PRT'"
+      },
+      {
+       "value": "PRT.15_1",
+       "text": "Porto",
+       "visibleIf": "{gid0}='PRT'"
+      },
+      {
+       "value": "PRT.16_1",
+       "text": "Santarém",
+       "visibleIf": "{gid0}='PRT'"
+      },
+      {
+       "value": "PRT.17_1",
+       "text": "Setúbal",
+       "visibleIf": "{gid0}='PRT'"
+      },
+      {
+       "value": "PRT.18_1",
+       "text": "Viana do Castelo",
+       "visibleIf": "{gid0}='PRT'"
+      },
+      {
+       "value": "PRT.19_1",
+       "text": "Vila Real",
+       "visibleIf": "{gid0}='PRT'"
+      },
+      {
+       "value": "PRT.20_1",
+       "text": "Viseu",
+       "visibleIf": "{gid0}='PRT'"
+      }
+     ],
+     "hideIfChoicesEmpty": true
+    },
+    {
+     "type": "dropdown",
+     "name": "gid2",
+     "visibleIf": "{gid1} notempty",
+     "title": "Province",
+     "setValueIf": "{farm_gid2} notempty",
+     "setValueExpression": "{farm_gid2}",
+     "choices": [
+      {
+       "value": "ESP.1.1_1",
+       "text": "Almería",
+       "visibleIf": "{gid1}='ESP.1_1'"
+      },
+      {
+       "value": "ESP.1.2_1",
+       "text": "Cádiz",
+       "visibleIf": "{gid1}='ESP.1_1'"
+      },
+      {
+       "value": "ESP.1.3_1",
+       "text": "Córdoba",
+       "visibleIf": "{gid1}='ESP.1_1'"
+      },
+      {
+       "value": "ESP.1.4_1",
+       "text": "Granada",
+       "visibleIf": "{gid1}='ESP.1_1'"
+      },
+      {
+       "value": "ESP.1.5_1",
+       "text": "Huelva",
+       "visibleIf": "{gid1}='ESP.1_1'"
+      },
+      {
+       "value": "ESP.1.6_1",
+       "text": "Jaén",
+       "visibleIf": "{gid1}='ESP.1_1'"
+      },
+      {
+       "value": "ESP.1.7_1",
+       "text": "Málaga",
+       "visibleIf": "{gid1}='ESP.1_1'"
+      },
+      {
+       "value": "ESP.1.8_1",
+       "text": "Sevilla",
+       "visibleIf": "{gid1}='ESP.1_1'"
+      },
+      {
+       "value": "ESP.2.1_1",
+       "text": "Huesca",
+       "visibleIf": "{gid1}='ESP.2_1'"
+      },
+      {
+       "value": "ESP.2.2_1",
+       "text": "Teruel",
+       "visibleIf": "{gid1}='ESP.2_1'"
+      },
+      {
+       "value": "ESP.2.3_1",
+       "text": "Zaragoza",
+       "visibleIf": "{gid1}='ESP.2_1'"
+      },
+      {
+       "value": "ESP.3.1_1",
+       "text": "Cantabria",
+       "visibleIf": "{gid1}='ESP.3_1'"
+      },
+      {
+       "value": "ESP.4.1_1",
+       "text": "Albacete",
+       "visibleIf": "{gid1}='ESP.4_1'"
+      },
+      {
+       "value": "ESP.4.2_1",
+       "text": "Ciudad Real",
+       "visibleIf": "{gid1}='ESP.4_1'"
+      },
+      {
+       "value": "ESP.4.3_1",
+       "text": "Cuenca",
+       "visibleIf": "{gid1}='ESP.4_1'"
+      },
+      {
+       "value": "ESP.4.4_1",
+       "text": "Guadalajara",
+       "visibleIf": "{gid1}='ESP.4_1'"
+      },
+      {
+       "value": "ESP.4.5_1",
+       "text": "Toledo",
+       "visibleIf": "{gid1}='ESP.4_1'"
+      },
+      {
+       "value": "ESP.5.1_1",
+       "text": "Ávila",
+       "visibleIf": "{gid1}='ESP.5_1'"
+      },
+      {
+       "value": "ESP.5.2_1",
+       "text": "Burgos",
+       "visibleIf": "{gid1}='ESP.5_1'"
+      },
+      {
+       "value": "ESP.5.3_1",
+       "text": "León",
+       "visibleIf": "{gid1}='ESP.5_1'"
+      },
+      {
+       "value": "ESP.5.4_1",
+       "text": "Palencia",
+       "visibleIf": "{gid1}='ESP.5_1'"
+      },
+      {
+       "value": "ESP.5.5_1",
+       "text": "Salamanca",
+       "visibleIf": "{gid1}='ESP.5_1'"
+      },
+      {
+       "value": "ESP.5.6_1",
+       "text": "Segovia",
+       "visibleIf": "{gid1}='ESP.5_1'"
+      },
+      {
+       "value": "ESP.5.7_1",
+       "text": "Soria",
+       "visibleIf": "{gid1}='ESP.5_1'"
+      },
+      {
+       "value": "ESP.5.8_1",
+       "text": "Valladolid",
+       "visibleIf": "{gid1}='ESP.5_1'"
+      },
+      {
+       "value": "ESP.5.9_1",
+       "text": "Zamora",
+       "visibleIf": "{gid1}='ESP.5_1'"
+      },
+      {
+       "value": "ESP.6.1_1",
+       "text": "Barcelona",
+       "visibleIf": "{gid1}='ESP.6_1'"
+      },
+      {
+       "value": "ESP.6.2_1",
+       "text": "Girona",
+       "visibleIf": "{gid1}='ESP.6_1'"
+      },
+      {
+       "value": "ESP.6.3_1",
+       "text": "Lleida",
+       "visibleIf": "{gid1}='ESP.6_1'"
+      },
+      {
+       "value": "ESP.6.4_1",
+       "text": "Tarragona",
+       "visibleIf": "{gid1}='ESP.6_1'"
+      },
+      {
+       "value": "ESP.7.1_1",
+       "text": "Ceuta",
+       "visibleIf": "{gid1}='ESP.7_1'"
+      },
+      {
+       "value": "ESP.7.2_1",
+       "text": "Melilla",
+       "visibleIf": "{gid1}='ESP.7_1'"
+      },
+      {
+       "value": "ESP.8.1_1",
+       "text": "Madrid",
+       "visibleIf": "{gid1}='ESP.8_1'"
+      },
+      {
+       "value": "ESP.9.1_1",
+       "text": "Navarra",
+       "visibleIf": "{gid1}='ESP.9_1'"
+      },
+      {
+       "value": "ESP.10.1_1",
+       "text": "Alicante",
+       "visibleIf": "{gid1}='ESP.10_1'"
+      },
+      {
+       "value": "ESP.10.2_1",
+       "text": "Castellón",
+       "visibleIf": "{gid1}='ESP.10_1'"
+      },
+      {
+       "value": "ESP.10.3_1",
+       "text": "Valencia",
+       "visibleIf": "{gid1}='ESP.10_1'"
+      },
+      {
+       "value": "ESP.11.1_1",
+       "text": "Badajoz",
+       "visibleIf": "{gid1}='ESP.11_1'"
+      },
+      {
+       "value": "ESP.11.2_1",
+       "text": "Cáceres",
+       "visibleIf": "{gid1}='ESP.11_1'"
+      },
+      {
+       "value": "ESP.12.1_1",
+       "text": "A Coruña",
+       "visibleIf": "{gid1}='ESP.12_1'"
+      },
+      {
+       "value": "ESP.12.2_1",
+       "text": "Lugo",
+       "visibleIf": "{gid1}='ESP.12_1'"
+      },
+      {
+       "value": "ESP.12.3_1",
+       "text": "Ourense",
+       "visibleIf": "{gid1}='ESP.12_1'"
+      },
+      {
+       "value": "ESP.12.4_1",
+       "text": "Pontevedra",
+       "visibleIf": "{gid1}='ESP.12_1'"
+      },
+      {
+       "value": "ESP.13.1_1",
+       "text": "Baleares",
+       "visibleIf": "{gid1}='ESP.13_1'"
+      },
+      {
+       "value": "ESP.14.1_1",
+       "text": "Las Palmas",
+       "visibleIf": "{gid1}='ESP.14_1'"
+      },
+      {
+       "value": "ESP.14.2_1",
+       "text": "Santa Cruz de Tenerife",
+       "visibleIf": "{gid1}='ESP.14_1'"
+      },
+      {
+       "value": "ESP.15.1_1",
+       "text": "La Rioja",
+       "visibleIf": "{gid1}='ESP.15_1'"
+      },
+      {
+       "value": "ESP.16.1_1",
+       "text": "Álava",
+       "visibleIf": "{gid1}='ESP.16_1'"
+      },
+      {
+       "value": "ESP.16.2_1",
+       "text": "Guipúzcoa",
+       "visibleIf": "{gid1}='ESP.16_1'"
+      },
+      {
+       "value": "ESP.16.3_1",
+       "text": "Vizcaya",
+       "visibleIf": "{gid1}='ESP.16_1'"
+      },
+      {
+       "value": "ESP.17.1_1",
+       "text": "Asturias",
+       "visibleIf": "{gid1}='ESP.17_1'"
+      },
+      {
+       "value": "ESP.18.1_1",
+       "text": "Murcia",
+       "visibleIf": "{gid1}='ESP.18_1'"
+      }
+     ],
+     "hideIfChoicesEmpty": true
+    },
+    {
+     "type": "dropdown",
+     "name": "gid3",
+     "visibleIf": "{gid2} notempty",
+     "title": "County",
+     "setValueIf": "{farm_gid3} notempty",
+     "setValueExpression": "{farm_gid3}",
+     "choices": [
+      {
+       "value": "ESP.1.1.1_1",
+       "text": "n.a. (15)",
+       "visibleIf": "{gid2}='ESP.1.1_1'"
+      },
+      {
+       "value": "ESP.1.1.2_1",
+       "text": "n.a. (16)",
+       "visibleIf": "{gid2}='ESP.1.1_1'"
+      },
+      {
+       "value": "ESP.1.1.3_1",
+       "text": "n.a. (17)",
+       "visibleIf": "{gid2}='ESP.1.1_1'"
+      },
+      {
+       "value": "ESP.1.1.4_1",
+       "text": "n.a. (18)",
+       "visibleIf": "{gid2}='ESP.1.1_1'"
+      },
+      {
+       "value": "ESP.1.1.5_1",
+       "text": "n.a. (19)",
+       "visibleIf": "{gid2}='ESP.1.1_1'"
+      },
+      {
+       "value": "ESP.1.1.6_1",
+       "text": "n.a. (20)",
+       "visibleIf": "{gid2}='ESP.1.1_1'"
+      },
+      {
+       "value": "ESP.1.1.7_1",
+       "text": "n.a. (21)",
+       "visibleIf": "{gid2}='ESP.1.1_1'"
+      },
+      {
+       "value": "ESP.1.1.8_1",
+       "text": "n.a. (22)",
+       "visibleIf": "{gid2}='ESP.1.1_1'"
+      },
+      {
+       "value": "ESP.1.2.1_1",
+       "text": "Bahía de Cádiz",
+       "visibleIf": "{gid2}='ESP.1.2_1'"
+      },
+      {
+       "value": "ESP.1.2.2_1",
+       "text": "Campiña de Jerez",
+       "visibleIf": "{gid2}='ESP.1.2_1'"
+      },
+      {
+       "value": "ESP.1.2.3_1",
+       "text": "Campo de Gibraltar",
+       "visibleIf": "{gid2}='ESP.1.2_1'"
+      },
+      {
+       "value": "ESP.1.2.4_1",
+       "text": "Costa Noroeste",
+       "visibleIf": "{gid2}='ESP.1.2_1'"
+      },
+      {
+       "value": "ESP.1.2.5_1",
+       "text": "La Janda",
+       "visibleIf": "{gid2}='ESP.1.2_1'"
+      },
+      {
+       "value": "ESP.1.2.6_1",
+       "text": "Sierra de Cádiz",
+       "visibleIf": "{gid2}='ESP.1.2_1'"
+      },
+      {
+       "value": "ESP.1.3.1_1",
+       "text": "Campiña Sur",
+       "visibleIf": "{gid2}='ESP.1.3_1'"
+      },
+      {
+       "value": "ESP.1.3.2_1",
+       "text": "n.a. (86)",
+       "visibleIf": "{gid2}='ESP.1.3_1'"
+      },
+      {
+       "value": "ESP.1.3.3_1",
+       "text": "n.a. (87)",
+       "visibleIf": "{gid2}='ESP.1.3_1'"
+      },
+      {
+       "value": "ESP.1.3.4_1",
+       "text": "n.a. (88)",
+       "visibleIf": "{gid2}='ESP.1.3_1'"
+      },
+      {
+       "value": "ESP.1.3.5_1",
+       "text": "n.a. (89)",
+       "visibleIf": "{gid2}='ESP.1.3_1'"
+      },
+      {
+       "value": "ESP.1.3.6_1",
+       "text": "n.a. (90)",
+       "visibleIf": "{gid2}='ESP.1.3_1'"
+      },
+      {
+       "value": "ESP.1.3.7_1",
+       "text": "n.a. (91)",
+       "visibleIf": "{gid2}='ESP.1.3_1'"
+      },
+      {
+       "value": "ESP.1.3.8_1",
+       "text": "n.a. (92)",
+       "visibleIf": "{gid2}='ESP.1.3_1'"
+      },
+      {
+       "value": "ESP.1.4.1_1",
+       "text": "n.a. (109)",
+       "visibleIf": "{gid2}='ESP.1.4_1'"
+      },
+      {
+       "value": "ESP.1.4.2_1",
+       "text": "n.a. (110)",
+       "visibleIf": "{gid2}='ESP.1.4_1'"
+      },
+      {
+       "value": "ESP.1.4.3_1",
+       "text": "n.a. (111)",
+       "visibleIf": "{gid2}='ESP.1.4_1'"
+      },
+      {
+       "value": "ESP.1.4.4_1",
+       "text": "n.a. (112)",
+       "visibleIf": "{gid2}='ESP.1.4_1'"
+      },
+      {
+       "value": "ESP.1.4.5_1",
+       "text": "n.a. (113)",
+       "visibleIf": "{gid2}='ESP.1.4_1'"
+      },
+      {
+       "value": "ESP.1.4.6_1",
+       "text": "n.a. (114)",
+       "visibleIf": "{gid2}='ESP.1.4_1'"
+      },
+      {
+       "value": "ESP.1.4.7_1",
+       "text": "n.a. (115)",
+       "visibleIf": "{gid2}='ESP.1.4_1'"
+      },
+      {
+       "value": "ESP.1.4.8_1",
+       "text": "n.a. (116)",
+       "visibleIf": "{gid2}='ESP.1.4_1'"
+      },
+      {
+       "value": "ESP.1.4.9_1",
+       "text": "n.a. (117)",
+       "visibleIf": "{gid2}='ESP.1.4_1'"
+      },
+      {
+       "value": "ESP.1.4.10_1",
+       "text": "n.a. (118)",
+       "visibleIf": "{gid2}='ESP.1.4_1'"
+      },
+      {
+       "value": "ESP.1.5.1_1",
+       "text": "n.a. (133)",
+       "visibleIf": "{gid2}='ESP.1.5_1'"
+      },
+      {
+       "value": "ESP.1.5.2_1",
+       "text": "n.a. (134)",
+       "visibleIf": "{gid2}='ESP.1.5_1'"
+      },
+      {
+       "value": "ESP.1.5.3_1",
+       "text": "n.a. (135)",
+       "visibleIf": "{gid2}='ESP.1.5_1'"
+      },
+      {
+       "value": "ESP.1.5.4_1",
+       "text": "n.a. (136)",
+       "visibleIf": "{gid2}='ESP.1.5_1'"
+      },
+      {
+       "value": "ESP.1.5.5_1",
+       "text": "n.a. (137)",
+       "visibleIf": "{gid2}='ESP.1.5_1'"
+      },
+      {
+       "value": "ESP.1.5.6_1",
+       "text": "n.a. (138)",
+       "visibleIf": "{gid2}='ESP.1.5_1'"
+      },
+      {
+       "value": "ESP.1.6.1_1",
+       "text": "Alto Guadalquivir",
+       "visibleIf": "{gid2}='ESP.1.6_1'"
+      },
+      {
+       "value": "ESP.1.6.2_1",
+       "text": "Área metropolitana de Jaén",
+       "visibleIf": "{gid2}='ESP.1.6_1'"
+      },
+      {
+       "value": "ESP.1.6.3_1",
+       "text": "Campiña",
+       "visibleIf": "{gid2}='ESP.1.6_1'"
+      },
+      {
+       "value": "ESP.1.6.4_1",
+       "text": "El Condado",
+       "visibleIf": "{gid2}='ESP.1.6_1'"
+      },
+      {
+       "value": "ESP.1.6.5_1",
+       "text": "Lalomay Lasvillas",
+       "visibleIf": "{gid2}='ESP.1.6_1'"
+      },
+      {
+       "value": "ESP.1.6.6_1",
+       "text": "Sierra De Segura",
+       "visibleIf": "{gid2}='ESP.1.6_1'"
+      },
+      {
+       "value": "ESP.1.6.7_1",
+       "text": "Sierra Magina",
+       "visibleIf": "{gid2}='ESP.1.6_1'"
+      },
+      {
+       "value": "ESP.1.6.8_1",
+       "text": "Sierra Norte",
+       "visibleIf": "{gid2}='ESP.1.6_1'"
+      },
+      {
+       "value": "ESP.1.6.9_1",
+       "text": "Sierra Sur",
+       "visibleIf": "{gid2}='ESP.1.6_1'"
+      },
+      {
+       "value": "ESP.1.7.1_1",
+       "text": "n.a. (181)",
+       "visibleIf": "{gid2}='ESP.1.7_1'"
+      },
+      {
+       "value": "ESP.1.7.2_1",
+       "text": "n.a. (182)",
+       "visibleIf": "{gid2}='ESP.1.7_1'"
+      },
+      {
+       "value": "ESP.1.7.3_1",
+       "text": "n.a. (183)",
+       "visibleIf": "{gid2}='ESP.1.7_1'"
+      },
+      {
+       "value": "ESP.1.7.4_1",
+       "text": "n.a. (184)",
+       "visibleIf": "{gid2}='ESP.1.7_1'"
+      },
+      {
+       "value": "ESP.1.8.1_1",
+       "text": "n.a. (226)",
+       "visibleIf": "{gid2}='ESP.1.8_1'"
+      },
+      {
+       "value": "ESP.1.8.2_1",
+       "text": "n.a. (227)",
+       "visibleIf": "{gid2}='ESP.1.8_1'"
+      },
+      {
+       "value": "ESP.1.8.3_1",
+       "text": "n.a. (228)",
+       "visibleIf": "{gid2}='ESP.1.8_1'"
+      },
+      {
+       "value": "ESP.1.8.4_1",
+       "text": "n.a. (229)",
+       "visibleIf": "{gid2}='ESP.1.8_1'"
+      },
+      {
+       "value": "ESP.1.8.5_1",
+       "text": "n.a. (230)",
+       "visibleIf": "{gid2}='ESP.1.8_1'"
+      },
+      {
+       "value": "ESP.1.8.6_1",
+       "text": "n.a. (231)",
+       "visibleIf": "{gid2}='ESP.1.8_1'"
+      },
+      {
+       "value": "ESP.1.8.7_1",
+       "text": "n.a. (232)",
+       "visibleIf": "{gid2}='ESP.1.8_1'"
+      },
+      {
+       "value": "ESP.2.1.1_1",
+       "text": "n.a. (125)",
+       "visibleIf": "{gid2}='ESP.2.1_1'"
+      },
+      {
+       "value": "ESP.2.1.2_1",
+       "text": "n.a. (126)",
+       "visibleIf": "{gid2}='ESP.2.1_1'"
+      },
+      {
+       "value": "ESP.2.1.3_1",
+       "text": "n.a. (127)",
+       "visibleIf": "{gid2}='ESP.2.1_1'"
+      },
+      {
+       "value": "ESP.2.1.4_1",
+       "text": "n.a. (128)",
+       "visibleIf": "{gid2}='ESP.2.1_1'"
+      },
+      {
+       "value": "ESP.2.1.5_1",
+       "text": "n.a. (129)",
+       "visibleIf": "{gid2}='ESP.2.1_1'"
+      },
+      {
+       "value": "ESP.2.1.6_1",
+       "text": "n.a. (130)",
+       "visibleIf": "{gid2}='ESP.2.1_1'"
+      },
+      {
+       "value": "ESP.2.1.7_1",
+       "text": "n.a. (131)",
+       "visibleIf": "{gid2}='ESP.2.1_1'"
+      },
+      {
+       "value": "ESP.2.1.8_1",
+       "text": "n.a. (132)",
+       "visibleIf": "{gid2}='ESP.2.1_1'"
+      },
+      {
+       "value": "ESP.2.2.1_1",
+       "text": "n.a. (248)",
+       "visibleIf": "{gid2}='ESP.2.2_1'"
+      },
+      {
+       "value": "ESP.2.2.2_1",
+       "text": "n.a. (249)",
+       "visibleIf": "{gid2}='ESP.2.2_1'"
+      },
+      {
+       "value": "ESP.2.2.3_1",
+       "text": "n.a. (250)",
+       "visibleIf": "{gid2}='ESP.2.2_1'"
+      },
+      {
+       "value": "ESP.2.2.4_1",
+       "text": "n.a. (251)",
+       "visibleIf": "{gid2}='ESP.2.2_1'"
+      },
+      {
+       "value": "ESP.2.2.5_1",
+       "text": "n.a. (252)",
+       "visibleIf": "{gid2}='ESP.2.2_1'"
+      },
+      {
+       "value": "ESP.2.2.6_1",
+       "text": "n.a. (253)",
+       "visibleIf": "{gid2}='ESP.2.2_1'"
+      },
+      {
+       "value": "ESP.2.3.1_1",
+       "text": "n.a. (274)",
+       "visibleIf": "{gid2}='ESP.2.3_1'"
+      },
+      {
+       "value": "ESP.2.3.2_1",
+       "text": "n.a. (275)",
+       "visibleIf": "{gid2}='ESP.2.3_1'"
+      },
+      {
+       "value": "ESP.2.3.3_1",
+       "text": "n.a. (276)",
+       "visibleIf": "{gid2}='ESP.2.3_1'"
+      },
+      {
+       "value": "ESP.2.3.4_1",
+       "text": "n.a. (277)",
+       "visibleIf": "{gid2}='ESP.2.3_1'"
+      },
+      {
+       "value": "ESP.2.3.5_1",
+       "text": "n.a. (278)",
+       "visibleIf": "{gid2}='ESP.2.3_1'"
+      },
+      {
+       "value": "ESP.2.3.6_1",
+       "text": "n.a. (279)",
+       "visibleIf": "{gid2}='ESP.2.3_1'"
+      },
+      {
+       "value": "ESP.2.3.7_1",
+       "text": "n.a. (280)",
+       "visibleIf": "{gid2}='ESP.2.3_1'"
+      },
+      {
+       "value": "ESP.2.3.8_1",
+       "text": "n.a. (281)",
+       "visibleIf": "{gid2}='ESP.2.3_1'"
+      },
+      {
+       "value": "ESP.3.1.1_1",
+       "text": "Asón-Agüera",
+       "visibleIf": "{gid2}='ESP.3.1_1'"
+      },
+      {
+       "value": "ESP.3.1.2_1",
+       "text": "Besaya",
+       "visibleIf": "{gid2}='ESP.3.1_1'"
+      },
+      {
+       "value": "ESP.3.1.3_1",
+       "text": "Campoo-Los Valles",
+       "visibleIf": "{gid2}='ESP.3.1_1'"
+      },
+      {
+       "value": "ESP.3.1.4_1",
+       "text": "Comarca de Santander",
+       "visibleIf": "{gid2}='ESP.3.1_1'"
+      },
+      {
+       "value": "ESP.3.1.5_1",
+       "text": "Costa Occidental",
+       "visibleIf": "{gid2}='ESP.3.1_1'"
+      },
+      {
+       "value": "ESP.3.1.6_1",
+       "text": "Costa Oriental",
+       "visibleIf": "{gid2}='ESP.3.1_1'"
+      },
+      {
+       "value": "ESP.3.1.7_1",
+       "text": "Liébana",
+       "visibleIf": "{gid2}='ESP.3.1_1'"
+      },
+      {
+       "value": "ESP.3.1.8_1",
+       "text": "n.a. (196)",
+       "visibleIf": "{gid2}='ESP.3.1_1'"
+      },
+      {
+       "value": "ESP.3.1.9_1",
+       "text": "n.a. (222)",
+       "visibleIf": "{gid2}='ESP.3.1_1'"
+      },
+      {
+       "value": "ESP.3.1.10_1",
+       "text": "Pas-Miera",
+       "visibleIf": "{gid2}='ESP.3.1_1'"
+      },
+      {
+       "value": "ESP.3.1.11_1",
+       "text": "Trasmiera",
+       "visibleIf": "{gid2}='ESP.3.1_1'"
+      },
+      {
+       "value": "ESP.4.1.1_1",
+       "text": "n.a. (10)",
+       "visibleIf": "{gid2}='ESP.4.1_1'"
+      },
+      {
+       "value": "ESP.4.1.2_1",
+       "text": "n.a. (11)",
+       "visibleIf": "{gid2}='ESP.4.1_1'"
+      },
+      {
+       "value": "ESP.4.1.3_1",
+       "text": "n.a. (12)",
+       "visibleIf": "{gid2}='ESP.4.1_1'"
+      },
+      {
+       "value": "ESP.4.1.4_1",
+       "text": "n.a. (13)",
+       "visibleIf": "{gid2}='ESP.4.1_1'"
+      },
+      {
+       "value": "ESP.4.1.5_1",
+       "text": "n.a. (14)",
+       "visibleIf": "{gid2}='ESP.4.1_1'"
+      },
+      {
+       "value": "ESP.4.1.6_1",
+       "text": "n.a. (8)",
+       "visibleIf": "{gid2}='ESP.4.1_1'"
+      },
+      {
+       "value": "ESP.4.1.7_1",
+       "text": "n.a. (9)",
+       "visibleIf": "{gid2}='ESP.4.1_1'"
+      },
+      {
+       "value": "ESP.4.2.1_1",
+       "text": "n.a. (79)",
+       "visibleIf": "{gid2}='ESP.4.2_1'"
+      },
+      {
+       "value": "ESP.4.2.2_1",
+       "text": "n.a. (80)",
+       "visibleIf": "{gid2}='ESP.4.2_1'"
+      },
+      {
+       "value": "ESP.4.2.3_1",
+       "text": "n.a. (81)",
+       "visibleIf": "{gid2}='ESP.4.2_1'"
+      },
+      {
+       "value": "ESP.4.2.4_1",
+       "text": "n.a. (82)",
+       "visibleIf": "{gid2}='ESP.4.2_1'"
+      },
+      {
+       "value": "ESP.4.2.5_1",
+       "text": "n.a. (83)",
+       "visibleIf": "{gid2}='ESP.4.2_1'"
+      },
+      {
+       "value": "ESP.4.2.6_1",
+       "text": "n.a. (84)",
+       "visibleIf": "{gid2}='ESP.4.2_1'"
+      },
+      {
+       "value": "ESP.4.2.7_1",
+       "text": "n.a. (85)",
+       "visibleIf": "{gid2}='ESP.4.2_1'"
+      },
+      {
+       "value": "ESP.4.3.1_1",
+       "text": "n.a. (93)",
+       "visibleIf": "{gid2}='ESP.4.3_1'"
+      },
+      {
+       "value": "ESP.4.3.2_1",
+       "text": "n.a. (94)",
+       "visibleIf": "{gid2}='ESP.4.3_1'"
+      },
+      {
+       "value": "ESP.4.3.3_1",
+       "text": "n.a. (95)",
+       "visibleIf": "{gid2}='ESP.4.3_1'"
+      },
+      {
+       "value": "ESP.4.3.4_1",
+       "text": "n.a. (96)",
+       "visibleIf": "{gid2}='ESP.4.3_1'"
+      },
+      {
+       "value": "ESP.4.3.5_1",
+       "text": "n.a. (97)",
+       "visibleIf": "{gid2}='ESP.4.3_1'"
+      },
+      {
+       "value": "ESP.4.3.6_1",
+       "text": "n.a. (98)",
+       "visibleIf": "{gid2}='ESP.4.3_1'"
+      },
+      {
+       "value": "ESP.4.3.7_1",
+       "text": "n.a. (99)",
+       "visibleIf": "{gid2}='ESP.4.3_1'"
+      },
+      {
+       "value": "ESP.4.4.1_1",
+       "text": "n.a. (119)",
+       "visibleIf": "{gid2}='ESP.4.4_1'"
+      },
+      {
+       "value": "ESP.4.4.2_1",
+       "text": "n.a. (120)",
+       "visibleIf": "{gid2}='ESP.4.4_1'"
+      },
+      {
+       "value": "ESP.4.4.3_1",
+       "text": "n.a. (121)",
+       "visibleIf": "{gid2}='ESP.4.4_1'"
+      },
+      {
+       "value": "ESP.4.4.4_1",
+       "text": "n.a. (122)",
+       "visibleIf": "{gid2}='ESP.4.4_1'"
+      },
+      {
+       "value": "ESP.4.4.5_1",
+       "text": "n.a. (123)",
+       "visibleIf": "{gid2}='ESP.4.4_1'"
+      },
+      {
+       "value": "ESP.4.4.6_1",
+       "text": "n.a. (176)",
+       "visibleIf": "{gid2}='ESP.4.4_1'"
+      },
+      {
+       "value": "ESP.4.5.1_1",
+       "text": "n.a. (254)",
+       "visibleIf": "{gid2}='ESP.4.5_1'"
+      },
+      {
+       "value": "ESP.4.5.2_1",
+       "text": "n.a. (255)",
+       "visibleIf": "{gid2}='ESP.4.5_1'"
+      },
+      {
+       "value": "ESP.4.5.3_1",
+       "text": "n.a. (256)",
+       "visibleIf": "{gid2}='ESP.4.5_1'"
+      },
+      {
+       "value": "ESP.4.5.4_1",
+       "text": "n.a. (257)",
+       "visibleIf": "{gid2}='ESP.4.5_1'"
+      },
+      {
+       "value": "ESP.4.5.5_1",
+       "text": "n.a. (258)",
+       "visibleIf": "{gid2}='ESP.4.5_1'"
+      },
+      {
+       "value": "ESP.4.5.6_1",
+       "text": "n.a. (259)",
+       "visibleIf": "{gid2}='ESP.4.5_1'"
+      },
+      {
+       "value": "ESP.4.5.7_1",
+       "text": "n.a. (260)",
+       "visibleIf": "{gid2}='ESP.4.5_1'"
+      },
+      {
+       "value": "ESP.5.1.1_1",
+       "text": "n.a. (23)",
+       "visibleIf": "{gid2}='ESP.5.1_1'"
+      },
+      {
+       "value": "ESP.5.1.2_1",
+       "text": "n.a. (24)",
+       "visibleIf": "{gid2}='ESP.5.1_1'"
+      },
+      {
+       "value": "ESP.5.1.3_1",
+       "text": "n.a. (25)",
+       "visibleIf": "{gid2}='ESP.5.1_1'"
+      },
+      {
+       "value": "ESP.5.1.4_1",
+       "text": "n.a. (26)",
+       "visibleIf": "{gid2}='ESP.5.1_1'"
+      },
+      {
+       "value": "ESP.5.1.5_1",
+       "text": "n.a. (27)",
+       "visibleIf": "{gid2}='ESP.5.1_1'"
+      },
+      {
+       "value": "ESP.5.1.6_1",
+       "text": "n.a. (28)",
+       "visibleIf": "{gid2}='ESP.5.1_1'"
+      },
+      {
+       "value": "ESP.5.2.1_1",
+       "text": "n.a. (202)",
+       "visibleIf": "{gid2}='ESP.5.2_1'"
+      },
+      {
+       "value": "ESP.5.2.2_1",
+       "text": "n.a. (60)",
+       "visibleIf": "{gid2}='ESP.5.2_1'"
+      },
+      {
+       "value": "ESP.5.2.3_1",
+       "text": "n.a. (61)",
+       "visibleIf": "{gid2}='ESP.5.2_1'"
+      },
+      {
+       "value": "ESP.5.2.4_1",
+       "text": "n.a. (62)",
+       "visibleIf": "{gid2}='ESP.5.2_1'"
+      },
+      {
+       "value": "ESP.5.2.5_1",
+       "text": "n.a. (63)",
+       "visibleIf": "{gid2}='ESP.5.2_1'"
+      },
+      {
+       "value": "ESP.5.2.6_1",
+       "text": "n.a. (64)",
+       "visibleIf": "{gid2}='ESP.5.2_1'"
+      },
+      {
+       "value": "ESP.5.2.7_1",
+       "text": "n.a. (65)",
+       "visibleIf": "{gid2}='ESP.5.2_1'"
+      },
+      {
+       "value": "ESP.5.2.8_1",
+       "text": "n.a. (66)",
+       "visibleIf": "{gid2}='ESP.5.2_1'"
+      },
+      {
+       "value": "ESP.5.2.9_1",
+       "text": "n.a. (67)",
+       "visibleIf": "{gid2}='ESP.5.2_1'"
+      },
+      {
+       "value": "ESP.5.2.10_1",
+       "text": "n.a. (68)",
+       "visibleIf": "{gid2}='ESP.5.2_1'"
+      },
+      {
+       "value": "ESP.5.3.1_1",
+       "text": "n.a. (148)",
+       "visibleIf": "{gid2}='ESP.5.3_1'"
+      },
+      {
+       "value": "ESP.5.3.2_1",
+       "text": "n.a. (149)",
+       "visibleIf": "{gid2}='ESP.5.3_1'"
+      },
+      {
+       "value": "ESP.5.3.3_1",
+       "text": "n.a. (150)",
+       "visibleIf": "{gid2}='ESP.5.3_1'"
+      },
+      {
+       "value": "ESP.5.3.4_1",
+       "text": "n.a. (151)",
+       "visibleIf": "{gid2}='ESP.5.3_1'"
+      },
+      {
+       "value": "ESP.5.3.5_1",
+       "text": "n.a. (152)",
+       "visibleIf": "{gid2}='ESP.5.3_1'"
+      },
+      {
+       "value": "ESP.5.3.6_1",
+       "text": "n.a. (153)",
+       "visibleIf": "{gid2}='ESP.5.3_1'"
+      },
+      {
+       "value": "ESP.5.3.7_1",
+       "text": "n.a. (154)",
+       "visibleIf": "{gid2}='ESP.5.3_1'"
+      },
+      {
+       "value": "ESP.5.3.8_1",
+       "text": "n.a. (155)",
+       "visibleIf": "{gid2}='ESP.5.3_1'"
+      },
+      {
+       "value": "ESP.5.3.9_1",
+       "text": "n.a. (156)",
+       "visibleIf": "{gid2}='ESP.5.3_1'"
+      },
+      {
+       "value": "ESP.5.3.10_1",
+       "text": "n.a. (157)",
+       "visibleIf": "{gid2}='ESP.5.3_1'"
+      },
+      {
+       "value": "ESP.5.3.11_1",
+       "text": "n.a. (158)",
+       "visibleIf": "{gid2}='ESP.5.3_1'"
+      },
+      {
+       "value": "ESP.5.4.1_1",
+       "text": "n.a. (200)",
+       "visibleIf": "{gid2}='ESP.5.4_1'"
+      },
+      {
+       "value": "ESP.5.4.2_1",
+       "text": "n.a. (201)",
+       "visibleIf": "{gid2}='ESP.5.4_1'"
+      },
+      {
+       "value": "ESP.5.4.3_1",
+       "text": "n.a. (202)",
+       "visibleIf": "{gid2}='ESP.5.4_1'"
+      },
+      {
+       "value": "ESP.5.4.4_1",
+       "text": "n.a. (203)",
+       "visibleIf": "{gid2}='ESP.5.4_1'"
+      },
+      {
+       "value": "ESP.5.4.5_1",
+       "text": "n.a. (204)",
+       "visibleIf": "{gid2}='ESP.5.4_1'"
+      },
+      {
+       "value": "ESP.5.4.6_1",
+       "text": "n.a. (205)",
+       "visibleIf": "{gid2}='ESP.5.4_1'"
+      },
+      {
+       "value": "ESP.5.4.7_1",
+       "text": "n.a. (206)",
+       "visibleIf": "{gid2}='ESP.5.4_1'"
+      },
+      {
+       "value": "ESP.5.5.1_1",
+       "text": "n.a. (212)",
+       "visibleIf": "{gid2}='ESP.5.5_1'"
+      },
+      {
+       "value": "ESP.5.5.2_1",
+       "text": "n.a. (213)",
+       "visibleIf": "{gid2}='ESP.5.5_1'"
+      },
+      {
+       "value": "ESP.5.5.3_1",
+       "text": "n.a. (214)",
+       "visibleIf": "{gid2}='ESP.5.5_1'"
+      },
+      {
+       "value": "ESP.5.5.4_1",
+       "text": "n.a. (215)",
+       "visibleIf": "{gid2}='ESP.5.5_1'"
+      },
+      {
+       "value": "ESP.5.5.5_1",
+       "text": "n.a. (216)",
+       "visibleIf": "{gid2}='ESP.5.5_1'"
+      },
+      {
+       "value": "ESP.5.5.6_1",
+       "text": "n.a. (217)",
+       "visibleIf": "{gid2}='ESP.5.5_1'"
+      },
+      {
+       "value": "ESP.5.5.7_1",
+       "text": "n.a. (218)",
+       "visibleIf": "{gid2}='ESP.5.5_1'"
+      },
+      {
+       "value": "ESP.5.5.8_1",
+       "text": "n.a. (219)",
+       "visibleIf": "{gid2}='ESP.5.5_1'"
+      },
+      {
+       "value": "ESP.5.5.9_1",
+       "text": "n.a. (220)",
+       "visibleIf": "{gid2}='ESP.5.5_1'"
+      },
+      {
+       "value": "ESP.5.6.1_1",
+       "text": "n.a. (223)",
+       "visibleIf": "{gid2}='ESP.5.6_1'"
+      },
+      {
+       "value": "ESP.5.6.2_1",
+       "text": "n.a. (224)",
+       "visibleIf": "{gid2}='ESP.5.6_1'"
+      },
+      {
+       "value": "ESP.5.6.3_1",
+       "text": "n.a. (225)",
+       "visibleIf": "{gid2}='ESP.5.6_1'"
+      },
+      {
+       "value": "ESP.5.7.1_1",
+       "text": "n.a. (233)",
+       "visibleIf": "{gid2}='ESP.5.7_1'"
+      },
+      {
+       "value": "ESP.5.7.2_1",
+       "text": "n.a. (234)",
+       "visibleIf": "{gid2}='ESP.5.7_1'"
+      },
+      {
+       "value": "ESP.5.7.3_1",
+       "text": "n.a. (235)",
+       "visibleIf": "{gid2}='ESP.5.7_1'"
+      },
+      {
+       "value": "ESP.5.7.4_1",
+       "text": "n.a. (236)",
+       "visibleIf": "{gid2}='ESP.5.7_1'"
+      },
+      {
+       "value": "ESP.5.7.5_1",
+       "text": "n.a. (237)",
+       "visibleIf": "{gid2}='ESP.5.7_1'"
+      },
+      {
+       "value": "ESP.5.7.6_1",
+       "text": "n.a. (238)",
+       "visibleIf": "{gid2}='ESP.5.7_1'"
+      },
+      {
+       "value": "ESP.5.7.7_1",
+       "text": "n.a. (239)",
+       "visibleIf": "{gid2}='ESP.5.7_1'"
+      },
+      {
+       "value": "ESP.5.7.8_1",
+       "text": "n.a. (65)",
+       "visibleIf": "{gid2}='ESP.5.7_1'"
+      },
+      {
+       "value": "ESP.5.8.1_1",
+       "text": "n.a. (263)",
+       "visibleIf": "{gid2}='ESP.5.8_1'"
+      },
+      {
+       "value": "ESP.5.8.2_1",
+       "text": "n.a. (264)",
+       "visibleIf": "{gid2}='ESP.5.8_1'"
+      },
+      {
+       "value": "ESP.5.8.3_1",
+       "text": "n.a. (265)",
+       "visibleIf": "{gid2}='ESP.5.8_1'"
+      },
+      {
+       "value": "ESP.5.8.4_1",
+       "text": "n.a. (266)",
+       "visibleIf": "{gid2}='ESP.5.8_1'"
+      },
+      {
+       "value": "ESP.5.8.5_1",
+       "text": "n.a. (267)",
+       "visibleIf": "{gid2}='ESP.5.8_1'"
+      },
+      {
+       "value": "ESP.5.9.1_1",
+       "text": "n.a. (268)",
+       "visibleIf": "{gid2}='ESP.5.9_1'"
+      },
+      {
+       "value": "ESP.5.9.2_1",
+       "text": "n.a. (269)",
+       "visibleIf": "{gid2}='ESP.5.9_1'"
+      },
+      {
+       "value": "ESP.5.9.3_1",
+       "text": "n.a. (270)",
+       "visibleIf": "{gid2}='ESP.5.9_1'"
+      },
+      {
+       "value": "ESP.5.9.4_1",
+       "text": "n.a. (271)",
+       "visibleIf": "{gid2}='ESP.5.9_1'"
+      },
+      {
+       "value": "ESP.5.9.5_1",
+       "text": "n.a. (272)",
+       "visibleIf": "{gid2}='ESP.5.9_1'"
+      },
+      {
+       "value": "ESP.5.9.6_1",
+       "text": "n.a. (273)",
+       "visibleIf": "{gid2}='ESP.5.9_1'"
+      },
+      {
+       "value": "ESP.6.1.1_1",
+       "text": "n.a. (162)",
+       "visibleIf": "{gid2}='ESP.6.1_1'"
+      },
+      {
+       "value": "ESP.6.1.2_1",
+       "text": "n.a. (164)",
+       "visibleIf": "{gid2}='ESP.6.1_1'"
+      },
+      {
+       "value": "ESP.6.1.3_1",
+       "text": "n.a. (29)",
+       "visibleIf": "{gid2}='ESP.6.1_1'"
+      },
+      {
+       "value": "ESP.6.1.4_1",
+       "text": "n.a. (30)",
+       "visibleIf": "{gid2}='ESP.6.1_1'"
+      },
+      {
+       "value": "ESP.6.1.5_1",
+       "text": "n.a. (31)",
+       "visibleIf": "{gid2}='ESP.6.1_1'"
+      },
+      {
+       "value": "ESP.6.1.6_1",
+       "text": "n.a. (32)",
+       "visibleIf": "{gid2}='ESP.6.1_1'"
+      },
+      {
+       "value": "ESP.6.1.7_1",
+       "text": "n.a. (33)",
+       "visibleIf": "{gid2}='ESP.6.1_1'"
+      },
+      {
+       "value": "ESP.6.1.8_1",
+       "text": "n.a. (34)",
+       "visibleIf": "{gid2}='ESP.6.1_1'"
+      },
+      {
+       "value": "ESP.6.1.9_1",
+       "text": "n.a. (35)",
+       "visibleIf": "{gid2}='ESP.6.1_1'"
+      },
+      {
+       "value": "ESP.6.1.10_1",
+       "text": "n.a. (36)",
+       "visibleIf": "{gid2}='ESP.6.1_1'"
+      },
+      {
+       "value": "ESP.6.1.11_1",
+       "text": "n.a. (37)",
+       "visibleIf": "{gid2}='ESP.6.1_1'"
+      },
+      {
+       "value": "ESP.6.1.12_1",
+       "text": "n.a. (38)",
+       "visibleIf": "{gid2}='ESP.6.1_1'"
+      },
+      {
+       "value": "ESP.6.2.1_1",
+       "text": "n.a. (101)",
+       "visibleIf": "{gid2}='ESP.6.2_1'"
+      },
+      {
+       "value": "ESP.6.2.2_1",
+       "text": "n.a. (102)",
+       "visibleIf": "{gid2}='ESP.6.2_1'"
+      },
+      {
+       "value": "ESP.6.2.3_1",
+       "text": "n.a. (103)",
+       "visibleIf": "{gid2}='ESP.6.2_1'"
+      },
+      {
+       "value": "ESP.6.2.4_1",
+       "text": "n.a. (104)",
+       "visibleIf": "{gid2}='ESP.6.2_1'"
+      },
+      {
+       "value": "ESP.6.2.5_1",
+       "text": "n.a. (105)",
+       "visibleIf": "{gid2}='ESP.6.2_1'"
+      },
+      {
+       "value": "ESP.6.2.6_1",
+       "text": "n.a. (106)",
+       "visibleIf": "{gid2}='ESP.6.2_1'"
+      },
+      {
+       "value": "ESP.6.2.7_1",
+       "text": "n.a. (107)",
+       "visibleIf": "{gid2}='ESP.6.2_1'"
+      },
+      {
+       "value": "ESP.6.2.8_1",
+       "text": "n.a. (34)",
+       "visibleIf": "{gid2}='ESP.6.2_1'"
+      },
+      {
+       "value": "ESP.6.3.1_1",
+       "text": "n.a. (159)",
+       "visibleIf": "{gid2}='ESP.6.3_1'"
+      },
+      {
+       "value": "ESP.6.3.2_1",
+       "text": "n.a. (160)",
+       "visibleIf": "{gid2}='ESP.6.3_1'"
+      },
+      {
+       "value": "ESP.6.3.3_1",
+       "text": "n.a. (161)",
+       "visibleIf": "{gid2}='ESP.6.3_1'"
+      },
+      {
+       "value": "ESP.6.3.4_1",
+       "text": "n.a. (162)",
+       "visibleIf": "{gid2}='ESP.6.3_1'"
+      },
+      {
+       "value": "ESP.6.3.5_1",
+       "text": "n.a. (163)",
+       "visibleIf": "{gid2}='ESP.6.3_1'"
+      },
+      {
+       "value": "ESP.6.3.6_1",
+       "text": "n.a. (164)",
+       "visibleIf": "{gid2}='ESP.6.3_1'"
+      },
+      {
+       "value": "ESP.6.3.7_1",
+       "text": "n.a. (165)",
+       "visibleIf": "{gid2}='ESP.6.3_1'"
+      },
+      {
+       "value": "ESP.6.3.8_1",
+       "text": "n.a. (166)",
+       "visibleIf": "{gid2}='ESP.6.3_1'"
+      },
+      {
+       "value": "ESP.6.3.9_1",
+       "text": "n.a. (167)",
+       "visibleIf": "{gid2}='ESP.6.3_1'"
+      },
+      {
+       "value": "ESP.6.3.10_1",
+       "text": "n.a. (168)",
+       "visibleIf": "{gid2}='ESP.6.3_1'"
+      },
+      {
+       "value": "ESP.6.3.11_1",
+       "text": "n.a. (30)",
+       "visibleIf": "{gid2}='ESP.6.3_1'"
+      },
+      {
+       "value": "ESP.6.3.12_1",
+       "text": "n.a. (35)",
+       "visibleIf": "{gid2}='ESP.6.3_1'"
+      },
+      {
+       "value": "ESP.6.4.1_1",
+       "text": "n.a. (240)",
+       "visibleIf": "{gid2}='ESP.6.4_1'"
+      },
+      {
+       "value": "ESP.6.4.2_1",
+       "text": "n.a. (241)",
+       "visibleIf": "{gid2}='ESP.6.4_1'"
+      },
+      {
+       "value": "ESP.6.4.3_1",
+       "text": "n.a. (242)",
+       "visibleIf": "{gid2}='ESP.6.4_1'"
+      },
+      {
+       "value": "ESP.6.4.4_1",
+       "text": "n.a. (243)",
+       "visibleIf": "{gid2}='ESP.6.4_1'"
+      },
+      {
+       "value": "ESP.6.4.5_1",
+       "text": "n.a. (244)",
+       "visibleIf": "{gid2}='ESP.6.4_1'"
+      },
+      {
+       "value": "ESP.6.4.6_1",
+       "text": "n.a. (245)",
+       "visibleIf": "{gid2}='ESP.6.4_1'"
+      },
+      {
+       "value": "ESP.6.4.7_1",
+       "text": "n.a. (246)",
+       "visibleIf": "{gid2}='ESP.6.4_1'"
+      },
+      {
+       "value": "ESP.6.4.8_1",
+       "text": "n.a. (247)",
+       "visibleIf": "{gid2}='ESP.6.4_1'"
+      },
+      {
+       "value": "ESP.7.1.1_1",
+       "text": "n.a. (100)",
+       "visibleIf": "{gid2}='ESP.7.1_1'"
+      },
+      {
+       "value": "ESP.7.2.1_1",
+       "text": "n.a. (100)",
+       "visibleIf": "{gid2}='ESP.7.2_1'"
+      },
+      {
+       "value": "ESP.8.1.1_1",
+       "text": "n.a. (175)",
+       "visibleIf": "{gid2}='ESP.8.1_1'"
+      },
+      {
+       "value": "ESP.8.1.2_1",
+       "text": "n.a. (176)",
+       "visibleIf": "{gid2}='ESP.8.1_1'"
+      },
+      {
+       "value": "ESP.8.1.3_1",
+       "text": "n.a. (177)",
+       "visibleIf": "{gid2}='ESP.8.1_1'"
+      },
+      {
+       "value": "ESP.8.1.4_1",
+       "text": "n.a. (178)",
+       "visibleIf": "{gid2}='ESP.8.1_1'"
+      },
+      {
+       "value": "ESP.8.1.5_1",
+       "text": "n.a. (179)",
+       "visibleIf": "{gid2}='ESP.8.1_1'"
+      },
+      {
+       "value": "ESP.8.1.6_1",
+       "text": "n.a. (180)",
+       "visibleIf": "{gid2}='ESP.8.1_1'"
+      },
+      {
+       "value": "ESP.9.1.1_1",
+       "text": "n.a. (185)",
+       "visibleIf": "{gid2}='ESP.9.1_1'"
+      },
+      {
+       "value": "ESP.9.1.2_1",
+       "text": "n.a. (186)",
+       "visibleIf": "{gid2}='ESP.9.1_1'"
+      },
+      {
+       "value": "ESP.9.1.3_1",
+       "text": "n.a. (187)",
+       "visibleIf": "{gid2}='ESP.9.1_1'"
+      },
+      {
+       "value": "ESP.9.1.4_1",
+       "text": "n.a. (188)",
+       "visibleIf": "{gid2}='ESP.9.1_1'"
+      },
+      {
+       "value": "ESP.9.1.5_1",
+       "text": "n.a. (189)",
+       "visibleIf": "{gid2}='ESP.9.1_1'"
+      },
+      {
+       "value": "ESP.9.1.6_1",
+       "text": "n.a. (190)",
+       "visibleIf": "{gid2}='ESP.9.1_1'"
+      },
+      {
+       "value": "ESP.9.1.7_1",
+       "text": "n.a. (191)",
+       "visibleIf": "{gid2}='ESP.9.1_1'"
+      },
+      {
+       "value": "ESP.9.1.8_1",
+       "text": "n.a. (192)",
+       "visibleIf": "{gid2}='ESP.9.1_1'"
+      },
+      {
+       "value": "ESP.9.1.9_1",
+       "text": "n.a. (193)",
+       "visibleIf": "{gid2}='ESP.9.1_1'"
+      },
+      {
+       "value": "ESP.10.1.1_1",
+       "text": "Alacanti",
+       "visibleIf": "{gid2}='ESP.10.1_1'"
+      },
+      {
+       "value": "ESP.10.1.2_1",
+       "text": "Alcoia",
+       "visibleIf": "{gid2}='ESP.10.1_1'"
+      },
+      {
+       "value": "ESP.10.1.3_1",
+       "text": "Alt Vinalopo",
+       "visibleIf": "{gid2}='ESP.10.1_1'"
+      },
+      {
+       "value": "ESP.10.1.4_1",
+       "text": "Baix Segura",
+       "visibleIf": "{gid2}='ESP.10.1_1'"
+      },
+      {
+       "value": "ESP.10.1.5_1",
+       "text": "Comtat",
+       "visibleIf": "{gid2}='ESP.10.1_1'"
+      },
+      {
+       "value": "ESP.10.1.6_1",
+       "text": "Marina Alta",
+       "visibleIf": "{gid2}='ESP.10.1_1'"
+      },
+      {
+       "value": "ESP.10.1.7_1",
+       "text": "Marina Baixa",
+       "visibleIf": "{gid2}='ESP.10.1_1'"
+      },
+      {
+       "value": "ESP.10.1.9_1",
+       "text": "Vinalopo",
+       "visibleIf": "{gid2}='ESP.10.1_1'"
+      },
+      {
+       "value": "ESP.10.1.8_1",
+       "text": "Vinalopo Mitja",
+       "visibleIf": "{gid2}='ESP.10.1_1'"
+      },
+      {
+       "value": "ESP.10.2.1_1",
+       "text": "Alcalaten",
+       "visibleIf": "{gid2}='ESP.10.2_1'"
+      },
+      {
+       "value": "ESP.10.2.2_1",
+       "text": "Alt Millars",
+       "visibleIf": "{gid2}='ESP.10.2_1'"
+      },
+      {
+       "value": "ESP.10.2.3_1",
+       "text": "Alt Palancia",
+       "visibleIf": "{gid2}='ESP.10.2_1'"
+      },
+      {
+       "value": "ESP.10.2.4_1",
+       "text": "Alta Maestrat",
+       "visibleIf": "{gid2}='ESP.10.2_1'"
+      },
+      {
+       "value": "ESP.10.2.5_1",
+       "text": "Baix Maestrat",
+       "visibleIf": "{gid2}='ESP.10.2_1'"
+      },
+      {
+       "value": "ESP.10.2.6_1",
+       "text": "n.a. (211)",
+       "visibleIf": "{gid2}='ESP.10.2_1'"
+      },
+      {
+       "value": "ESP.10.2.7_1",
+       "text": "Plana Alta",
+       "visibleIf": "{gid2}='ESP.10.2_1'"
+      },
+      {
+       "value": "ESP.10.2.8_1",
+       "text": "Plana Baixa",
+       "visibleIf": "{gid2}='ESP.10.2_1'"
+      },
+      {
+       "value": "ESP.10.3.1_1",
+       "text": "Camp de Morvedre",
+       "visibleIf": "{gid2}='ESP.10.3_1'"
+      },
+      {
+       "value": "ESP.10.3.2_1",
+       "text": "Camp de Túria",
+       "visibleIf": "{gid2}='ESP.10.3_1'"
+      },
+      {
+       "value": "ESP.10.3.3_1",
+       "text": "Canal de Navarres",
+       "visibleIf": "{gid2}='ESP.10.3_1'"
+      },
+      {
+       "value": "ESP.10.3.4_1",
+       "text": "Ciutat de Valencia",
+       "visibleIf": "{gid2}='ESP.10.3_1'"
+      },
+      {
+       "value": "ESP.10.3.5_1",
+       "text": "Costera",
+       "visibleIf": "{gid2}='ESP.10.3_1'"
+      },
+      {
+       "value": "ESP.10.3.6_1",
+       "text": "Foia de Bunyol",
+       "visibleIf": "{gid2}='ESP.10.3_1'"
+      },
+      {
+       "value": "ESP.10.3.7_1",
+       "text": "Horta Nord",
+       "visibleIf": "{gid2}='ESP.10.3_1'"
+      },
+      {
+       "value": "ESP.10.3.8_1",
+       "text": "Horta Oest",
+       "visibleIf": "{gid2}='ESP.10.3_1'"
+      },
+      {
+       "value": "ESP.10.3.10_1",
+       "text": "Horta Sud",
+       "visibleIf": "{gid2}='ESP.10.3_1'"
+      },
+      {
+       "value": "ESP.10.3.9_1",
+       "text": "Horta Sud Ciutat de Valencia",
+       "visibleIf": "{gid2}='ESP.10.3_1'"
+      },
+      {
+       "value": "ESP.10.3.11_1",
+       "text": "n.a. (221)",
+       "visibleIf": "{gid2}='ESP.10.3_1'"
+      },
+      {
+       "value": "ESP.10.3.12_1",
+       "text": "Requena-Utiel",
+       "visibleIf": "{gid2}='ESP.10.3_1'"
+      },
+      {
+       "value": "ESP.10.3.13_1",
+       "text": "Ribera Alta",
+       "visibleIf": "{gid2}='ESP.10.3_1'"
+      },
+      {
+       "value": "ESP.10.3.14_1",
+       "text": "Ribera Baixa",
+       "visibleIf": "{gid2}='ESP.10.3_1'"
+      },
+      {
+       "value": "ESP.10.3.15_1",
+       "text": "Rincón de Ademuz",
+       "visibleIf": "{gid2}='ESP.10.3_1'"
+      },
+      {
+       "value": "ESP.10.3.16_1",
+       "text": "Serranos",
+       "visibleIf": "{gid2}='ESP.10.3_1'"
+      },
+      {
+       "value": "ESP.10.3.17_1",
+       "text": "Vall d'Albaida",
+       "visibleIf": "{gid2}='ESP.10.3_1'"
+      },
+      {
+       "value": "ESP.10.3.18_1",
+       "text": "Vall de Confrents",
+       "visibleIf": "{gid2}='ESP.10.3_1'"
+      },
+      {
+       "value": "ESP.11.1.1_1",
+       "text": "n.a. (39)",
+       "visibleIf": "{gid2}='ESP.11.1_1'"
+      },
+      {
+       "value": "ESP.11.1.2_1",
+       "text": "n.a. (40)",
+       "visibleIf": "{gid2}='ESP.11.1_1'"
+      },
+      {
+       "value": "ESP.11.1.3_1",
+       "text": "n.a. (41)",
+       "visibleIf": "{gid2}='ESP.11.1_1'"
+      },
+      {
+       "value": "ESP.11.1.4_1",
+       "text": "n.a. (42)",
+       "visibleIf": "{gid2}='ESP.11.1_1'"
+      },
+      {
+       "value": "ESP.11.1.5_1",
+       "text": "n.a. (43)",
+       "visibleIf": "{gid2}='ESP.11.1_1'"
+      },
+      {
+       "value": "ESP.11.1.6_1",
+       "text": "n.a. (44)",
+       "visibleIf": "{gid2}='ESP.11.1_1'"
+      },
+      {
+       "value": "ESP.11.1.7_1",
+       "text": "n.a. (45)",
+       "visibleIf": "{gid2}='ESP.11.1_1'"
+      },
+      {
+       "value": "ESP.11.1.8_1",
+       "text": "n.a. (46)",
+       "visibleIf": "{gid2}='ESP.11.1_1'"
+      },
+      {
+       "value": "ESP.11.1.9_1",
+       "text": "n.a. (47)",
+       "visibleIf": "{gid2}='ESP.11.1_1'"
+      },
+      {
+       "value": "ESP.11.1.10_1",
+       "text": "n.a. (48)",
+       "visibleIf": "{gid2}='ESP.11.1_1'"
+      },
+      {
+       "value": "ESP.11.1.11_1",
+       "text": "n.a. (49)",
+       "visibleIf": "{gid2}='ESP.11.1_1'"
+      },
+      {
+       "value": "ESP.11.1.12_1",
+       "text": "n.a. (50)",
+       "visibleIf": "{gid2}='ESP.11.1_1'"
+      },
+      {
+       "value": "ESP.11.2.1_1",
+       "text": "n.a. (69)",
+       "visibleIf": "{gid2}='ESP.11.2_1'"
+      },
+      {
+       "value": "ESP.11.2.2_1",
+       "text": "n.a. (70)",
+       "visibleIf": "{gid2}='ESP.11.2_1'"
+      },
+      {
+       "value": "ESP.11.2.3_1",
+       "text": "n.a. (71)",
+       "visibleIf": "{gid2}='ESP.11.2_1'"
+      },
+      {
+       "value": "ESP.11.2.4_1",
+       "text": "n.a. (72)",
+       "visibleIf": "{gid2}='ESP.11.2_1'"
+      },
+      {
+       "value": "ESP.11.2.5_1",
+       "text": "n.a. (73)",
+       "visibleIf": "{gid2}='ESP.11.2_1'"
+      },
+      {
+       "value": "ESP.11.2.6_1",
+       "text": "n.a. (74)",
+       "visibleIf": "{gid2}='ESP.11.2_1'"
+      },
+      {
+       "value": "ESP.11.2.7_1",
+       "text": "n.a. (75)",
+       "visibleIf": "{gid2}='ESP.11.2_1'"
+      },
+      {
+       "value": "ESP.11.2.8_1",
+       "text": "n.a. (76)",
+       "visibleIf": "{gid2}='ESP.11.2_1'"
+      },
+      {
+       "value": "ESP.11.2.9_1",
+       "text": "n.a. (77)",
+       "visibleIf": "{gid2}='ESP.11.2_1'"
+      },
+      {
+       "value": "ESP.11.2.10_1",
+       "text": "n.a. (78)",
+       "visibleIf": "{gid2}='ESP.11.2_1'"
+      },
+      {
+       "value": "ESP.12.1.1_1",
+       "text": "n.a. (145)",
+       "visibleIf": "{gid2}='ESP.12.1_1'"
+      },
+      {
+       "value": "ESP.12.1.2_1",
+       "text": "n.a. (146)",
+       "visibleIf": "{gid2}='ESP.12.1_1'"
+      },
+      {
+       "value": "ESP.12.1.3_1",
+       "text": "n.a. (147)",
+       "visibleIf": "{gid2}='ESP.12.1_1'"
+      },
+      {
+       "value": "ESP.12.2.1_1",
+       "text": "n.a. (169)",
+       "visibleIf": "{gid2}='ESP.12.2_1'"
+      },
+      {
+       "value": "ESP.12.2.2_1",
+       "text": "n.a. (170)",
+       "visibleIf": "{gid2}='ESP.12.2_1'"
+      },
+      {
+       "value": "ESP.12.2.3_1",
+       "text": "n.a. (171)",
+       "visibleIf": "{gid2}='ESP.12.2_1'"
+      },
+      {
+       "value": "ESP.12.2.4_1",
+       "text": "n.a. (172)",
+       "visibleIf": "{gid2}='ESP.12.2_1'"
+      },
+      {
+       "value": "ESP.12.2.5_1",
+       "text": "n.a. (173)",
+       "visibleIf": "{gid2}='ESP.12.2_1'"
+      },
+      {
+       "value": "ESP.12.2.6_1",
+       "text": "n.a. (174)",
+       "visibleIf": "{gid2}='ESP.12.2_1'"
+      },
+      {
+       "value": "ESP.12.3.1_1",
+       "text": "n.a. (197)",
+       "visibleIf": "{gid2}='ESP.12.3_1'"
+      },
+      {
+       "value": "ESP.12.3.2_1",
+       "text": "n.a. (198)",
+       "visibleIf": "{gid2}='ESP.12.3_1'"
+      },
+      {
+       "value": "ESP.12.3.3_1",
+       "text": "n.a. (199)",
+       "visibleIf": "{gid2}='ESP.12.3_1'"
+      },
+      {
+       "value": "ESP.12.4.1_1",
+       "text": "n.a. (207)",
+       "visibleIf": "{gid2}='ESP.12.4_1'"
+      },
+      {
+       "value": "ESP.12.4.2_1",
+       "text": "n.a. (208)",
+       "visibleIf": "{gid2}='ESP.12.4_1'"
+      },
+      {
+       "value": "ESP.12.4.3_1",
+       "text": "n.a. (209)",
+       "visibleIf": "{gid2}='ESP.12.4_1'"
+      },
+      {
+       "value": "ESP.12.4.4_1",
+       "text": "n.a. (210)",
+       "visibleIf": "{gid2}='ESP.12.4_1'"
+      },
+      {
+       "value": "ESP.13.1.1_1",
+       "text": "n.a. (51)",
+       "visibleIf": "{gid2}='ESP.13.1_1'"
+      },
+      {
+       "value": "ESP.13.1.2_1",
+       "text": "n.a. (52)",
+       "visibleIf": "{gid2}='ESP.13.1_1'"
+      },
+      {
+       "value": "ESP.13.1.3_1",
+       "text": "n.a. (53)",
+       "visibleIf": "{gid2}='ESP.13.1_1'"
+      },
+      {
+       "value": "ESP.13.1.4_1",
+       "text": "n.a. (54)",
+       "visibleIf": "{gid2}='ESP.13.1_1'"
+      },
+      {
+       "value": "ESP.13.1.5_1",
+       "text": "n.a. (55)",
+       "visibleIf": "{gid2}='ESP.13.1_1'"
+      },
+      {
+       "value": "ESP.13.1.6_1",
+       "text": "n.a. (56)",
+       "visibleIf": "{gid2}='ESP.13.1_1'"
+      },
+      {
+       "value": "ESP.13.1.7_1",
+       "text": "n.a. (57)",
+       "visibleIf": "{gid2}='ESP.13.1_1'"
+      },
+      {
+       "value": "ESP.13.1.8_1",
+       "text": "n.a. (58)",
+       "visibleIf": "{gid2}='ESP.13.1_1'"
+      },
+      {
+       "value": "ESP.13.1.9_1",
+       "text": "n.a. (59)",
+       "visibleIf": "{gid2}='ESP.13.1_1'"
+      },
+      {
+       "value": "ESP.14.1.1_1",
+       "text": "n.a. (144)",
+       "visibleIf": "{gid2}='ESP.14.1_1'"
+      },
+      {
+       "value": "ESP.14.2.1_1",
+       "text": "n.a. (144)",
+       "visibleIf": "{gid2}='ESP.14.2_1'"
+      },
+      {
+       "value": "ESP.15.1.1_1",
+       "text": "Anguiano",
+       "visibleIf": "{gid2}='ESP.15.1_1'"
+      },
+      {
+       "value": "ESP.15.1.2_1",
+       "text": "Arnedo",
+       "visibleIf": "{gid2}='ESP.15.1_1'"
+      },
+      {
+       "value": "ESP.15.1.3_1",
+       "text": "n.a. (139)",
+       "visibleIf": "{gid2}='ESP.15.1_1'"
+      },
+      {
+       "value": "ESP.15.1.4_1",
+       "text": "n.a. (140)",
+       "visibleIf": "{gid2}='ESP.15.1_1'"
+      },
+      {
+       "value": "ESP.15.1.5_1",
+       "text": "n.a. (141)",
+       "visibleIf": "{gid2}='ESP.15.1_1'"
+      },
+      {
+       "value": "ESP.15.1.6_1",
+       "text": "n.a. (142)",
+       "visibleIf": "{gid2}='ESP.15.1_1'"
+      },
+      {
+       "value": "ESP.15.1.7_1",
+       "text": "n.a. (143)",
+       "visibleIf": "{gid2}='ESP.15.1_1'"
+      },
+      {
+       "value": "ESP.15.1.8_1",
+       "text": "n.a. (65)",
+       "visibleIf": "{gid2}='ESP.15.1_1'"
+      },
+      {
+       "value": "ESP.16.1.1_1",
+       "text": "n.a. (1)",
+       "visibleIf": "{gid2}='ESP.16.1_1'"
+      },
+      {
+       "value": "ESP.16.1.2_1",
+       "text": "n.a. (2)",
+       "visibleIf": "{gid2}='ESP.16.1_1'"
+      },
+      {
+       "value": "ESP.16.1.3_1",
+       "text": "n.a. (3)",
+       "visibleIf": "{gid2}='ESP.16.1_1'"
+      },
+      {
+       "value": "ESP.16.1.4_1",
+       "text": "n.a. (4)",
+       "visibleIf": "{gid2}='ESP.16.1_1'"
+      },
+      {
+       "value": "ESP.16.1.5_1",
+       "text": "n.a. (5)",
+       "visibleIf": "{gid2}='ESP.16.1_1'"
+      },
+      {
+       "value": "ESP.16.1.6_1",
+       "text": "n.a. (6)",
+       "visibleIf": "{gid2}='ESP.16.1_1'"
+      },
+      {
+       "value": "ESP.16.1.7_1",
+       "text": "n.a. (7)",
+       "visibleIf": "{gid2}='ESP.16.1_1'"
+      },
+      {
+       "value": "ESP.16.2.1_1",
+       "text": "n.a. (124)",
+       "visibleIf": "{gid2}='ESP.16.2_1'"
+      },
+      {
+       "value": "ESP.16.3.1_1",
+       "text": "n.a. (261)",
+       "visibleIf": "{gid2}='ESP.16.3_1'"
+      },
+      {
+       "value": "ESP.16.3.2_1",
+       "text": "n.a. (262)",
+       "visibleIf": "{gid2}='ESP.16.3_1'"
+      },
+      {
+       "value": "ESP.17.1.1_1",
+       "text": "Avilés",
+       "visibleIf": "{gid2}='ESP.17.1_1'"
+      },
+      {
+       "value": "ESP.17.1.2_1",
+       "text": "Caudal",
+       "visibleIf": "{gid2}='ESP.17.1_1'"
+      },
+      {
+       "value": "ESP.17.1.3_1",
+       "text": "Eo-Navia",
+       "visibleIf": "{gid2}='ESP.17.1_1'"
+      },
+      {
+       "value": "ESP.17.1.4_1",
+       "text": "n.a. (108)",
+       "visibleIf": "{gid2}='ESP.17.1_1'"
+      },
+      {
+       "value": "ESP.17.1.5_1",
+       "text": "n.a. (194)",
+       "visibleIf": "{gid2}='ESP.17.1_1'"
+      },
+      {
+       "value": "ESP.17.1.6_1",
+       "text": "n.a. (195)",
+       "visibleIf": "{gid2}='ESP.17.1_1'"
+      },
+      {
+       "value": "ESP.17.1.7_1",
+       "text": "Oriente",
+       "visibleIf": "{gid2}='ESP.17.1_1'"
+      },
+      {
+       "value": "ESP.17.1.8_1",
+       "text": "Oviedo",
+       "visibleIf": "{gid2}='ESP.17.1_1'"
+      },
+      {
+       "value": "ESP.18.1.1_1",
+       "text": "Altiplano",
+       "visibleIf": "{gid2}='ESP.18.1_1'"
+      },
+      {
+       "value": "ESP.18.1.2_1",
+       "text": "Alto Guadalentin",
+       "visibleIf": "{gid2}='ESP.18.1_1'"
+      },
+      {
+       "value": "ESP.18.1.3_1",
+       "text": "Bajo Guadalentín",
+       "visibleIf": "{gid2}='ESP.18.1_1'"
+      },
+      {
+       "value": "ESP.18.1.4_1",
+       "text": "Campo de Cartagena",
+       "visibleIf": "{gid2}='ESP.18.1_1'"
+      },
+      {
+       "value": "ESP.18.1.5_1",
+       "text": "Huera de Murcia",
+       "visibleIf": "{gid2}='ESP.18.1_1'"
+      },
+      {
+       "value": "ESP.18.1.6_1",
+       "text": "Mar Menor",
+       "visibleIf": "{gid2}='ESP.18.1_1'"
+      },
+      {
+       "value": "ESP.18.1.7_1",
+       "text": "Noroeste",
+       "visibleIf": "{gid2}='ESP.18.1_1'"
+      },
+      {
+       "value": "ESP.18.1.8_1",
+       "text": "Oriental",
+       "visibleIf": "{gid2}='ESP.18.1_1'"
+      },
+      {
+       "value": "ESP.18.1.9_1",
+       "text": "Rio Mua",
+       "visibleIf": "{gid2}='ESP.18.1_1'"
+      },
+      {
+       "value": "ESP.18.1.10_1",
+       "text": "Valle de Ricote",
+       "visibleIf": "{gid2}='ESP.18.1_1'"
+      },
+      {
+       "value": "ESP.18.1.11_1",
+       "text": "Vega Alta",
+       "visibleIf": "{gid2}='ESP.18.1_1'"
+      },
+      {
+       "value": "ESP.18.1.12_1",
+       "text": "Vega Media",
+       "visibleIf": "{gid2}='ESP.18.1_1'"
+      }
+     ],
+     "hideIfChoicesEmpty": true
+    }
+   ],
+   "visible": false
+  },
+  {
+   "name": "general",
+   "elements": [
+    {
+     "type": "expression",
+     "name": "survey_id",
+     "title": "Survey id",
+     "expression": "bsg_cattle"
+    },
+    {
+     "type": "expression",
+     "name": "version",
+     "title": "Survey version",
+     "expression": "v2_14_ciria"
+    },
+    {
+     "type": "panel",
+     "name": "pilot",
+     "elements": [
+      {
+       "type": "boolean",
+       "name": "survey_mode",
+       "state": "collapsed",
+       "title": "Survey mode",
+       "setValueIf": "{user_id} notempty and {farm_id} notempty and {date} empty",
+       "setValueExpression": "true",
+       "defaultValueExpression": "true",
+       "labelTrue": "Survey",
+       "labelFalse": "Designer"
+      },
+      {
+       "type": "text",
+       "name": "date",
+       "title": {
+        "default": "Interview date",
+        "es": "granja",
+        "ca": "granja"
+       },
+       "isRequired": true,
+       "requiredIf": "{survey_mode} = true",
+       "inputType": "date",
+       "placeholder": "user_id"
+      },
+      {
+       "type": "text",
+       "name": "user_id",
+       "title": {
+        "default": "Interviewer name (user_id)",
+        "es": "granja",
+        "ca": "granja"
+       },
+       "description": "Always use the same alias (e.g. \"nat\"). Use only lower case and underscores.",
+       "isRequired": true,
+       "requiredIf": "{survey_mode} = true"
+      },
+      {
+       "type": "text",
+       "name": "farm_id",
+       "title": {
+        "default": "Farm (farm_id)",
+        "es": "granja",
+        "ca": "granja"
+       },
+       "description": "Use a name that allows you to remember which farm you are referring to (e.g. \"dairy_lleida_joan\"). Use only lower case and underscores.",
+       "isRequired": true,
+       "requiredIf": "{survey_mode} = true"
+      }
+     ],
+     "title": "Pilot survey ",
+     "description": "Please provide the following information for the pilot data processing. Use only lower case and underscores in the text inputs."
+    },
+    {
+     "type": "html",
+     "name": "farm_text",
+     "html": "Where is the farm located?"
+    },
+    {
+     "type": "dropdown",
+     "name": "farm_gid0",
+     "title": "Country",
+     "defaultValueExpression": "ESP",
+     "choicesFromQuestion": "gid0",
+     "autocomplete": "country-name"
+    },
+    {
+     "type": "dropdown",
+     "name": "farm_gid1",
+     "visibleIf": "{farm_gid0} notempty",
+     "title": "Region",
+     "description": "1st admisnistrative level",
+     "choicesFromQuestion": "gid1",
+     "hideIfChoicesEmpty": true,
+     "autocomplete": "country-name"
+    },
+    {
+     "type": "dropdown",
+     "name": "farm_gid2",
+     "visibleIf": "{farm_gid1} notempty",
+     "title": "Province",
+     "description": "2nd administrative level",
+     "choicesFromQuestion": "gid2",
+     "hideIfChoicesEmpty": true,
+     "autocomplete": "country-name"
+    },
+    {
+     "type": "dropdown",
+     "name": "farm_gid3",
+     "visible": false,
+     "title": "County",
+     "description": "3rd administrative level",
+     "choicesFromQuestion": "gid3",
+     "hideIfChoicesEmpty": true,
+     "autocomplete": "country-name"
+    }
+   ],
+   "title": "General information",
+   "navigationTitle": "General information"
+  },
+  {
+   "name": "farm",
+   "elements": [
+    {
+     "type": "radiogroup",
+     "name": "farm_type",
+     "title": "Farm type",
+     "choices": [
+      {
+       "value": "beef",
+       "text": "Beef cattle"
+      },
+      {
+       "value": "dairy",
+       "text": "Dairy cattle"
+      }
+     ],
+     "showOtherItem": true,
+     "otherText": "Mixed/Other (describe)"
+    },
+    {
+     "type": "boolean",
+     "name": "farm_site",
+     "title": "Does the farm have multiple sites?",
+     "description": "e.g. cows and heifers are housed in different stalls."
+    },
+    {
+     "type": "boolean",
+     "name": "farm_epiunit",
+     "visible": false,
+     "visibleIf": "{farm_site} = true",
+     "title": "Are the different sites part of a single epidemiological unit?",
+     "description": "i.e. animals from the different sites could easily share pathogens by direct or indirect contact"
+    }
+   ],
+   "title": "Farm characteristics",
+   "navigationTitle": "Farm characteristics"
+  },
+  {
+   "name": "census",
+   "elements": [
+    {
+     "type": "expression",
+     "name": "question1",
+     "visibleIf": "{farm_epiunit} = true",
+     "title": "Include all the animals in the epidemiological unit",
+     "description": "even if they are in diferent sites",
+     "hideNumber": true
+    },
+    {
+     "type": "multipletext",
+     "name": "farm_census",
+     "title": "Cattle census",
+     "description": "Number of animals",
+     "items": [
+      {
+       "name": "cattlefrom24",
+       "inputType": "number",
+       "title": "Adult cows (>24 m)"
+      },
+      {
+       "name": "cattle8to24",
+       "inputType": "number",
+       "title": "Heifers (8 - 24 m)"
+      },
+      {
+       "name": "cattleunder8",
+       "inputType": "number",
+       "title": "Calves ( <8 m)"
+      },
+      {
+       "name": "cattlebull",
+       "inputType": "number",
+       "title": "Bulls"
+      }
+     ]
+    },
+    {
+     "type": "checkbox",
+     "name": "farm_category",
+     "visible": false,
+     "title": "Cattle categories",
+     "description": "Number of animals",
+     "defaultValue": [
+      "cattlefrom24",
+      "cattle8to24",
+      "cattleunder8",
+      "cattlebull"
+     ],
+     "choices": [
+      {
+       "value": "cattlefrom24",
+       "text": "Adult cows (>24 m)",
+       "visibleIf": "{farm_census.cattlefrom24} > 0"
+      },
+      {
+       "value": "cattle8to24",
+       "text": "Heifers (8 - 24 m)",
+       "visibleIf": "{farm_census.cattle8to24} > 0"
+      },
+      {
+       "value": "cattleunder8",
+       "text": "Calves (<8m )",
+       "visibleIf": "{farm_census.cattleunder8} > 0"
+      },
+      {
+       "value": "cattlebull",
+       "text": "Bulls",
+       "visibleIf": "{farm_census.cattlebull} > 0"
+      }
+     ]
+    },
+    {
+     "type": "boolean",
+     "name": "farm_other",
+     "title": "Are there other domestic species on the farm?",
+     "description": "Sheep, goats, pigs, poultry, dogs, cats, horses..."
+    },
+    {
+     "type": "multipletext",
+     "name": "farm_other_census",
+     "visibleIf": "{farm_other} = true",
+     "title": "Other domestic species census",
+     "description": "Number of animals",
+     "validators": [
+      {
+       "type": "expression"
+      }
+     ],
+     "items": [
+      {
+       "name": "sheep",
+       "inputType": "number",
+       "title": "Sheep"
+      },
+      {
+       "name": "goats",
+       "inputType": "number",
+       "title": "Goats"
+      },
+      {
+       "name": "pigs",
+       "inputType": "number",
+       "title": "Pigs"
+      },
+      {
+       "name": "poultry",
+       "inputType": "number",
+       "title": "Poultry"
+      },
+      {
+       "name": "dogs",
+       "inputType": "number",
+       "title": "Dogs"
+      },
+      {
+       "name": "cats",
+       "inputType": "number",
+       "title": "Cats"
+      },
+      {
+       "name": "horses",
+       "inputType": "number",
+       "title": "Horses"
+      },
+      {
+       "name": "other",
+       "placeholder": "e.g. 4 Alpacas, 2 Ostriches",
+       "title": "Other (describe)"
+      }
+     ]
+    },
+    {
+     "type": "checkbox",
+     "name": "farm_other_contact",
+     "visibleIf": "{farm_other} = true",
+     "title": "Which species have direct contact with cattle?",
+     "defaultValue": [
+      "sheep",
+      "goats",
+      "pigs",
+      "poultry",
+      "dogs",
+      "cats",
+      "horses",
+      "other"
+     ],
+     "choices": [
+      {
+       "value": "sheep",
+       "text": "Sheep",
+       "visibleIf": "{farm_other_census.sheep} > 0"
+      },
+      {
+       "value": "goats",
+       "text": "Goats",
+       "visibleIf": "{farm_other_census.goats} > 0"
+      },
+      {
+       "value": "pigs",
+       "text": "Pigs",
+       "visibleIf": "{farm_other_census.pigs} > 0"
+      },
+      {
+       "value": "poultry",
+       "text": "Poultry",
+       "visibleIf": "{farm_other_census.poultry} > 0"
+      },
+      {
+       "value": "dogs",
+       "text": "Dogs",
+       "visibleIf": "{farm_other_census.dogs} > 0"
+      },
+      {
+       "value": "cats",
+       "text": "Cats",
+       "visibleIf": "{farm_other_census.cats} > 0"
+      },
+      {
+       "value": "horses",
+       "text": "Horses",
+       "visibleIf": "{farm_other_census.horses} > 0"
+      },
+      {
+       "value": "other",
+       "text": "Other",
+       "visibleIf": "{farm_other_census.other} notempty"
+      }
+     ]
+    },
+    {
+     "type": "boolean",
+     "name": "farm_other_entry",
+     "visibleIf": "{farm_other} = true",
+     "title": "Have there been any entries of small ruminants in the last year?"
+    }
+   ],
+   "title": "Farm census",
+   "navigationTitle": "Farm census"
+  },
+  {
+   "name": "quarantine",
+   "elements": [
+    {
+     "type": "boolean",
+     "name": "quarantine_area",
+     "title": "When new cattle enter the farm, are they isolated from the herd (quarantine)?"
+    },
+    {
+     "type": "boolean",
+     "name": "quarantine_direct",
+     "visibleIf": "{quarantine_area} = true",
+     "title": "Can isolated animals come into direct contact with other cattle in the herd?"
+    },
+    {
+     "type": "text",
+     "name": "quarantine_time",
+     "visibleIf": "{quarantine_area} = true",
+     "title": "Average duration of quarantine in days",
+     "inputType": "number"
+    },
+    {
+     "type": "radiogroup",
+     "name": "quarantine_visits",
+     "visibleIf": "{quarantine_area} = true",
+     "title": "What time of day is the quarantine visited?",
+     "choices": [
+      {
+       "value": "end",
+       "text": "At the end of the day"
+      },
+      {
+       "value": "any",
+       "text": "At any time of the day"
+      },
+      {
+       "value": "never",
+       "text": "Never"
+      }
+     ]
+    },
+    {
+     "type": "radiogroup",
+     "name": "quarantine_frequency",
+     "visibleIf": "{quarantine_area} = true",
+     "title": "How often is the quarantine visited?",
+     "choices": [
+      {
+       "value": "daily",
+       "text": "Daily"
+      },
+      {
+       "value": "weekly",
+       "text": "Weekly"
+      },
+      {
+       "value": "few",
+       "text": "A few times during the period of quarantine"
+      },
+      {
+       "value": "never",
+       "text": "Never"
+      }
+     ]
+    },
+    {
+     "type": "boolean",
+     "name": "quarantine_equipment",
+     "visibleIf": "{quarantine_area} = true",
+     "title": "Is quarantine equipment shared with the rest of the herd?"
+    },
+    {
+     "type": "boolean",
+     "name": "quarantine_cleaning",
+     "visibleIf": "{quarantine_equipment} = true",
+     "title": "Is equipment cleaned after each use?"
+    },
+    {
+     "type": "boolean",
+     "name": "quarantine_disinfection",
+     "visibleIf": "{quarantine_cleaning} = true",
+     "title": "Is equipment disinfected after each use?"
+    },
+    {
+     "type": "comment",
+     "name": "quarantine_comments",
+     "title": "Comments about quarantine (optional)",
+     "autoGrow": true
+    }
+   ],
+   "title": "Quarantine",
+   "navigationTitle": "Quarantine"
+  },
+  {
+   "name": "fattening",
+   "elements": [
+    {
+     "type": "boolean",
+     "name": "fattening_external",
+     "title": "Do you fatten calves from other farms?"
+    },
+    {
+     "type": "text",
+     "name": "fattening_time",
+     "visibleIf": "{fattening_external} = true",
+     "title": "Average duration of fattening in months",
+     "inputType": "number",
+     "min": 1,
+     "max": 100
+    },
+    {
+     "type": "boolean",
+     "name": "fattening_direct",
+     "visibleIf": "{fattening_external} = true",
+     "title": "Can fattening calves come into direct contact with other cattle?"
+    },
+    {
+     "type": "boolean",
+     "name": "fattening_indirect",
+     "visibleIf": "{fattening_external} = true and {fattening_direct} = false",
+     "title": "Is fattening equipment, clothing or personnel, shared with the rest of the herd?"
+    },
+    {
+     "type": "radiogroup",
+     "name": "fattening_frequency",
+     "visibleIf": "{fattening_external} = true and {fattening_indirect} = true",
+     "title": "If equipment and personnel are shared, how often can there be indirect contact between fattening animals and the rest of the herd?",
+     "choices": [
+      {
+       "value": "daily",
+       "text": "Daily"
+      },
+      {
+       "value": "weekly",
+       "text": "Weekly"
+      },
+      {
+       "value": "few",
+       "text": "A few times during fattening period"
+      },
+      {
+       "value": "never",
+       "text": "Never"
+      }
+     ]
+    },
+    {
+     "type": "comment",
+     "name": "fattening_comments",
+     "title": "Comments about fattening (optional)",
+     "autoGrow": true
+    }
+   ],
+   "title": "Fattening",
+   "navigationTitle": "Fattening"
+  },
+  {
+   "name": "surroundings",
+   "elements": [
+    {
+     "type": "boolean",
+     "name": "neighbour_farms",
+     "title": "Are there other cattle farms within a 1-2km radius?"
+    },
+    {
+     "type": "text",
+     "name": "neighbour_n",
+     "visibleIf": "{neighbour_farms} = true",
+     "title": "Number of cattle farms in  1-2 km radius",
+     "description": "From any location of your farm",
+     "inputType": "number",
+     "max": 20,
+     "step": 0
+    },
+    {
+     "type": "boolean",
+     "name": "neighbour_direct",
+     "visibleIf": "{neighbour_farms} = true",
+     "title": "Is it possible for your livestock to have direct contact with livestock on neighbouring farms?",
+     "description": "For example, through a fence"
+    },
+    {
+     "type": "boolean",
+     "name": "outdoors_access",
+     "title": "Do your animals graze outdoors?"
+    },
+    {
+     "type": "checkbox",
+     "name": "outdoors_fencing_type",
+     "visibleIf": "{outdoors_access} = true",
+     "title": "What type of fencing does the farm have?",
+     "choices": [
+      {
+       "value": "electric",
+       "text": "Electric fence"
+      },
+      {
+       "value": "simple",
+       "text": "Simple fence"
+      },
+      {
+       "value": "double",
+       "text": "Double fence"
+      }
+     ]
+    },
+    {
+     "type": "boolean",
+     "name": "outdoors_fencing_perimeter",
+     "visibleIf": "{outdoors_access} = true",
+     "title": "Does the farm have a complete perimeter fence?",
+     "description": "i.e. a continuous fence that surrounds the entire farm"
+    },
+    {
+     "type": "boolean",
+     "name": "outdoors_fencing_wildlife",
+     "visibleIf": "{outdoors_access} = true and {outdoors_fencing_perimeter} = true",
+     "title": "Can terrestrial wildlife access the farm?",
+     "description": "i.e. wild boar, red deer, etc."
+    },
+    {
+     "type": "boolean",
+     "name": "outdoors_waterpoints_access",
+     "visibleIf": "{outdoors_access} = true and {outdoors_fencing_wildlife} = true or {outdoors_fencing_perimeter} = false",
+     "title": "Are there water points accessible to wildlife (in the outdoor grazing area)?"
+    },
+    {
+     "type": "checkbox",
+     "name": "outdoors_waterpoints",
+     "visibleIf": "{outdoors_access} = true and {outdoors_fencing_wildlife} = true or {outdoors_fencing_perimeter} = false and {outdoors_waterpoints_access} = true",
+     "title": "What type of water points are available?",
+     "choices": [
+      {
+       "value": "low",
+       "text": "Low waterer (<90cm)"
+      },
+      {
+       "value": "high",
+       "text": "High waterer (>90cm)"
+      },
+      {
+       "value": "waterhole",
+       "text": "Waterhole"
+      },
+      {
+       "value": "river",
+       "text": "River"
+      },
+      {
+       "value": "stream",
+       "text": "Stream (seasonal flow)"
+      }
+     ]
+    },
+    {
+     "type": "expression",
+     "name": "outdoors_waterpoints_types_n",
+     "title": "Number of visit water point types",
+     "expression": "count({outdoors_waterpoints})"
+    },
+    {
+     "type": "panel",
+     "name": "outdoors_waterpoints_p",
+     "elements": [
+      {
+       "type": "expression",
+       "name": "outdoors_sum_p",
+       "title": "Sum percentage",
+       "titleLocation": "left",
+       "hideNumber": true,
+       "validators": [
+        {
+         "type": "expression",
+         "text": "Must add up to 100%",
+         "expression": "{outdoors_sum_p} = 100 or {survey_mode} = false"
+        }
+       ],
+       "expression": "{outdoors_low_p}+{outdoors_high_p}+{outdoors_waterhole_p}+{outdoors_river_p}+{outdoors_stream_p}",
+       "format": "{0}%",
+       "displayStyle": "decimal"
+      },
+      {
+       "type": "text",
+       "name": "outdoors_low_p",
+       "visibleIf": "{outdoors_waterpoints} contains 'low'",
+       "title": "Low waterer (<90cm)",
+       "titleLocation": "left",
+       "resetValueIf": "{outdoors_waterpoints} contains 'low'",
+       "setValueIf": "{outdoors_waterpoints} notcontains 'low'",
+       "setValueExpression": "0",
+       "defaultValueExpression": "100/{outdoors_waterpoints_types_n}",
+       "inputType": "number",
+       "min": 0,
+       "max": 100,
+       "step": 5
+      },
+      {
+       "type": "text",
+       "name": "outdoors_high_p",
+       "visibleIf": "{outdoors_waterpoints} contains 'high'",
+       "title": "High waterer (<90cm)",
+       "titleLocation": "left",
+       "resetValueIf": "{outdoors_waterpoints} contains 'high'",
+       "setValueIf": "{outdoors_waterpoints} notcontains 'high'",
+       "setValueExpression": "0",
+       "defaultValueExpression": "100/{outdoors_waterpoints_types_n}",
+       "inputType": "number",
+       "min": 0,
+       "max": 100,
+       "step": 5
+      },
+      {
+       "type": "text",
+       "name": "outdoors_waterhole_p",
+       "visibleIf": "{outdoors_waterpoints} contains 'waterhole'",
+       "title": "Waterhole",
+       "titleLocation": "left",
+       "resetValueIf": "{outdoors_waterpoints} contains 'waterhole'",
+       "setValueIf": "{outdoors_waterpoints} notcontains 'waterhole'",
+       "setValueExpression": "0",
+       "defaultValueExpression": "100/{outdoors_waterpoints_types_n}",
+       "inputType": "number",
+       "min": 0,
+       "max": 100,
+       "step": 5
+      },
+      {
+       "type": "text",
+       "name": "outdoors_river_p",
+       "visibleIf": "{outdoors_waterpoints} contains 'river'",
+       "title": "River",
+       "titleLocation": "left",
+       "resetValueIf": "{outdoors_waterpoints} contains 'river'",
+       "setValueIf": "{outdoors_waterpoints} notcontains 'river'",
+       "setValueExpression": "0",
+       "defaultValueExpression": "100/{outdoors_waterpoints_types_n}",
+       "inputType": "number",
+       "min": 0,
+       "max": 100,
+       "step": 5
+      },
+      {
+       "type": "text",
+       "name": "outdoors_stream_p",
+       "visibleIf": "{outdoors_waterpoints} contains 'stream'",
+       "title": "Stream (seasonal flow)",
+       "titleLocation": "left",
+       "resetValueIf": "{outdoors_waterpoints} contains 'stream'",
+       "setValueIf": "{outdoors_waterpoints} notcontains 'stream'",
+       "setValueExpression": "0",
+       "defaultValueExpression": "100/{outdoors_waterpoints_types_n}",
+       "inputType": "number",
+       "min": 0,
+       "max": 100,
+       "step": 5
+      }
+     ],
+     "visible": false,
+     "visibleIf": "{outdoors_access} = true and {outdoors_fencing_wildlife} = true or {outdoors_fencing_perimeter} = false and {outdoors_waterpoints_access} = true",
+     "title": "What percentage of the time do the cows use each type of water point? "
+    },
+    {
+     "type": "boolean",
+     "name": "outdoors_mud",
+     "visibleIf": "{outdoors_waterpoints} anyof ['low', 'high']",
+     "title": "Is there usually mud around the waterers?"
+    },
+    {
+     "type": "dropdown",
+     "name": "outdoors_mud_p",
+     "visibleIf": "{outdoors_mud} = true",
+     "title": "What is the percentage of waterers with mud around them?",
+     "choices": [
+      "10%",
+      "20%",
+      "30%",
+      "40%",
+      "50%",
+      "60%",
+      "70%",
+      "80%",
+      "90%",
+      "100%"
+     ]
+    },
+    {
+     "type": "comment",
+     "name": "outdoor_comments",
+     "title": "Comments about neighbours and outdoor facilities (optional)",
+     "autoGrow": true
+    }
+   ],
+   "title": "Surroundings",
+   "navigationTitle": "Surroundings"
+  },
+  {
+   "name": "pasture",
+   "elements": [
+    {
+     "type": "boolean",
+     "name": "pasture_goes",
+     "title": "Do livestock go seasonally to pasture? (transhumance)"
+    },
+    {
+     "type": "boolean",
+     "name": "pasture_same",
+     "visibleIf": "{pasture_goes} = true",
+     "title": "Do animals always go to the same pastures?"
+    },
+    {
+     "type": "text",
+     "name": "pasture_n",
+     "visibleIf": "{pasture_same} = false",
+     "title": "To how many diferent pastures do the animals go?",
+     "setValueIf": "{pasture_same} = true",
+     "setValueExpression": "1",
+     "defaultValue": "1",
+     "clearIfInvisible": "none",
+     "inputType": "number",
+     "min": 2,
+     "max": 10,
+     "maxErrorText": "You can only register up to {0} pastures. Please register the {0} pastures you go to most often."
+    },
+    {
+     "type": "paneldynamic",
+     "name": "pasture_info",
+     "visibleIf": "{pasture_goes} = true",
+     "title": "Information about pasture",
+     "bindings": {
+      "pos": {
+       "pos": {
+        "pos": {
+         "pos": {
+          "pos": {
+           "pos": {
+            "pos": {
+             "pos": {
+              "pos": {
+               "pos": {
+                "pos": {
+                 "pos": {
+                  "pos": {
+                   "pos": {
+                    "pos": {
+                     "pos": {
+                      "pos": {
+                       "pos": {
+                        "pos": {
+                         "pos": {
+                          "pos": {
+                           "pos": {
+                            "pos": {
+                             "start": 90020,
+                             "end": 90134
+                            },
+                            "start": 89959,
+                            "end": 90246
+                           },
+                           "start": 89924,
+                           "end": 90355
+                          },
+                          "start": 93649,
+                          "end": 90461
+                         },
+                         "start": 93411,
+                         "end": 90564
+                        },
+                        "start": 92486,
+                        "end": 90664
+                       },
+                       "start": 88659,
+                       "end": 90761
+                      },
+                      "start": 92303,
+                      "end": 90855
+                     },
+                     "start": 92273,
+                     "end": 90946
+                    },
+                    "start": 87700,
+                    "end": 91034
+                   },
+                   "start": 58862,
+                   "end": 91119
+                  },
+                  "start": 88470,
+                  "end": 91201
+                 },
+                 "start": 92163,
+                 "end": 91280
+                },
+                "start": 92060,
+                "end": 91356
+               },
+               "start": 90429,
+               "end": 91429
+              },
+              "start": 85416,
+              "end": 91499
+             },
+             "start": 85663,
+             "end": 91566
+            },
+            "start": 85643,
+            "end": 91630
+           },
+           "start": 84862,
+           "end": 91691
+          },
+          "start": 56650,
+          "end": 91749
+         },
+         "start": 85589,
+         "end": 91804
+        },
+        "start": 89216,
+        "end": 91856
+       },
+       "start": 35755,
+       "end": 91896
+      },
+      "panelCount": "pasture_n"
+     },
+     "templateElements": [
+      {
+       "type": "dropdown",
+       "name": "pasture_id",
+       "title": "Pasture key",
+       "description": "Remember this key to identify this pasture in the movements survey",
+       "requiredIf": "{pasture_goes} = true and {survey_mode} = true",
+       "choices": [
+        {
+         "value": "a",
+         "text": "🌿 Pasture A"
+        },
+        {
+         "value": "b",
+         "text": "🍂 Pasture B"
+        },
+        {
+         "value": "c",
+         "text": "🌾 Pasture C"
+        },
+        {
+         "value": "d",
+         "text": "🌱 Pasture D"
+        },
+        {
+         "value": "e",
+         "text": "☘️ Pasture E"
+        },
+        {
+         "value": "f",
+         "text": "🍁 Pasture F"
+        },
+        {
+         "value": "g",
+         "text": "🍃 Pasture G"
+        },
+        {
+         "value": "h",
+         "text": "🏞️ Pasture H"
+        },
+        {
+         "value": "i",
+         "text": "⛰️ Pasture I"
+        },
+        {
+         "value": "j",
+         "text": "🌄 Pasture J"
+        }
+       ]
+      },
+      {
+       "type": "text",
+       "name": "pasture_name",
+       "title": "Pasture name",
+       "description": "Open field to clarify which pasture you are referring to"
+      },
+      {
+       "type": "dropdown",
+       "name": "pasture_gid1",
+       "visibleIf": "{pasture_goes} = true",
+       "title": "Region",
+       "choicesFromQuestion": "gid1",
+       "hideIfChoicesEmpty": true
+      },
+      {
+       "type": "dropdown",
+       "name": "pasture_gid2",
+       "visibleIf": "{panel.pasture_gid1} notempty",
+       "title": "Province",
+       "choices": [
+        {
+         "value": "ESP.1.1_1",
+         "text": "Almería",
+         "visibleIf": "{panel.pasture_gid1}='ESP.1_1'"
+        },
+        {
+         "value": "ESP.1.2_1",
+         "text": "Cádiz",
+         "visibleIf": "{panel.pasture_gid1}='ESP.1_1'"
+        },
+        {
+         "value": "ESP.1.3_1",
+         "text": "Córdoba",
+         "visibleIf": "{panel.pasture_gid1}='ESP.1_1'"
+        },
+        {
+         "value": "ESP.1.4_1",
+         "text": "Granada",
+         "visibleIf": "{panel.pasture_gid1}='ESP.1_1'"
+        },
+        {
+         "value": "ESP.1.5_1",
+         "text": "Huelva",
+         "visibleIf": "{panel.pasture_gid1}='ESP.1_1'"
+        },
+        {
+         "value": "ESP.1.6_1",
+         "text": "Jaén",
+         "visibleIf": "{panel.pasture_gid1}='ESP.1_1'"
+        },
+        {
+         "value": "ESP.1.7_1",
+         "text": "Málaga",
+         "visibleIf": "{panel.pasture_gid1}='ESP.1_1'"
+        },
+        {
+         "value": "ESP.1.8_1",
+         "text": "Sevilla",
+         "visibleIf": "{panel.pasture_gid1}='ESP.1_1'"
+        },
+        {
+         "value": "ESP.2.1_1",
+         "text": "Huesca",
+         "visibleIf": "{panel.pasture_gid1}='ESP.2_1'"
+        },
+        {
+         "value": "ESP.2.2_1",
+         "text": "Teruel",
+         "visibleIf": "{panel.pasture_gid1}='ESP.2_1'"
+        },
+        {
+         "value": "ESP.2.3_1",
+         "text": "Zaragoza",
+         "visibleIf": "{panel.pasture_gid1}='ESP.2_1'"
+        },
+        {
+         "value": "ESP.3.1_1",
+         "text": "Cantabria",
+         "visibleIf": "{panel.pasture_gid1}='ESP.3_1'"
+        },
+        {
+         "value": "ESP.4.1_1",
+         "text": "Albacete",
+         "visibleIf": "{panel.pasture_gid1}='ESP.4_1'"
+        },
+        {
+         "value": "ESP.4.2_1",
+         "text": "Ciudad Real",
+         "visibleIf": "{panel.pasture_gid1}='ESP.4_1'"
+        },
+        {
+         "value": "ESP.4.3_1",
+         "text": "Cuenca",
+         "visibleIf": "{panel.pasture_gid1}='ESP.4_1'"
+        },
+        {
+         "value": "ESP.4.4_1",
+         "text": "Guadalajara",
+         "visibleIf": "{panel.pasture_gid1}='ESP.4_1'"
+        },
+        {
+         "value": "ESP.4.5_1",
+         "text": "Toledo",
+         "visibleIf": "{panel.pasture_gid1}='ESP.4_1'"
+        },
+        {
+         "value": "ESP.5.1_1",
+         "text": "Ávila",
+         "visibleIf": "{panel.pasture_gid1}='ESP.5_1'"
+        },
+        {
+         "value": "ESP.5.2_1",
+         "text": "Burgos",
+         "visibleIf": "{panel.pasture_gid1}='ESP.5_1'"
+        },
+        {
+         "value": "ESP.5.3_1",
+         "text": "León",
+         "visibleIf": "{panel.pasture_gid1}='ESP.5_1'"
+        },
+        {
+         "value": "ESP.5.4_1",
+         "text": "Palencia",
+         "visibleIf": "{panel.pasture_gid1}='ESP.5_1'"
+        },
+        {
+         "value": "ESP.5.5_1",
+         "text": "Salamanca",
+         "visibleIf": "{panel.pasture_gid1}='ESP.5_1'"
+        },
+        {
+         "value": "ESP.5.6_1",
+         "text": "Segovia",
+         "visibleIf": "{panel.pasture_gid1}='ESP.5_1'"
+        },
+        {
+         "value": "ESP.5.7_1",
+         "text": "Soria",
+         "visibleIf": "{panel.pasture_gid1}='ESP.5_1'"
+        },
+        {
+         "value": "ESP.5.8_1",
+         "text": "Valladolid",
+         "visibleIf": "{panel.pasture_gid1}='ESP.5_1'"
+        },
+        {
+         "value": "ESP.5.9_1",
+         "text": "Zamora",
+         "visibleIf": "{panel.pasture_gid1}='ESP.5_1'"
+        },
+        {
+         "value": "ESP.6.1_1",
+         "text": "Barcelona",
+         "visibleIf": "{panel.pasture_gid1}='ESP.6_1'"
+        },
+        {
+         "value": "ESP.6.2_1",
+         "text": "Girona",
+         "visibleIf": "{panel.pasture_gid1}='ESP.6_1'"
+        },
+        {
+         "value": "ESP.6.3_1",
+         "text": "Lleida",
+         "visibleIf": "{panel.pasture_gid1}='ESP.6_1'"
+        },
+        {
+         "value": "ESP.6.4_1",
+         "text": "Tarragona",
+         "visibleIf": "{panel.pasture_gid1}='ESP.6_1'"
+        },
+        {
+         "value": "ESP.7.1_1",
+         "text": "Ceuta",
+         "visibleIf": "{panel.pasture_gid1}='ESP.7_1'"
+        },
+        {
+         "value": "ESP.7.2_1",
+         "text": "Melilla",
+         "visibleIf": "{panel.pasture_gid1}='ESP.7_1'"
+        },
+        {
+         "value": "ESP.8.1_1",
+         "text": "Madrid",
+         "visibleIf": "{panel.pasture_gid1}='ESP.8_1'"
+        },
+        {
+         "value": "ESP.9.1_1",
+         "text": "Navarra",
+         "visibleIf": "{panel.pasture_gid1}='ESP.9_1'"
+        },
+        {
+         "value": "ESP.10.1_1",
+         "text": "Alicante",
+         "visibleIf": "{panel.pasture_gid1}='ESP.10_1'"
+        },
+        {
+         "value": "ESP.10.2_1",
+         "text": "Castellón",
+         "visibleIf": "{panel.pasture_gid1}='ESP.10_1'"
+        },
+        {
+         "value": "ESP.10.3_1",
+         "text": "Valencia",
+         "visibleIf": "{panel.pasture_gid1}='ESP.10_1'"
+        },
+        {
+         "value": "ESP.11.1_1",
+         "text": "Badajoz",
+         "visibleIf": "{panel.pasture_gid1}='ESP.11_1'"
+        },
+        {
+         "value": "ESP.11.2_1",
+         "text": "Cáceres",
+         "visibleIf": "{panel.pasture_gid1}='ESP.11_1'"
+        },
+        {
+         "value": "ESP.12.1_1",
+         "text": "A Coruña",
+         "visibleIf": "{panel.pasture_gid1}='ESP.12_1'"
+        },
+        {
+         "value": "ESP.12.2_1",
+         "text": "Lugo",
+         "visibleIf": "{panel.pasture_gid1}='ESP.12_1'"
+        },
+        {
+         "value": "ESP.12.3_1",
+         "text": "Ourense",
+         "visibleIf": "{panel.pasture_gid1}='ESP.12_1'"
+        },
+        {
+         "value": "ESP.12.4_1",
+         "text": "Pontevedra",
+         "visibleIf": "{panel.pasture_gid1}='ESP.12_1'"
+        },
+        {
+         "value": "ESP.13.1_1",
+         "text": "Baleares",
+         "visibleIf": "{panel.pasture_gid1}='ESP.13_1'"
+        },
+        {
+         "value": "ESP.14.1_1",
+         "text": "Las Palmas",
+         "visibleIf": "{panel.pasture_gid1}='ESP.14_1'"
+        },
+        {
+         "value": "ESP.14.2_1",
+         "text": "Santa Cruz de Tenerife",
+         "visibleIf": "{panel.pasture_gid1}='ESP.14_1'"
+        },
+        {
+         "value": "ESP.15.1_1",
+         "text": "La Rioja",
+         "visibleIf": "{panel.pasture_gid1}='ESP.15_1'"
+        },
+        {
+         "value": "ESP.16.1_1",
+         "text": "Álava",
+         "visibleIf": "{panel.pasture_gid1}='ESP.16_1'"
+        },
+        {
+         "value": "ESP.16.2_1",
+         "text": "Guipúzcoa",
+         "visibleIf": "{panel.pasture_gid1}='ESP.16_1'"
+        },
+        {
+         "value": "ESP.16.3_1",
+         "text": "Vizcaya",
+         "visibleIf": "{panel.pasture_gid1}='ESP.16_1'"
+        },
+        {
+         "value": "ESP.17.1_1",
+         "text": "Asturias",
+         "visibleIf": "{panel.pasture_gid1}='ESP.17_1'"
+        },
+        {
+         "value": "ESP.18.1_1",
+         "text": "Murcia",
+         "visibleIf": "{panel.pasture_gid1}='ESP.18_1'"
+        }
+       ],
+       "hideIfChoicesEmpty": true
+      },
+      {
+       "type": "dropdown",
+       "name": "pasture_gid3",
+       "visibleIf": "{panel.pasture_gid2} notempty",
+       "title": "County",
+       "choices": [
+        {
+         "value": "ESP.1.1.1_1",
+         "text": "n.a. (15)",
+         "visibleIf": "{panel.pasture_gid2}='ESP.1.1_1'"
+        },
+        {
+         "value": "ESP.1.1.2_1",
+         "text": "n.a. (16)",
+         "visibleIf": "{panel.pasture_gid2}='ESP.1.1_1'"
+        },
+        {
+         "value": "ESP.1.1.3_1",
+         "text": "n.a. (17)",
+         "visibleIf": "{panel.pasture_gid2}='ESP.1.1_1'"
+        },
+        {
+         "value": "ESP.1.1.4_1",
+         "text": "n.a. (18)",
+         "visibleIf": "{panel.pasture_gid2}='ESP.1.1_1'"
+        },
+        {
+         "value": "ESP.1.1.5_1",
+         "text": "n.a. (19)",
+         "visibleIf": "{panel.pasture_gid2}='ESP.1.1_1'"
+        },
+        {
+         "value": "ESP.1.1.6_1",
+         "text": "n.a. (20)",
+         "visibleIf": "{panel.pasture_gid2}='ESP.1.1_1'"
+        },
+        {
+         "value": "ESP.1.1.7_1",
+         "text": "n.a. (21)",
+         "visibleIf": "{panel.pasture_gid2}='ESP.1.1_1'"
+        },
+        {
+         "value": "ESP.1.1.8_1",
+         "text": "n.a. (22)",
+         "visibleIf": "{panel.pasture_gid2}='ESP.1.1_1'"
+        },
+        {
+         "value": "ESP.1.2.1_1",
+         "text": "Bahía de Cádiz",
+         "visibleIf": "{panel.pasture_gid2}='ESP.1.2_1'"
+        },
+        {
+         "value": "ESP.1.2.2_1",
+         "text": "Campiña de Jerez",
+         "visibleIf": "{panel.pasture_gid2}='ESP.1.2_1'"
+        },
+        {
+         "value": "ESP.1.2.3_1",
+         "text": "Campo de Gibraltar",
+         "visibleIf": "{panel.pasture_gid2}='ESP.1.2_1'"
+        },
+        {
+         "value": "ESP.1.2.4_1",
+         "text": "Costa Noroeste",
+         "visibleIf": "{panel.pasture_gid2}='ESP.1.2_1'"
+        },
+        {
+         "value": "ESP.1.2.5_1",
+         "text": "La Janda",
+         "visibleIf": "{panel.pasture_gid2}='ESP.1.2_1'"
+        },
+        {
+         "value": "ESP.1.2.6_1",
+         "text": "Sierra de Cádiz",
+         "visibleIf": "{panel.pasture_gid2}='ESP.1.2_1'"
+        },
+        {
+         "value": "ESP.1.3.1_1",
+         "text": "Campiña Sur",
+         "visibleIf": "{panel.pasture_gid2}='ESP.1.3_1'"
+        },
+        {
+         "value": "ESP.1.3.2_1",
+         "text": "n.a. (86)",
+         "visibleIf": "{panel.pasture_gid2}='ESP.1.3_1'"
+        },
+        {
+         "value": "ESP.1.3.3_1",
+         "text": "n.a. (87)",
+         "visibleIf": "{panel.pasture_gid2}='ESP.1.3_1'"
+        },
+        {
+         "value": "ESP.1.3.4_1",
+         "text": "n.a. (88)",
+         "visibleIf": "{panel.pasture_gid2}='ESP.1.3_1'"
+        },
+        {
+         "value": "ESP.1.3.5_1",
+         "text": "n.a. (89)",
+         "visibleIf": "{panel.pasture_gid2}='ESP.1.3_1'"
+        },
+        {
+         "value": "ESP.1.3.6_1",
+         "text": "n.a. (90)",
+         "visibleIf": "{panel.pasture_gid2}='ESP.1.3_1'"
+        },
+        {
+         "value": "ESP.1.3.7_1",
+         "text": "n.a. (91)",
+         "visibleIf": "{panel.pasture_gid2}='ESP.1.3_1'"
+        },
+        {
+         "value": "ESP.1.3.8_1",
+         "text": "n.a. (92)",
+         "visibleIf": "{panel.pasture_gid2}='ESP.1.3_1'"
+        },
+        {
+         "value": "ESP.1.4.1_1",
+         "text": "n.a. (109)",
+         "visibleIf": "{panel.pasture_gid2}='ESP.1.4_1'"
+        },
+        {
+         "value": "ESP.1.4.2_1",
+         "text": "n.a. (110)",
+         "visibleIf": "{panel.pasture_gid2}='ESP.1.4_1'"
+        },
+        {
+         "value": "ESP.1.4.3_1",
+         "text": "n.a. (111)",
+         "visibleIf": "{panel.pasture_gid2}='ESP.1.4_1'"
+        },
+        {
+         "value": "ESP.1.4.4_1",
+         "text": "n.a. (112)",
+         "visibleIf": "{panel.pasture_gid2}='ESP.1.4_1'"
+        },
+        {
+         "value": "ESP.1.4.5_1",
+         "text": "n.a. (113)",
+         "visibleIf": "{panel.pasture_gid2}='ESP.1.4_1'"
+        },
+        {
+         "value": "ESP.1.4.6_1",
+         "text": "n.a. (114)",
+         "visibleIf": "{panel.pasture_gid2}='ESP.1.4_1'"
+        },
+        {
+         "value": "ESP.1.4.7_1",
+         "text": "n.a. (115)",
+         "visibleIf": "{panel.pasture_gid2}='ESP.1.4_1'"
+        },
+        {
+         "value": "ESP.1.4.8_1",
+         "text": "n.a. (116)",
+         "visibleIf": "{panel.pasture_gid2}='ESP.1.4_1'"
+        },
+        {
+         "value": "ESP.1.4.9_1",
+         "text": "n.a. (117)",
+         "visibleIf": "{panel.pasture_gid2}='ESP.1.4_1'"
+        },
+        {
+         "value": "ESP.1.4.10_1",
+         "text": "n.a. (118)",
+         "visibleIf": "{panel.pasture_gid2}='ESP.1.4_1'"
+        },
+        {
+         "value": "ESP.1.5.1_1",
+         "text": "n.a. (133)",
+         "visibleIf": "{panel.pasture_gid2}='ESP.1.5_1'"
+        },
+        {
+         "value": "ESP.1.5.2_1",
+         "text": "n.a. (134)",
+         "visibleIf": "{panel.pasture_gid2}='ESP.1.5_1'"
+        },
+        {
+         "value": "ESP.1.5.3_1",
+         "text": "n.a. (135)",
+         "visibleIf": "{panel.pasture_gid2}='ESP.1.5_1'"
+        },
+        {
+         "value": "ESP.1.5.4_1",
+         "text": "n.a. (136)",
+         "visibleIf": "{panel.pasture_gid2}='ESP.1.5_1'"
+        },
+        {
+         "value": "ESP.1.5.5_1",
+         "text": "n.a. (137)",
+         "visibleIf": "{panel.pasture_gid2}='ESP.1.5_1'"
+        },
+        {
+         "value": "ESP.1.5.6_1",
+         "text": "n.a. (138)",
+         "visibleIf": "{panel.pasture_gid2}='ESP.1.5_1'"
+        },
+        {
+         "value": "ESP.1.6.1_1",
+         "text": "Alto Guadalquivir",
+         "visibleIf": "{panel.pasture_gid2}='ESP.1.6_1'"
+        },
+        {
+         "value": "ESP.1.6.2_1",
+         "text": "Área metropolitana de Jaén",
+         "visibleIf": "{panel.pasture_gid2}='ESP.1.6_1'"
+        },
+        {
+         "value": "ESP.1.6.3_1",
+         "text": "Campiña",
+         "visibleIf": "{panel.pasture_gid2}='ESP.1.6_1'"
+        },
+        {
+         "value": "ESP.1.6.4_1",
+         "text": "El Condado",
+         "visibleIf": "{panel.pasture_gid2}='ESP.1.6_1'"
+        },
+        {
+         "value": "ESP.1.6.5_1",
+         "text": "Lalomay Lasvillas",
+         "visibleIf": "{panel.pasture_gid2}='ESP.1.6_1'"
+        },
+        {
+         "value": "ESP.1.6.6_1",
+         "text": "Sierra De Segura",
+         "visibleIf": "{panel.pasture_gid2}='ESP.1.6_1'"
+        },
+        {
+         "value": "ESP.1.6.7_1",
+         "text": "Sierra Magina",
+         "visibleIf": "{panel.pasture_gid2}='ESP.1.6_1'"
+        },
+        {
+         "value": "ESP.1.6.8_1",
+         "text": "Sierra Norte",
+         "visibleIf": "{panel.pasture_gid2}='ESP.1.6_1'"
+        },
+        {
+         "value": "ESP.1.6.9_1",
+         "text": "Sierra Sur",
+         "visibleIf": "{panel.pasture_gid2}='ESP.1.6_1'"
+        },
+        {
+         "value": "ESP.1.7.1_1",
+         "text": "n.a. (181)",
+         "visibleIf": "{panel.pasture_gid2}='ESP.1.7_1'"
+        },
+        {
+         "value": "ESP.1.7.2_1",
+         "text": "n.a. (182)",
+         "visibleIf": "{panel.pasture_gid2}='ESP.1.7_1'"
+        },
+        {
+         "value": "ESP.1.7.3_1",
+         "text": "n.a. (183)",
+         "visibleIf": "{panel.pasture_gid2}='ESP.1.7_1'"
+        },
+        {
+         "value": "ESP.1.7.4_1",
+         "text": "n.a. (184)",
+         "visibleIf": "{panel.pasture_gid2}='ESP.1.7_1'"
+        },
+        {
+         "value": "ESP.1.8.1_1",
+         "text": "n.a. (226)",
+         "visibleIf": "{panel.pasture_gid2}='ESP.1.8_1'"
+        },
+        {
+         "value": "ESP.1.8.2_1",
+         "text": "n.a. (227)",
+         "visibleIf": "{panel.pasture_gid2}='ESP.1.8_1'"
+        },
+        {
+         "value": "ESP.1.8.3_1",
+         "text": "n.a. (228)",
+         "visibleIf": "{panel.pasture_gid2}='ESP.1.8_1'"
+        },
+        {
+         "value": "ESP.1.8.4_1",
+         "text": "n.a. (229)",
+         "visibleIf": "{panel.pasture_gid2}='ESP.1.8_1'"
+        },
+        {
+         "value": "ESP.1.8.5_1",
+         "text": "n.a. (230)",
+         "visibleIf": "{panel.pasture_gid2}='ESP.1.8_1'"
+        },
+        {
+         "value": "ESP.1.8.6_1",
+         "text": "n.a. (231)",
+         "visibleIf": "{panel.pasture_gid2}='ESP.1.8_1'"
+        },
+        {
+         "value": "ESP.1.8.7_1",
+         "text": "n.a. (232)",
+         "visibleIf": "{panel.pasture_gid2}='ESP.1.8_1'"
+        },
+        {
+         "value": "ESP.2.1.1_1",
+         "text": "n.a. (125)",
+         "visibleIf": "{panel.pasture_gid2}='ESP.2.1_1'"
+        },
+        {
+         "value": "ESP.2.1.2_1",
+         "text": "n.a. (126)",
+         "visibleIf": "{panel.pasture_gid2}='ESP.2.1_1'"
+        },
+        {
+         "value": "ESP.2.1.3_1",
+         "text": "n.a. (127)",
+         "visibleIf": "{panel.pasture_gid2}='ESP.2.1_1'"
+        },
+        {
+         "value": "ESP.2.1.4_1",
+         "text": "n.a. (128)",
+         "visibleIf": "{panel.pasture_gid2}='ESP.2.1_1'"
+        },
+        {
+         "value": "ESP.2.1.5_1",
+         "text": "n.a. (129)",
+         "visibleIf": "{panel.pasture_gid2}='ESP.2.1_1'"
+        },
+        {
+         "value": "ESP.2.1.6_1",
+         "text": "n.a. (130)",
+         "visibleIf": "{panel.pasture_gid2}='ESP.2.1_1'"
+        },
+        {
+         "value": "ESP.2.1.7_1",
+         "text": "n.a. (131)",
+         "visibleIf": "{panel.pasture_gid2}='ESP.2.1_1'"
+        },
+        {
+         "value": "ESP.2.1.8_1",
+         "text": "n.a. (132)",
+         "visibleIf": "{panel.pasture_gid2}='ESP.2.1_1'"
+        },
+        {
+         "value": "ESP.2.2.1_1",
+         "text": "n.a. (248)",
+         "visibleIf": "{panel.pasture_gid2}='ESP.2.2_1'"
+        },
+        {
+         "value": "ESP.2.2.2_1",
+         "text": "n.a. (249)",
+         "visibleIf": "{panel.pasture_gid2}='ESP.2.2_1'"
+        },
+        {
+         "value": "ESP.2.2.3_1",
+         "text": "n.a. (250)",
+         "visibleIf": "{panel.pasture_gid2}='ESP.2.2_1'"
+        },
+        {
+         "value": "ESP.2.2.4_1",
+         "text": "n.a. (251)",
+         "visibleIf": "{panel.pasture_gid2}='ESP.2.2_1'"
+        },
+        {
+         "value": "ESP.2.2.5_1",
+         "text": "n.a. (252)",
+         "visibleIf": "{panel.pasture_gid2}='ESP.2.2_1'"
+        },
+        {
+         "value": "ESP.2.2.6_1",
+         "text": "n.a. (253)",
+         "visibleIf": "{panel.pasture_gid2}='ESP.2.2_1'"
+        },
+        {
+         "value": "ESP.2.3.1_1",
+         "text": "n.a. (274)",
+         "visibleIf": "{panel.pasture_gid2}='ESP.2.3_1'"
+        },
+        {
+         "value": "ESP.2.3.2_1",
+         "text": "n.a. (275)",
+         "visibleIf": "{panel.pasture_gid2}='ESP.2.3_1'"
+        },
+        {
+         "value": "ESP.2.3.3_1",
+         "text": "n.a. (276)",
+         "visibleIf": "{panel.pasture_gid2}='ESP.2.3_1'"
+        },
+        {
+         "value": "ESP.2.3.4_1",
+         "text": "n.a. (277)",
+         "visibleIf": "{panel.pasture_gid2}='ESP.2.3_1'"
+        },
+        {
+         "value": "ESP.2.3.5_1",
+         "text": "n.a. (278)",
+         "visibleIf": "{panel.pasture_gid2}='ESP.2.3_1'"
+        },
+        {
+         "value": "ESP.2.3.6_1",
+         "text": "n.a. (279)",
+         "visibleIf": "{panel.pasture_gid2}='ESP.2.3_1'"
+        },
+        {
+         "value": "ESP.2.3.7_1",
+         "text": "n.a. (280)",
+         "visibleIf": "{panel.pasture_gid2}='ESP.2.3_1'"
+        },
+        {
+         "value": "ESP.2.3.8_1",
+         "text": "n.a. (281)",
+         "visibleIf": "{panel.pasture_gid2}='ESP.2.3_1'"
+        },
+        {
+         "value": "ESP.3.1.1_1",
+         "text": "Asón-Agüera",
+         "visibleIf": "{panel.pasture_gid2}='ESP.3.1_1'"
+        },
+        {
+         "value": "ESP.3.1.2_1",
+         "text": "Besaya",
+         "visibleIf": "{panel.pasture_gid2}='ESP.3.1_1'"
+        },
+        {
+         "value": "ESP.3.1.3_1",
+         "text": "Campoo-Los Valles",
+         "visibleIf": "{panel.pasture_gid2}='ESP.3.1_1'"
+        },
+        {
+         "value": "ESP.3.1.4_1",
+         "text": "Comarca de Santander",
+         "visibleIf": "{panel.pasture_gid2}='ESP.3.1_1'"
+        },
+        {
+         "value": "ESP.3.1.5_1",
+         "text": "Costa Occidental",
+         "visibleIf": "{panel.pasture_gid2}='ESP.3.1_1'"
+        },
+        {
+         "value": "ESP.3.1.6_1",
+         "text": "Costa Oriental",
+         "visibleIf": "{panel.pasture_gid2}='ESP.3.1_1'"
+        },
+        {
+         "value": "ESP.3.1.7_1",
+         "text": "Liébana",
+         "visibleIf": "{panel.pasture_gid2}='ESP.3.1_1'"
+        },
+        {
+         "value": "ESP.3.1.8_1",
+         "text": "n.a. (196)",
+         "visibleIf": "{panel.pasture_gid2}='ESP.3.1_1'"
+        },
+        {
+         "value": "ESP.3.1.9_1",
+         "text": "n.a. (222)",
+         "visibleIf": "{panel.pasture_gid2}='ESP.3.1_1'"
+        },
+        {
+         "value": "ESP.3.1.10_1",
+         "text": "Pas-Miera",
+         "visibleIf": "{panel.pasture_gid2}='ESP.3.1_1'"
+        },
+        {
+         "value": "ESP.3.1.11_1",
+         "text": "Trasmiera",
+         "visibleIf": "{panel.pasture_gid2}='ESP.3.1_1'"
+        },
+        {
+         "value": "ESP.4.1.1_1",
+         "text": "n.a. (10)",
+         "visibleIf": "{panel.pasture_gid2}='ESP.4.1_1'"
+        },
+        {
+         "value": "ESP.4.1.2_1",
+         "text": "n.a. (11)",
+         "visibleIf": "{panel.pasture_gid2}='ESP.4.1_1'"
+        },
+        {
+         "value": "ESP.4.1.3_1",
+         "text": "n.a. (12)",
+         "visibleIf": "{panel.pasture_gid2}='ESP.4.1_1'"
+        },
+        {
+         "value": "ESP.4.1.4_1",
+         "text": "n.a. (13)",
+         "visibleIf": "{panel.pasture_gid2}='ESP.4.1_1'"
+        },
+        {
+         "value": "ESP.4.1.5_1",
+         "text": "n.a. (14)",
+         "visibleIf": "{panel.pasture_gid2}='ESP.4.1_1'"
+        },
+        {
+         "value": "ESP.4.1.6_1",
+         "text": "n.a. (8)",
+         "visibleIf": "{panel.pasture_gid2}='ESP.4.1_1'"
+        },
+        {
+         "value": "ESP.4.1.7_1",
+         "text": "n.a. (9)",
+         "visibleIf": "{panel.pasture_gid2}='ESP.4.1_1'"
+        },
+        {
+         "value": "ESP.4.2.1_1",
+         "text": "n.a. (79)",
+         "visibleIf": "{panel.pasture_gid2}='ESP.4.2_1'"
+        },
+        {
+         "value": "ESP.4.2.2_1",
+         "text": "n.a. (80)",
+         "visibleIf": "{panel.pasture_gid2}='ESP.4.2_1'"
+        },
+        {
+         "value": "ESP.4.2.3_1",
+         "text": "n.a. (81)",
+         "visibleIf": "{panel.pasture_gid2}='ESP.4.2_1'"
+        },
+        {
+         "value": "ESP.4.2.4_1",
+         "text": "n.a. (82)",
+         "visibleIf": "{panel.pasture_gid2}='ESP.4.2_1'"
+        },
+        {
+         "value": "ESP.4.2.5_1",
+         "text": "n.a. (83)",
+         "visibleIf": "{panel.pasture_gid2}='ESP.4.2_1'"
+        },
+        {
+         "value": "ESP.4.2.6_1",
+         "text": "n.a. (84)",
+         "visibleIf": "{panel.pasture_gid2}='ESP.4.2_1'"
+        },
+        {
+         "value": "ESP.4.2.7_1",
+         "text": "n.a. (85)",
+         "visibleIf": "{panel.pasture_gid2}='ESP.4.2_1'"
+        },
+        {
+         "value": "ESP.4.3.1_1",
+         "text": "n.a. (93)",
+         "visibleIf": "{panel.pasture_gid2}='ESP.4.3_1'"
+        },
+        {
+         "value": "ESP.4.3.2_1",
+         "text": "n.a. (94)",
+         "visibleIf": "{panel.pasture_gid2}='ESP.4.3_1'"
+        },
+        {
+         "value": "ESP.4.3.3_1",
+         "text": "n.a. (95)",
+         "visibleIf": "{panel.pasture_gid2}='ESP.4.3_1'"
+        },
+        {
+         "value": "ESP.4.3.4_1",
+         "text": "n.a. (96)",
+         "visibleIf": "{panel.pasture_gid2}='ESP.4.3_1'"
+        },
+        {
+         "value": "ESP.4.3.5_1",
+         "text": "n.a. (97)",
+         "visibleIf": "{panel.pasture_gid2}='ESP.4.3_1'"
+        },
+        {
+         "value": "ESP.4.3.6_1",
+         "text": "n.a. (98)",
+         "visibleIf": "{panel.pasture_gid2}='ESP.4.3_1'"
+        },
+        {
+         "value": "ESP.4.3.7_1",
+         "text": "n.a. (99)",
+         "visibleIf": "{panel.pasture_gid2}='ESP.4.3_1'"
+        },
+        {
+         "value": "ESP.4.4.1_1",
+         "text": "n.a. (119)",
+         "visibleIf": "{panel.pasture_gid2}='ESP.4.4_1'"
+        },
+        {
+         "value": "ESP.4.4.2_1",
+         "text": "n.a. (120)",
+         "visibleIf": "{panel.pasture_gid2}='ESP.4.4_1'"
+        },
+        {
+         "value": "ESP.4.4.3_1",
+         "text": "n.a. (121)",
+         "visibleIf": "{panel.pasture_gid2}='ESP.4.4_1'"
+        },
+        {
+         "value": "ESP.4.4.4_1",
+         "text": "n.a. (122)",
+         "visibleIf": "{panel.pasture_gid2}='ESP.4.4_1'"
+        },
+        {
+         "value": "ESP.4.4.5_1",
+         "text": "n.a. (123)",
+         "visibleIf": "{panel.pasture_gid2}='ESP.4.4_1'"
+        },
+        {
+         "value": "ESP.4.4.6_1",
+         "text": "n.a. (176)",
+         "visibleIf": "{panel.pasture_gid2}='ESP.4.4_1'"
+        },
+        {
+         "value": "ESP.4.5.1_1",
+         "text": "n.a. (254)",
+         "visibleIf": "{panel.pasture_gid2}='ESP.4.5_1'"
+        },
+        {
+         "value": "ESP.4.5.2_1",
+         "text": "n.a. (255)",
+         "visibleIf": "{panel.pasture_gid2}='ESP.4.5_1'"
+        },
+        {
+         "value": "ESP.4.5.3_1",
+         "text": "n.a. (256)",
+         "visibleIf": "{panel.pasture_gid2}='ESP.4.5_1'"
+        },
+        {
+         "value": "ESP.4.5.4_1",
+         "text": "n.a. (257)",
+         "visibleIf": "{panel.pasture_gid2}='ESP.4.5_1'"
+        },
+        {
+         "value": "ESP.4.5.5_1",
+         "text": "n.a. (258)",
+         "visibleIf": "{panel.pasture_gid2}='ESP.4.5_1'"
+        },
+        {
+         "value": "ESP.4.5.6_1",
+         "text": "n.a. (259)",
+         "visibleIf": "{panel.pasture_gid2}='ESP.4.5_1'"
+        },
+        {
+         "value": "ESP.4.5.7_1",
+         "text": "n.a. (260)",
+         "visibleIf": "{panel.pasture_gid2}='ESP.4.5_1'"
+        },
+        {
+         "value": "ESP.5.1.1_1",
+         "text": "n.a. (23)",
+         "visibleIf": "{panel.pasture_gid2}='ESP.5.1_1'"
+        },
+        {
+         "value": "ESP.5.1.2_1",
+         "text": "n.a. (24)",
+         "visibleIf": "{panel.pasture_gid2}='ESP.5.1_1'"
+        },
+        {
+         "value": "ESP.5.1.3_1",
+         "text": "n.a. (25)",
+         "visibleIf": "{panel.pasture_gid2}='ESP.5.1_1'"
+        },
+        {
+         "value": "ESP.5.1.4_1",
+         "text": "n.a. (26)",
+         "visibleIf": "{panel.pasture_gid2}='ESP.5.1_1'"
+        },
+        {
+         "value": "ESP.5.1.5_1",
+         "text": "n.a. (27)",
+         "visibleIf": "{panel.pasture_gid2}='ESP.5.1_1'"
+        },
+        {
+         "value": "ESP.5.1.6_1",
+         "text": "n.a. (28)",
+         "visibleIf": "{panel.pasture_gid2}='ESP.5.1_1'"
+        },
+        {
+         "value": "ESP.5.2.1_1",
+         "text": "n.a. (202)",
+         "visibleIf": "{panel.pasture_gid2}='ESP.5.2_1'"
+        },
+        {
+         "value": "ESP.5.2.2_1",
+         "text": "n.a. (60)",
+         "visibleIf": "{panel.pasture_gid2}='ESP.5.2_1'"
+        },
+        {
+         "value": "ESP.5.2.3_1",
+         "text": "n.a. (61)",
+         "visibleIf": "{panel.pasture_gid2}='ESP.5.2_1'"
+        },
+        {
+         "value": "ESP.5.2.4_1",
+         "text": "n.a. (62)",
+         "visibleIf": "{panel.pasture_gid2}='ESP.5.2_1'"
+        },
+        {
+         "value": "ESP.5.2.5_1",
+         "text": "n.a. (63)",
+         "visibleIf": "{panel.pasture_gid2}='ESP.5.2_1'"
+        },
+        {
+         "value": "ESP.5.2.6_1",
+         "text": "n.a. (64)",
+         "visibleIf": "{panel.pasture_gid2}='ESP.5.2_1'"
+        },
+        {
+         "value": "ESP.5.2.7_1",
+         "text": "n.a. (65)",
+         "visibleIf": "{panel.pasture_gid2}='ESP.5.2_1'"
+        },
+        {
+         "value": "ESP.5.2.8_1",
+         "text": "n.a. (66)",
+         "visibleIf": "{panel.pasture_gid2}='ESP.5.2_1'"
+        },
+        {
+         "value": "ESP.5.2.9_1",
+         "text": "n.a. (67)",
+         "visibleIf": "{panel.pasture_gid2}='ESP.5.2_1'"
+        },
+        {
+         "value": "ESP.5.2.10_1",
+         "text": "n.a. (68)",
+         "visibleIf": "{panel.pasture_gid2}='ESP.5.2_1'"
+        },
+        {
+         "value": "ESP.5.3.1_1",
+         "text": "n.a. (148)",
+         "visibleIf": "{panel.pasture_gid2}='ESP.5.3_1'"
+        },
+        {
+         "value": "ESP.5.3.2_1",
+         "text": "n.a. (149)",
+         "visibleIf": "{panel.pasture_gid2}='ESP.5.3_1'"
+        },
+        {
+         "value": "ESP.5.3.3_1",
+         "text": "n.a. (150)",
+         "visibleIf": "{panel.pasture_gid2}='ESP.5.3_1'"
+        },
+        {
+         "value": "ESP.5.3.4_1",
+         "text": "n.a. (151)",
+         "visibleIf": "{panel.pasture_gid2}='ESP.5.3_1'"
+        },
+        {
+         "value": "ESP.5.3.5_1",
+         "text": "n.a. (152)",
+         "visibleIf": "{panel.pasture_gid2}='ESP.5.3_1'"
+        },
+        {
+         "value": "ESP.5.3.6_1",
+         "text": "n.a. (153)",
+         "visibleIf": "{panel.pasture_gid2}='ESP.5.3_1'"
+        },
+        {
+         "value": "ESP.5.3.7_1",
+         "text": "n.a. (154)",
+         "visibleIf": "{panel.pasture_gid2}='ESP.5.3_1'"
+        },
+        {
+         "value": "ESP.5.3.8_1",
+         "text": "n.a. (155)",
+         "visibleIf": "{panel.pasture_gid2}='ESP.5.3_1'"
+        },
+        {
+         "value": "ESP.5.3.9_1",
+         "text": "n.a. (156)",
+         "visibleIf": "{panel.pasture_gid2}='ESP.5.3_1'"
+        },
+        {
+         "value": "ESP.5.3.10_1",
+         "text": "n.a. (157)",
+         "visibleIf": "{panel.pasture_gid2}='ESP.5.3_1'"
+        },
+        {
+         "value": "ESP.5.3.11_1",
+         "text": "n.a. (158)",
+         "visibleIf": "{panel.pasture_gid2}='ESP.5.3_1'"
+        },
+        {
+         "value": "ESP.5.4.1_1",
+         "text": "n.a. (200)",
+         "visibleIf": "{panel.pasture_gid2}='ESP.5.4_1'"
+        },
+        {
+         "value": "ESP.5.4.2_1",
+         "text": "n.a. (201)",
+         "visibleIf": "{panel.pasture_gid2}='ESP.5.4_1'"
+        },
+        {
+         "value": "ESP.5.4.3_1",
+         "text": "n.a. (202)",
+         "visibleIf": "{panel.pasture_gid2}='ESP.5.4_1'"
+        },
+        {
+         "value": "ESP.5.4.4_1",
+         "text": "n.a. (203)",
+         "visibleIf": "{panel.pasture_gid2}='ESP.5.4_1'"
+        },
+        {
+         "value": "ESP.5.4.5_1",
+         "text": "n.a. (204)",
+         "visibleIf": "{panel.pasture_gid2}='ESP.5.4_1'"
+        },
+        {
+         "value": "ESP.5.4.6_1",
+         "text": "n.a. (205)",
+         "visibleIf": "{panel.pasture_gid2}='ESP.5.4_1'"
+        },
+        {
+         "value": "ESP.5.4.7_1",
+         "text": "n.a. (206)",
+         "visibleIf": "{panel.pasture_gid2}='ESP.5.4_1'"
+        },
+        {
+         "value": "ESP.5.5.1_1",
+         "text": "n.a. (212)",
+         "visibleIf": "{panel.pasture_gid2}='ESP.5.5_1'"
+        },
+        {
+         "value": "ESP.5.5.2_1",
+         "text": "n.a. (213)",
+         "visibleIf": "{panel.pasture_gid2}='ESP.5.5_1'"
+        },
+        {
+         "value": "ESP.5.5.3_1",
+         "text": "n.a. (214)",
+         "visibleIf": "{panel.pasture_gid2}='ESP.5.5_1'"
+        },
+        {
+         "value": "ESP.5.5.4_1",
+         "text": "n.a. (215)",
+         "visibleIf": "{panel.pasture_gid2}='ESP.5.5_1'"
+        },
+        {
+         "value": "ESP.5.5.5_1",
+         "text": "n.a. (216)",
+         "visibleIf": "{panel.pasture_gid2}='ESP.5.5_1'"
+        },
+        {
+         "value": "ESP.5.5.6_1",
+         "text": "n.a. (217)",
+         "visibleIf": "{panel.pasture_gid2}='ESP.5.5_1'"
+        },
+        {
+         "value": "ESP.5.5.7_1",
+         "text": "n.a. (218)",
+         "visibleIf": "{panel.pasture_gid2}='ESP.5.5_1'"
+        },
+        {
+         "value": "ESP.5.5.8_1",
+         "text": "n.a. (219)",
+         "visibleIf": "{panel.pasture_gid2}='ESP.5.5_1'"
+        },
+        {
+         "value": "ESP.5.5.9_1",
+         "text": "n.a. (220)",
+         "visibleIf": "{panel.pasture_gid2}='ESP.5.5_1'"
+        },
+        {
+         "value": "ESP.5.6.1_1",
+         "text": "n.a. (223)",
+         "visibleIf": "{panel.pasture_gid2}='ESP.5.6_1'"
+        },
+        {
+         "value": "ESP.5.6.2_1",
+         "text": "n.a. (224)",
+         "visibleIf": "{panel.pasture_gid2}='ESP.5.6_1'"
+        },
+        {
+         "value": "ESP.5.6.3_1",
+         "text": "n.a. (225)",
+         "visibleIf": "{panel.pasture_gid2}='ESP.5.6_1'"
+        },
+        {
+         "value": "ESP.5.7.1_1",
+         "text": "n.a. (233)",
+         "visibleIf": "{panel.pasture_gid2}='ESP.5.7_1'"
+        },
+        {
+         "value": "ESP.5.7.2_1",
+         "text": "n.a. (234)",
+         "visibleIf": "{panel.pasture_gid2}='ESP.5.7_1'"
+        },
+        {
+         "value": "ESP.5.7.3_1",
+         "text": "n.a. (235)",
+         "visibleIf": "{panel.pasture_gid2}='ESP.5.7_1'"
+        },
+        {
+         "value": "ESP.5.7.4_1",
+         "text": "n.a. (236)",
+         "visibleIf": "{panel.pasture_gid2}='ESP.5.7_1'"
+        },
+        {
+         "value": "ESP.5.7.5_1",
+         "text": "n.a. (237)",
+         "visibleIf": "{panel.pasture_gid2}='ESP.5.7_1'"
+        },
+        {
+         "value": "ESP.5.7.6_1",
+         "text": "n.a. (238)",
+         "visibleIf": "{panel.pasture_gid2}='ESP.5.7_1'"
+        },
+        {
+         "value": "ESP.5.7.7_1",
+         "text": "n.a. (239)",
+         "visibleIf": "{panel.pasture_gid2}='ESP.5.7_1'"
+        },
+        {
+         "value": "ESP.5.7.8_1",
+         "text": "n.a. (65)",
+         "visibleIf": "{panel.pasture_gid2}='ESP.5.7_1'"
+        },
+        {
+         "value": "ESP.5.8.1_1",
+         "text": "n.a. (263)",
+         "visibleIf": "{panel.pasture_gid2}='ESP.5.8_1'"
+        },
+        {
+         "value": "ESP.5.8.2_1",
+         "text": "n.a. (264)",
+         "visibleIf": "{panel.pasture_gid2}='ESP.5.8_1'"
+        },
+        {
+         "value": "ESP.5.8.3_1",
+         "text": "n.a. (265)",
+         "visibleIf": "{panel.pasture_gid2}='ESP.5.8_1'"
+        },
+        {
+         "value": "ESP.5.8.4_1",
+         "text": "n.a. (266)",
+         "visibleIf": "{panel.pasture_gid2}='ESP.5.8_1'"
+        },
+        {
+         "value": "ESP.5.8.5_1",
+         "text": "n.a. (267)",
+         "visibleIf": "{panel.pasture_gid2}='ESP.5.8_1'"
+        },
+        {
+         "value": "ESP.5.9.1_1",
+         "text": "n.a. (268)",
+         "visibleIf": "{panel.pasture_gid2}='ESP.5.9_1'"
+        },
+        {
+         "value": "ESP.5.9.2_1",
+         "text": "n.a. (269)",
+         "visibleIf": "{panel.pasture_gid2}='ESP.5.9_1'"
+        },
+        {
+         "value": "ESP.5.9.3_1",
+         "text": "n.a. (270)",
+         "visibleIf": "{panel.pasture_gid2}='ESP.5.9_1'"
+        },
+        {
+         "value": "ESP.5.9.4_1",
+         "text": "n.a. (271)",
+         "visibleIf": "{panel.pasture_gid2}='ESP.5.9_1'"
+        },
+        {
+         "value": "ESP.5.9.5_1",
+         "text": "n.a. (272)",
+         "visibleIf": "{panel.pasture_gid2}='ESP.5.9_1'"
+        },
+        {
+         "value": "ESP.5.9.6_1",
+         "text": "n.a. (273)",
+         "visibleIf": "{panel.pasture_gid2}='ESP.5.9_1'"
+        },
+        {
+         "value": "ESP.6.1.1_1",
+         "text": "n.a. (162)",
+         "visibleIf": "{panel.pasture_gid2}='ESP.6.1_1'"
+        },
+        {
+         "value": "ESP.6.1.2_1",
+         "text": "n.a. (164)",
+         "visibleIf": "{panel.pasture_gid2}='ESP.6.1_1'"
+        },
+        {
+         "value": "ESP.6.1.3_1",
+         "text": "n.a. (29)",
+         "visibleIf": "{panel.pasture_gid2}='ESP.6.1_1'"
+        },
+        {
+         "value": "ESP.6.1.4_1",
+         "text": "n.a. (30)",
+         "visibleIf": "{panel.pasture_gid2}='ESP.6.1_1'"
+        },
+        {
+         "value": "ESP.6.1.5_1",
+         "text": "n.a. (31)",
+         "visibleIf": "{panel.pasture_gid2}='ESP.6.1_1'"
+        },
+        {
+         "value": "ESP.6.1.6_1",
+         "text": "n.a. (32)",
+         "visibleIf": "{panel.pasture_gid2}='ESP.6.1_1'"
+        },
+        {
+         "value": "ESP.6.1.7_1",
+         "text": "n.a. (33)",
+         "visibleIf": "{panel.pasture_gid2}='ESP.6.1_1'"
+        },
+        {
+         "value": "ESP.6.1.8_1",
+         "text": "n.a. (34)",
+         "visibleIf": "{panel.pasture_gid2}='ESP.6.1_1'"
+        },
+        {
+         "value": "ESP.6.1.9_1",
+         "text": "n.a. (35)",
+         "visibleIf": "{panel.pasture_gid2}='ESP.6.1_1'"
+        },
+        {
+         "value": "ESP.6.1.10_1",
+         "text": "n.a. (36)",
+         "visibleIf": "{panel.pasture_gid2}='ESP.6.1_1'"
+        },
+        {
+         "value": "ESP.6.1.11_1",
+         "text": "n.a. (37)",
+         "visibleIf": "{panel.pasture_gid2}='ESP.6.1_1'"
+        },
+        {
+         "value": "ESP.6.1.12_1",
+         "text": "n.a. (38)",
+         "visibleIf": "{panel.pasture_gid2}='ESP.6.1_1'"
+        },
+        {
+         "value": "ESP.6.2.1_1",
+         "text": "n.a. (101)",
+         "visibleIf": "{panel.pasture_gid2}='ESP.6.2_1'"
+        },
+        {
+         "value": "ESP.6.2.2_1",
+         "text": "n.a. (102)",
+         "visibleIf": "{panel.pasture_gid2}='ESP.6.2_1'"
+        },
+        {
+         "value": "ESP.6.2.3_1",
+         "text": "n.a. (103)",
+         "visibleIf": "{panel.pasture_gid2}='ESP.6.2_1'"
+        },
+        {
+         "value": "ESP.6.2.4_1",
+         "text": "n.a. (104)",
+         "visibleIf": "{panel.pasture_gid2}='ESP.6.2_1'"
+        },
+        {
+         "value": "ESP.6.2.5_1",
+         "text": "n.a. (105)",
+         "visibleIf": "{panel.pasture_gid2}='ESP.6.2_1'"
+        },
+        {
+         "value": "ESP.6.2.6_1",
+         "text": "n.a. (106)",
+         "visibleIf": "{panel.pasture_gid2}='ESP.6.2_1'"
+        },
+        {
+         "value": "ESP.6.2.7_1",
+         "text": "n.a. (107)",
+         "visibleIf": "{panel.pasture_gid2}='ESP.6.2_1'"
+        },
+        {
+         "value": "ESP.6.2.8_1",
+         "text": "n.a. (34)",
+         "visibleIf": "{panel.pasture_gid2}='ESP.6.2_1'"
+        },
+        {
+         "value": "ESP.6.3.1_1",
+         "text": "n.a. (159)",
+         "visibleIf": "{panel.pasture_gid2}='ESP.6.3_1'"
+        },
+        {
+         "value": "ESP.6.3.2_1",
+         "text": "n.a. (160)",
+         "visibleIf": "{panel.pasture_gid2}='ESP.6.3_1'"
+        },
+        {
+         "value": "ESP.6.3.3_1",
+         "text": "n.a. (161)",
+         "visibleIf": "{panel.pasture_gid2}='ESP.6.3_1'"
+        },
+        {
+         "value": "ESP.6.3.4_1",
+         "text": "n.a. (162)",
+         "visibleIf": "{panel.pasture_gid2}='ESP.6.3_1'"
+        },
+        {
+         "value": "ESP.6.3.5_1",
+         "text": "n.a. (163)",
+         "visibleIf": "{panel.pasture_gid2}='ESP.6.3_1'"
+        },
+        {
+         "value": "ESP.6.3.6_1",
+         "text": "n.a. (164)",
+         "visibleIf": "{panel.pasture_gid2}='ESP.6.3_1'"
+        },
+        {
+         "value": "ESP.6.3.7_1",
+         "text": "n.a. (165)",
+         "visibleIf": "{panel.pasture_gid2}='ESP.6.3_1'"
+        },
+        {
+         "value": "ESP.6.3.8_1",
+         "text": "n.a. (166)",
+         "visibleIf": "{panel.pasture_gid2}='ESP.6.3_1'"
+        },
+        {
+         "value": "ESP.6.3.9_1",
+         "text": "n.a. (167)",
+         "visibleIf": "{panel.pasture_gid2}='ESP.6.3_1'"
+        },
+        {
+         "value": "ESP.6.3.10_1",
+         "text": "n.a. (168)",
+         "visibleIf": "{panel.pasture_gid2}='ESP.6.3_1'"
+        },
+        {
+         "value": "ESP.6.3.11_1",
+         "text": "n.a. (30)",
+         "visibleIf": "{panel.pasture_gid2}='ESP.6.3_1'"
+        },
+        {
+         "value": "ESP.6.3.12_1",
+         "text": "n.a. (35)",
+         "visibleIf": "{panel.pasture_gid2}='ESP.6.3_1'"
+        },
+        {
+         "value": "ESP.6.4.1_1",
+         "text": "n.a. (240)",
+         "visibleIf": "{panel.pasture_gid2}='ESP.6.4_1'"
+        },
+        {
+         "value": "ESP.6.4.2_1",
+         "text": "n.a. (241)",
+         "visibleIf": "{panel.pasture_gid2}='ESP.6.4_1'"
+        },
+        {
+         "value": "ESP.6.4.3_1",
+         "text": "n.a. (242)",
+         "visibleIf": "{panel.pasture_gid2}='ESP.6.4_1'"
+        },
+        {
+         "value": "ESP.6.4.4_1",
+         "text": "n.a. (243)",
+         "visibleIf": "{panel.pasture_gid2}='ESP.6.4_1'"
+        },
+        {
+         "value": "ESP.6.4.5_1",
+         "text": "n.a. (244)",
+         "visibleIf": "{panel.pasture_gid2}='ESP.6.4_1'"
+        },
+        {
+         "value": "ESP.6.4.6_1",
+         "text": "n.a. (245)",
+         "visibleIf": "{panel.pasture_gid2}='ESP.6.4_1'"
+        },
+        {
+         "value": "ESP.6.4.7_1",
+         "text": "n.a. (246)",
+         "visibleIf": "{panel.pasture_gid2}='ESP.6.4_1'"
+        },
+        {
+         "value": "ESP.6.4.8_1",
+         "text": "n.a. (247)",
+         "visibleIf": "{panel.pasture_gid2}='ESP.6.4_1'"
+        },
+        {
+         "value": "ESP.7.1.1_1",
+         "text": "n.a. (100)",
+         "visibleIf": "{panel.pasture_gid2}='ESP.7.1_1'"
+        },
+        {
+         "value": "ESP.7.2.1_1",
+         "text": "n.a. (100)",
+         "visibleIf": "{panel.pasture_gid2}='ESP.7.2_1'"
+        },
+        {
+         "value": "ESP.8.1.1_1",
+         "text": "n.a. (175)",
+         "visibleIf": "{panel.pasture_gid2}='ESP.8.1_1'"
+        },
+        {
+         "value": "ESP.8.1.2_1",
+         "text": "n.a. (176)",
+         "visibleIf": "{panel.pasture_gid2}='ESP.8.1_1'"
+        },
+        {
+         "value": "ESP.8.1.3_1",
+         "text": "n.a. (177)",
+         "visibleIf": "{panel.pasture_gid2}='ESP.8.1_1'"
+        },
+        {
+         "value": "ESP.8.1.4_1",
+         "text": "n.a. (178)",
+         "visibleIf": "{panel.pasture_gid2}='ESP.8.1_1'"
+        },
+        {
+         "value": "ESP.8.1.5_1",
+         "text": "n.a. (179)",
+         "visibleIf": "{panel.pasture_gid2}='ESP.8.1_1'"
+        },
+        {
+         "value": "ESP.8.1.6_1",
+         "text": "n.a. (180)",
+         "visibleIf": "{panel.pasture_gid2}='ESP.8.1_1'"
+        },
+        {
+         "value": "ESP.9.1.1_1",
+         "text": "n.a. (185)",
+         "visibleIf": "{panel.pasture_gid2}='ESP.9.1_1'"
+        },
+        {
+         "value": "ESP.9.1.2_1",
+         "text": "n.a. (186)",
+         "visibleIf": "{panel.pasture_gid2}='ESP.9.1_1'"
+        },
+        {
+         "value": "ESP.9.1.3_1",
+         "text": "n.a. (187)",
+         "visibleIf": "{panel.pasture_gid2}='ESP.9.1_1'"
+        },
+        {
+         "value": "ESP.9.1.4_1",
+         "text": "n.a. (188)",
+         "visibleIf": "{panel.pasture_gid2}='ESP.9.1_1'"
+        },
+        {
+         "value": "ESP.9.1.5_1",
+         "text": "n.a. (189)",
+         "visibleIf": "{panel.pasture_gid2}='ESP.9.1_1'"
+        },
+        {
+         "value": "ESP.9.1.6_1",
+         "text": "n.a. (190)",
+         "visibleIf": "{panel.pasture_gid2}='ESP.9.1_1'"
+        },
+        {
+         "value": "ESP.9.1.7_1",
+         "text": "n.a. (191)",
+         "visibleIf": "{panel.pasture_gid2}='ESP.9.1_1'"
+        },
+        {
+         "value": "ESP.9.1.8_1",
+         "text": "n.a. (192)",
+         "visibleIf": "{panel.pasture_gid2}='ESP.9.1_1'"
+        },
+        {
+         "value": "ESP.9.1.9_1",
+         "text": "n.a. (193)",
+         "visibleIf": "{panel.pasture_gid2}='ESP.9.1_1'"
+        },
+        {
+         "value": "ESP.10.1.1_1",
+         "text": "Alacanti",
+         "visibleIf": "{panel.pasture_gid2}='ESP.10.1_1'"
+        },
+        {
+         "value": "ESP.10.1.2_1",
+         "text": "Alcoia",
+         "visibleIf": "{panel.pasture_gid2}='ESP.10.1_1'"
+        },
+        {
+         "value": "ESP.10.1.3_1",
+         "text": "Alt Vinalopo",
+         "visibleIf": "{panel.pasture_gid2}='ESP.10.1_1'"
+        },
+        {
+         "value": "ESP.10.1.4_1",
+         "text": "Baix Segura",
+         "visibleIf": "{panel.pasture_gid2}='ESP.10.1_1'"
+        },
+        {
+         "value": "ESP.10.1.5_1",
+         "text": "Comtat",
+         "visibleIf": "{panel.pasture_gid2}='ESP.10.1_1'"
+        },
+        {
+         "value": "ESP.10.1.6_1",
+         "text": "Marina Alta",
+         "visibleIf": "{panel.pasture_gid2}='ESP.10.1_1'"
+        },
+        {
+         "value": "ESP.10.1.7_1",
+         "text": "Marina Baixa",
+         "visibleIf": "{panel.pasture_gid2}='ESP.10.1_1'"
+        },
+        {
+         "value": "ESP.10.1.9_1",
+         "text": "Vinalopo",
+         "visibleIf": "{panel.pasture_gid2}='ESP.10.1_1'"
+        },
+        {
+         "value": "ESP.10.1.8_1",
+         "text": "Vinalopo Mitja",
+         "visibleIf": "{panel.pasture_gid2}='ESP.10.1_1'"
+        },
+        {
+         "value": "ESP.10.2.1_1",
+         "text": "Alcalaten",
+         "visibleIf": "{panel.pasture_gid2}='ESP.10.2_1'"
+        },
+        {
+         "value": "ESP.10.2.2_1",
+         "text": "Alt Millars",
+         "visibleIf": "{panel.pasture_gid2}='ESP.10.2_1'"
+        },
+        {
+         "value": "ESP.10.2.3_1",
+         "text": "Alt Palancia",
+         "visibleIf": "{panel.pasture_gid2}='ESP.10.2_1'"
+        },
+        {
+         "value": "ESP.10.2.4_1",
+         "text": "Alta Maestrat",
+         "visibleIf": "{panel.pasture_gid2}='ESP.10.2_1'"
+        },
+        {
+         "value": "ESP.10.2.5_1",
+         "text": "Baix Maestrat",
+         "visibleIf": "{panel.pasture_gid2}='ESP.10.2_1'"
+        },
+        {
+         "value": "ESP.10.2.6_1",
+         "text": "n.a. (211)",
+         "visibleIf": "{panel.pasture_gid2}='ESP.10.2_1'"
+        },
+        {
+         "value": "ESP.10.2.7_1",
+         "text": "Plana Alta",
+         "visibleIf": "{panel.pasture_gid2}='ESP.10.2_1'"
+        },
+        {
+         "value": "ESP.10.2.8_1",
+         "text": "Plana Baixa",
+         "visibleIf": "{panel.pasture_gid2}='ESP.10.2_1'"
+        },
+        {
+         "value": "ESP.10.3.1_1",
+         "text": "Camp de Morvedre",
+         "visibleIf": "{panel.pasture_gid2}='ESP.10.3_1'"
+        },
+        {
+         "value": "ESP.10.3.2_1",
+         "text": "Camp de Túria",
+         "visibleIf": "{panel.pasture_gid2}='ESP.10.3_1'"
+        },
+        {
+         "value": "ESP.10.3.3_1",
+         "text": "Canal de Navarres",
+         "visibleIf": "{panel.pasture_gid2}='ESP.10.3_1'"
+        },
+        {
+         "value": "ESP.10.3.4_1",
+         "text": "Ciutat de Valencia",
+         "visibleIf": "{panel.pasture_gid2}='ESP.10.3_1'"
+        },
+        {
+         "value": "ESP.10.3.5_1",
+         "text": "Costera",
+         "visibleIf": "{panel.pasture_gid2}='ESP.10.3_1'"
+        },
+        {
+         "value": "ESP.10.3.6_1",
+         "text": "Foia de Bunyol",
+         "visibleIf": "{panel.pasture_gid2}='ESP.10.3_1'"
+        },
+        {
+         "value": "ESP.10.3.7_1",
+         "text": "Horta Nord",
+         "visibleIf": "{panel.pasture_gid2}='ESP.10.3_1'"
+        },
+        {
+         "value": "ESP.10.3.8_1",
+         "text": "Horta Oest",
+         "visibleIf": "{panel.pasture_gid2}='ESP.10.3_1'"
+        },
+        {
+         "value": "ESP.10.3.10_1",
+         "text": "Horta Sud",
+         "visibleIf": "{panel.pasture_gid2}='ESP.10.3_1'"
+        },
+        {
+         "value": "ESP.10.3.9_1",
+         "text": "Horta Sud Ciutat de Valencia",
+         "visibleIf": "{panel.pasture_gid2}='ESP.10.3_1'"
+        },
+        {
+         "value": "ESP.10.3.11_1",
+         "text": "n.a. (221)",
+         "visibleIf": "{panel.pasture_gid2}='ESP.10.3_1'"
+        },
+        {
+         "value": "ESP.10.3.12_1",
+         "text": "Requena-Utiel",
+         "visibleIf": "{panel.pasture_gid2}='ESP.10.3_1'"
+        },
+        {
+         "value": "ESP.10.3.13_1",
+         "text": "Ribera Alta",
+         "visibleIf": "{panel.pasture_gid2}='ESP.10.3_1'"
+        },
+        {
+         "value": "ESP.10.3.14_1",
+         "text": "Ribera Baixa",
+         "visibleIf": "{panel.pasture_gid2}='ESP.10.3_1'"
+        },
+        {
+         "value": "ESP.10.3.15_1",
+         "text": "Rincón de Ademuz",
+         "visibleIf": "{panel.pasture_gid2}='ESP.10.3_1'"
+        },
+        {
+         "value": "ESP.10.3.16_1",
+         "text": "Serranos",
+         "visibleIf": "{panel.pasture_gid2}='ESP.10.3_1'"
+        },
+        {
+         "value": "ESP.10.3.17_1",
+         "text": "Vall d'Albaida",
+         "visibleIf": "{panel.pasture_gid2}='ESP.10.3_1'"
+        },
+        {
+         "value": "ESP.10.3.18_1",
+         "text": "Vall de Confrents",
+         "visibleIf": "{panel.pasture_gid2}='ESP.10.3_1'"
+        },
+        {
+         "value": "ESP.11.1.1_1",
+         "text": "n.a. (39)",
+         "visibleIf": "{panel.pasture_gid2}='ESP.11.1_1'"
+        },
+        {
+         "value": "ESP.11.1.2_1",
+         "text": "n.a. (40)",
+         "visibleIf": "{panel.pasture_gid2}='ESP.11.1_1'"
+        },
+        {
+         "value": "ESP.11.1.3_1",
+         "text": "n.a. (41)",
+         "visibleIf": "{panel.pasture_gid2}='ESP.11.1_1'"
+        },
+        {
+         "value": "ESP.11.1.4_1",
+         "text": "n.a. (42)",
+         "visibleIf": "{panel.pasture_gid2}='ESP.11.1_1'"
+        },
+        {
+         "value": "ESP.11.1.5_1",
+         "text": "n.a. (43)",
+         "visibleIf": "{panel.pasture_gid2}='ESP.11.1_1'"
+        },
+        {
+         "value": "ESP.11.1.6_1",
+         "text": "n.a. (44)",
+         "visibleIf": "{panel.pasture_gid2}='ESP.11.1_1'"
+        },
+        {
+         "value": "ESP.11.1.7_1",
+         "text": "n.a. (45)",
+         "visibleIf": "{panel.pasture_gid2}='ESP.11.1_1'"
+        },
+        {
+         "value": "ESP.11.1.8_1",
+         "text": "n.a. (46)",
+         "visibleIf": "{panel.pasture_gid2}='ESP.11.1_1'"
+        },
+        {
+         "value": "ESP.11.1.9_1",
+         "text": "n.a. (47)",
+         "visibleIf": "{panel.pasture_gid2}='ESP.11.1_1'"
+        },
+        {
+         "value": "ESP.11.1.10_1",
+         "text": "n.a. (48)",
+         "visibleIf": "{panel.pasture_gid2}='ESP.11.1_1'"
+        },
+        {
+         "value": "ESP.11.1.11_1",
+         "text": "n.a. (49)",
+         "visibleIf": "{panel.pasture_gid2}='ESP.11.1_1'"
+        },
+        {
+         "value": "ESP.11.1.12_1",
+         "text": "n.a. (50)",
+         "visibleIf": "{panel.pasture_gid2}='ESP.11.1_1'"
+        },
+        {
+         "value": "ESP.11.2.1_1",
+         "text": "n.a. (69)",
+         "visibleIf": "{panel.pasture_gid2}='ESP.11.2_1'"
+        },
+        {
+         "value": "ESP.11.2.2_1",
+         "text": "n.a. (70)",
+         "visibleIf": "{panel.pasture_gid2}='ESP.11.2_1'"
+        },
+        {
+         "value": "ESP.11.2.3_1",
+         "text": "n.a. (71)",
+         "visibleIf": "{panel.pasture_gid2}='ESP.11.2_1'"
+        },
+        {
+         "value": "ESP.11.2.4_1",
+         "text": "n.a. (72)",
+         "visibleIf": "{panel.pasture_gid2}='ESP.11.2_1'"
+        },
+        {
+         "value": "ESP.11.2.5_1",
+         "text": "n.a. (73)",
+         "visibleIf": "{panel.pasture_gid2}='ESP.11.2_1'"
+        },
+        {
+         "value": "ESP.11.2.6_1",
+         "text": "n.a. (74)",
+         "visibleIf": "{panel.pasture_gid2}='ESP.11.2_1'"
+        },
+        {
+         "value": "ESP.11.2.7_1",
+         "text": "n.a. (75)",
+         "visibleIf": "{panel.pasture_gid2}='ESP.11.2_1'"
+        },
+        {
+         "value": "ESP.11.2.8_1",
+         "text": "n.a. (76)",
+         "visibleIf": "{panel.pasture_gid2}='ESP.11.2_1'"
+        },
+        {
+         "value": "ESP.11.2.9_1",
+         "text": "n.a. (77)",
+         "visibleIf": "{panel.pasture_gid2}='ESP.11.2_1'"
+        },
+        {
+         "value": "ESP.11.2.10_1",
+         "text": "n.a. (78)",
+         "visibleIf": "{panel.pasture_gid2}='ESP.11.2_1'"
+        },
+        {
+         "value": "ESP.12.1.1_1",
+         "text": "n.a. (145)",
+         "visibleIf": "{panel.pasture_gid2}='ESP.12.1_1'"
+        },
+        {
+         "value": "ESP.12.1.2_1",
+         "text": "n.a. (146)",
+         "visibleIf": "{panel.pasture_gid2}='ESP.12.1_1'"
+        },
+        {
+         "value": "ESP.12.1.3_1",
+         "text": "n.a. (147)",
+         "visibleIf": "{panel.pasture_gid2}='ESP.12.1_1'"
+        },
+        {
+         "value": "ESP.12.2.1_1",
+         "text": "n.a. (169)",
+         "visibleIf": "{panel.pasture_gid2}='ESP.12.2_1'"
+        },
+        {
+         "value": "ESP.12.2.2_1",
+         "text": "n.a. (170)",
+         "visibleIf": "{panel.pasture_gid2}='ESP.12.2_1'"
+        },
+        {
+         "value": "ESP.12.2.3_1",
+         "text": "n.a. (171)",
+         "visibleIf": "{panel.pasture_gid2}='ESP.12.2_1'"
+        },
+        {
+         "value": "ESP.12.2.4_1",
+         "text": "n.a. (172)",
+         "visibleIf": "{panel.pasture_gid2}='ESP.12.2_1'"
+        },
+        {
+         "value": "ESP.12.2.5_1",
+         "text": "n.a. (173)",
+         "visibleIf": "{panel.pasture_gid2}='ESP.12.2_1'"
+        },
+        {
+         "value": "ESP.12.2.6_1",
+         "text": "n.a. (174)",
+         "visibleIf": "{panel.pasture_gid2}='ESP.12.2_1'"
+        },
+        {
+         "value": "ESP.12.3.1_1",
+         "text": "n.a. (197)",
+         "visibleIf": "{panel.pasture_gid2}='ESP.12.3_1'"
+        },
+        {
+         "value": "ESP.12.3.2_1",
+         "text": "n.a. (198)",
+         "visibleIf": "{panel.pasture_gid2}='ESP.12.3_1'"
+        },
+        {
+         "value": "ESP.12.3.3_1",
+         "text": "n.a. (199)",
+         "visibleIf": "{panel.pasture_gid2}='ESP.12.3_1'"
+        },
+        {
+         "value": "ESP.12.4.1_1",
+         "text": "n.a. (207)",
+         "visibleIf": "{panel.pasture_gid2}='ESP.12.4_1'"
+        },
+        {
+         "value": "ESP.12.4.2_1",
+         "text": "n.a. (208)",
+         "visibleIf": "{panel.pasture_gid2}='ESP.12.4_1'"
+        },
+        {
+         "value": "ESP.12.4.3_1",
+         "text": "n.a. (209)",
+         "visibleIf": "{panel.pasture_gid2}='ESP.12.4_1'"
+        },
+        {
+         "value": "ESP.12.4.4_1",
+         "text": "n.a. (210)",
+         "visibleIf": "{panel.pasture_gid2}='ESP.12.4_1'"
+        },
+        {
+         "value": "ESP.13.1.1_1",
+         "text": "n.a. (51)",
+         "visibleIf": "{panel.pasture_gid2}='ESP.13.1_1'"
+        },
+        {
+         "value": "ESP.13.1.2_1",
+         "text": "n.a. (52)",
+         "visibleIf": "{panel.pasture_gid2}='ESP.13.1_1'"
+        },
+        {
+         "value": "ESP.13.1.3_1",
+         "text": "n.a. (53)",
+         "visibleIf": "{panel.pasture_gid2}='ESP.13.1_1'"
+        },
+        {
+         "value": "ESP.13.1.4_1",
+         "text": "n.a. (54)",
+         "visibleIf": "{panel.pasture_gid2}='ESP.13.1_1'"
+        },
+        {
+         "value": "ESP.13.1.5_1",
+         "text": "n.a. (55)",
+         "visibleIf": "{panel.pasture_gid2}='ESP.13.1_1'"
+        },
+        {
+         "value": "ESP.13.1.6_1",
+         "text": "n.a. (56)",
+         "visibleIf": "{panel.pasture_gid2}='ESP.13.1_1'"
+        },
+        {
+         "value": "ESP.13.1.7_1",
+         "text": "n.a. (57)",
+         "visibleIf": "{panel.pasture_gid2}='ESP.13.1_1'"
+        },
+        {
+         "value": "ESP.13.1.8_1",
+         "text": "n.a. (58)",
+         "visibleIf": "{panel.pasture_gid2}='ESP.13.1_1'"
+        },
+        {
+         "value": "ESP.13.1.9_1",
+         "text": "n.a. (59)",
+         "visibleIf": "{panel.pasture_gid2}='ESP.13.1_1'"
+        },
+        {
+         "value": "ESP.14.1.1_1",
+         "text": "n.a. (144)",
+         "visibleIf": "{panel.pasture_gid2}='ESP.14.1_1'"
+        },
+        {
+         "value": "ESP.14.2.1_1",
+         "text": "n.a. (144)",
+         "visibleIf": "{panel.pasture_gid2}='ESP.14.2_1'"
+        },
+        {
+         "value": "ESP.15.1.1_1",
+         "text": "Anguiano",
+         "visibleIf": "{panel.pasture_gid2}='ESP.15.1_1'"
+        },
+        {
+         "value": "ESP.15.1.2_1",
+         "text": "Arnedo",
+         "visibleIf": "{panel.pasture_gid2}='ESP.15.1_1'"
+        },
+        {
+         "value": "ESP.15.1.3_1",
+         "text": "n.a. (139)",
+         "visibleIf": "{panel.pasture_gid2}='ESP.15.1_1'"
+        },
+        {
+         "value": "ESP.15.1.4_1",
+         "text": "n.a. (140)",
+         "visibleIf": "{panel.pasture_gid2}='ESP.15.1_1'"
+        },
+        {
+         "value": "ESP.15.1.5_1",
+         "text": "n.a. (141)",
+         "visibleIf": "{panel.pasture_gid2}='ESP.15.1_1'"
+        },
+        {
+         "value": "ESP.15.1.6_1",
+         "text": "n.a. (142)",
+         "visibleIf": "{panel.pasture_gid2}='ESP.15.1_1'"
+        },
+        {
+         "value": "ESP.15.1.7_1",
+         "text": "n.a. (143)",
+         "visibleIf": "{panel.pasture_gid2}='ESP.15.1_1'"
+        },
+        {
+         "value": "ESP.15.1.8_1",
+         "text": "n.a. (65)",
+         "visibleIf": "{panel.pasture_gid2}='ESP.15.1_1'"
+        },
+        {
+         "value": "ESP.16.1.1_1",
+         "text": "n.a. (1)",
+         "visibleIf": "{panel.pasture_gid2}='ESP.16.1_1'"
+        },
+        {
+         "value": "ESP.16.1.2_1",
+         "text": "n.a. (2)",
+         "visibleIf": "{panel.pasture_gid2}='ESP.16.1_1'"
+        },
+        {
+         "value": "ESP.16.1.3_1",
+         "text": "n.a. (3)",
+         "visibleIf": "{panel.pasture_gid2}='ESP.16.1_1'"
+        },
+        {
+         "value": "ESP.16.1.4_1",
+         "text": "n.a. (4)",
+         "visibleIf": "{panel.pasture_gid2}='ESP.16.1_1'"
+        },
+        {
+         "value": "ESP.16.1.5_1",
+         "text": "n.a. (5)",
+         "visibleIf": "{panel.pasture_gid2}='ESP.16.1_1'"
+        },
+        {
+         "value": "ESP.16.1.6_1",
+         "text": "n.a. (6)",
+         "visibleIf": "{panel.pasture_gid2}='ESP.16.1_1'"
+        },
+        {
+         "value": "ESP.16.1.7_1",
+         "text": "n.a. (7)",
+         "visibleIf": "{panel.pasture_gid2}='ESP.16.1_1'"
+        },
+        {
+         "value": "ESP.16.2.1_1",
+         "text": "n.a. (124)",
+         "visibleIf": "{panel.pasture_gid2}='ESP.16.2_1'"
+        },
+        {
+         "value": "ESP.16.3.1_1",
+         "text": "n.a. (261)",
+         "visibleIf": "{panel.pasture_gid2}='ESP.16.3_1'"
+        },
+        {
+         "value": "ESP.16.3.2_1",
+         "text": "n.a. (262)",
+         "visibleIf": "{panel.pasture_gid2}='ESP.16.3_1'"
+        },
+        {
+         "value": "ESP.17.1.1_1",
+         "text": "Avilés",
+         "visibleIf": "{panel.pasture_gid2}='ESP.17.1_1'"
+        },
+        {
+         "value": "ESP.17.1.2_1",
+         "text": "Caudal",
+         "visibleIf": "{panel.pasture_gid2}='ESP.17.1_1'"
+        },
+        {
+         "value": "ESP.17.1.3_1",
+         "text": "Eo-Navia",
+         "visibleIf": "{panel.pasture_gid2}='ESP.17.1_1'"
+        },
+        {
+         "value": "ESP.17.1.4_1",
+         "text": "n.a. (108)",
+         "visibleIf": "{panel.pasture_gid2}='ESP.17.1_1'"
+        },
+        {
+         "value": "ESP.17.1.5_1",
+         "text": "n.a. (194)",
+         "visibleIf": "{panel.pasture_gid2}='ESP.17.1_1'"
+        },
+        {
+         "value": "ESP.17.1.6_1",
+         "text": "n.a. (195)",
+         "visibleIf": "{panel.pasture_gid2}='ESP.17.1_1'"
+        },
+        {
+         "value": "ESP.17.1.7_1",
+         "text": "Oriente",
+         "visibleIf": "{panel.pasture_gid2}='ESP.17.1_1'"
+        },
+        {
+         "value": "ESP.17.1.8_1",
+         "text": "Oviedo",
+         "visibleIf": "{panel.pasture_gid2}='ESP.17.1_1'"
+        },
+        {
+         "value": "ESP.18.1.1_1",
+         "text": "Altiplano",
+         "visibleIf": "{panel.pasture_gid2}='ESP.18.1_1'"
+        },
+        {
+         "value": "ESP.18.1.2_1",
+         "text": "Alto Guadalentin",
+         "visibleIf": "{panel.pasture_gid2}='ESP.18.1_1'"
+        },
+        {
+         "value": "ESP.18.1.3_1",
+         "text": "Bajo Guadalentín",
+         "visibleIf": "{panel.pasture_gid2}='ESP.18.1_1'"
+        },
+        {
+         "value": "ESP.18.1.4_1",
+         "text": "Campo de Cartagena",
+         "visibleIf": "{panel.pasture_gid2}='ESP.18.1_1'"
+        },
+        {
+         "value": "ESP.18.1.5_1",
+         "text": "Huera de Murcia",
+         "visibleIf": "{panel.pasture_gid2}='ESP.18.1_1'"
+        },
+        {
+         "value": "ESP.18.1.6_1",
+         "text": "Mar Menor",
+         "visibleIf": "{panel.pasture_gid2}='ESP.18.1_1'"
+        },
+        {
+         "value": "ESP.18.1.7_1",
+         "text": "Noroeste",
+         "visibleIf": "{panel.pasture_gid2}='ESP.18.1_1'"
+        },
+        {
+         "value": "ESP.18.1.8_1",
+         "text": "Oriental",
+         "visibleIf": "{panel.pasture_gid2}='ESP.18.1_1'"
+        },
+        {
+         "value": "ESP.18.1.9_1",
+         "text": "Rio Mua",
+         "visibleIf": "{panel.pasture_gid2}='ESP.18.1_1'"
+        },
+        {
+         "value": "ESP.18.1.10_1",
+         "text": "Valle de Ricote",
+         "visibleIf": "{panel.pasture_gid2}='ESP.18.1_1'"
+        },
+        {
+         "value": "ESP.18.1.11_1",
+         "text": "Vega Alta",
+         "visibleIf": "{panel.pasture_gid2}='ESP.18.1_1'"
+        },
+        {
+         "value": "ESP.18.1.12_1",
+         "text": "Vega Media",
+         "visibleIf": "{panel.pasture_gid2}='ESP.18.1_1'"
+        }
+       ],
+       "hideIfChoicesEmpty": true
+      },
+      {
+       "type": "checkbox",
+       "name": "pasture_waterpoints",
+       "visibleIf": "{pasture_goes} = true",
+       "title": "What type of water points are available?",
+       "choices": [
+        {
+         "value": "low",
+         "text": "Low waterer (<90cm)"
+        },
+        {
+         "value": "high",
+         "text": "High waterer (>90cm)"
+        },
+        {
+         "value": "waterhole",
+         "text": "Waterhole"
+        },
+        {
+         "value": "river",
+         "text": "River"
+        },
+        {
+         "value": "stream",
+         "text": "Stream (seasonal flow)"
+        }
+       ]
+      },
+      {
+       "type": "expression",
+       "name": "pasture_waterpoints_types_n",
+       "title": "Number of visit water point types",
+       "expression": "count({panel.pasture_waterpoints})"
+      },
+      {
+       "type": "panel",
+       "name": "pasture_waterpoints_p",
+       "elements": [
+        {
+         "type": "expression",
+         "name": "pasture_sum_p",
+         "title": "Sum percentage",
+         "titleLocation": "left",
+         "hideNumber": true,
+         "validators": [
+          {
+           "type": "expression",
+           "text": "Must add up to 100%",
+           "expression": "{panel.pasture_sum_p} = 100 or {survey_mode} = false"
+          }
+         ],
+         "expression": "{panel.pasture_low_p}+{panel.pasture_high_p}+{panel.pasture_waterhole_p}+{panel.pasture_river_p}+{panel.pasture_stream_p}",
+         "format": "{0}%",
+         "displayStyle": "decimal"
+        },
+        {
+         "type": "text",
+         "name": "pasture_low_p",
+         "visibleIf": "{panel.pasture_waterpoints} contains 'low'",
+         "title": "Low waterer (<90cm)",
+         "titleLocation": "left",
+         "resetValueIf": "{panel.pasture_waterpoints} contains 'low'",
+         "setValueIf": "{panel.pasture_waterpoints} notcontains 'low'",
+         "setValueExpression": "0",
+         "defaultValueExpression": "100/{panel.pasture_waterpoints_types_n}",
+         "inputType": "number",
+         "min": 0,
+         "max": 100,
+         "step": 5
+        },
+        {
+         "type": "text",
+         "name": "pasture_high_p",
+         "visibleIf": "{panel.pasture_waterpoints} contains 'high'",
+         "title": "High waterer (<90cm)",
+         "titleLocation": "left",
+         "resetValueIf": "{panel.pasture_waterpoints} contains 'high'",
+         "setValueIf": "{panel.pasture_waterpoints} notcontains 'high'",
+         "setValueExpression": "0",
+         "defaultValueExpression": "100/{panel.pasture_waterpoints_types_n}",
+         "inputType": "number",
+         "min": 0,
+         "max": 100,
+         "step": 5
+        },
+        {
+         "type": "text",
+         "name": "pasture_waterhole_p",
+         "visibleIf": "{panel.pasture_waterpoints} contains 'waterhole'",
+         "title": "Waterhole",
+         "titleLocation": "left",
+         "resetValueIf": "{panel.pasture_waterpoints} contains 'waterhole'",
+         "setValueIf": "{panel.pasture_waterpoints} notcontains 'waterhole'",
+         "setValueExpression": "0",
+         "defaultValueExpression": "100/{panel.pasture_waterpoints_types_n}",
+         "inputType": "number",
+         "min": 0,
+         "max": 100,
+         "step": 5
+        },
+        {
+         "type": "text",
+         "name": "pasture_river_p",
+         "visibleIf": "{panel.pasture_waterpoints} contains 'river'",
+         "title": "River",
+         "titleLocation": "left",
+         "resetValueIf": "{panel.pasture_waterpoints} contains 'river'",
+         "setValueIf": "{panel.pasture_waterpoints} notcontains 'river'",
+         "setValueExpression": "0",
+         "defaultValueExpression": "100/{panel.pasture_waterpoints_types_n}",
+         "inputType": "number",
+         "min": 0,
+         "max": 100,
+         "step": 5
+        },
+        {
+         "type": "text",
+         "name": "pasture_stream_p",
+         "visibleIf": "{panel.pasture_waterpoints} contains 'stream'",
+         "title": "Stream (seasonal flow)",
+         "titleLocation": "left",
+         "resetValueIf": "{panel.pasture_waterpoints} contains 'stream'",
+         "setValueIf": "{panel.pasture_waterpoints} notcontains 'stream'",
+         "setValueExpression": "0",
+         "defaultValueExpression": "100/{panel.pasture_waterpoints_types_n}",
+         "inputType": "number",
+         "min": 0,
+         "max": 100,
+         "step": 5
+        }
+       ],
+       "visible": false,
+       "visibleIf": "{pasture_goes} = true",
+       "title": "What percentage of the time do the cows use each type of water point? "
+      },
+      {
+       "type": "boolean",
+       "name": "pasture_mud",
+       "visibleIf": "{panel.pasture_waterpoints} anyof ['low', 'high']",
+       "title": "Is there usually mud around the waterers?"
+      },
+      {
+       "type": "dropdown",
+       "name": "pasture_mud_p",
+       "visibleIf": "{panel.pasture_mud}  = true",
+       "title": "What is the percentage of waterers with mud around them?",
+       "choices": [
+        "10%",
+        "20%",
+        "30%",
+        "40%",
+        "50%",
+        "60%",
+        "70%",
+        "80%",
+        "90%",
+        "100%"
+       ]
+      },
+      {
+       "type": "comment",
+       "name": "pasture_comments",
+       "title": "Comments about pasture (optional)",
+       "autoGrow": true
+      }
+     ],
+     "templateTitle": "Pasture {panelIndex}",
+     "templateTabTitle": "",
+     "panelCount": 1,
+     "maxPanelCount": 10
+    }
+   ],
+   "title": "Seasonal movements",
+   "navigationTitle": "Pasture"
+  },
+  {
+   "name": "visit",
+   "elements": [
+    {
+     "type": "checkbox",
+     "name": "visit_list",
+     "title": "Who enters the barn or comes into contact with the cattle?",
+     "choices": [
+      {
+       "value": "vet",
+       "text": "External veterinarians"
+      },
+      {
+       "value": "other_farmer",
+       "text": "Other farmers"
+      },
+      {
+       "value": "farm_worker",
+       "text": "Farm workers that own livestock or work on other farms"
+      },
+      {
+       "value": "farmer_visit",
+       "text": "Farmer that visits other farms (e.g. for purchasing animals)"
+      },
+      {
+       "value": "animal_professional",
+       "text": "Other animal professionals (e.g. hoof trimmer)"
+      },
+      {
+       "value": "other_professional",
+       "text": "Other professionals (e.g. electrician, plumber...)"
+      }
+     ]
+    },
+    {
+     "type": "expression",
+     "name": "visit_type_n",
+     "visible": false,
+     "title": "Number of visit types",
+     "clearIfInvisible": "none",
+     "expression": "count({visit_list})"
+    },
+    {
+     "type": "paneldynamic",
+     "name": "visit_info",
+     "title": "Visitors",
+     "bindings": {
+      "pos": {
+       "pos": {
+        "pos": {
+         "pos": {
+          "pos": {
+           "pos": {
+            "pos": {
+             "pos": {
+              "start": 160950,
+              "end": 161021
+             },
+             "start": 160271,
+             "end": 161090
+            },
+            "start": 160162,
+            "end": 161156
+           },
+           "start": 165067,
+           "end": 161219
+          },
+          "start": 164593,
+          "end": 161279
+         },
+         "start": 163388,
+         "end": 161336
+        },
+        "start": 157037,
+        "end": 161389
+       },
+       "start": 57288,
+       "end": 161432
+      },
+      "panelCount": "visit_type_n"
+     },
+     "templateElements": [
+      {
+       "type": "expression",
+       "name": "visit_panel_n",
+       "visible": false,
+       "title": "visit_panel_n",
+       "expression": "{panelIndex}"
+      },
+      {
+       "type": "dropdown",
+       "name": "visit_type",
+       "title": "Type of visitor",
+       "defaultValueExpression": "iif({panel.visit_panel_n}==0, {visit_list[0]}, \niif({panel.visit_panel_n}==1, {visit_list[1]}, \niif({panel.visit_panel_n}==2, {visit_list[2]},\niif({panel.visit_panel_n}==3, {visit_list[3]},\niif({panel.visit_panel_n}==4, {visit_list[4]},\niif({panel.visit_panel_n}==5, {visit_list[5]},\niif({panel.visit_panel_n}==6, {visit_list[6]},\niif({panel.visit_panel_n}==7, {visit_list[7]},\niif({panel.visit_panel_n}==8, {visit_list[8]},'error'))",
+       "choicesFromQuestion": "visit_list",
+       "choices": [
+        "Item 1",
+        "Item 2",
+        "Item 3"
+       ],
+       "choicesFromQuestionMode": "selected",
+       "allowClear": false
+      },
+      {
+       "type": "radiogroup",
+       "name": "visit_frequency",
+       "title": "Visit frequency",
+       "description": "Select the shortest time period applicable",
+       "choices": [
+        {
+         "value": "daily",
+         "text": "Daily or several times a week"
+        },
+        {
+         "value": "weekly",
+         "text": "At least once a week"
+        },
+        {
+         "value": "monthly",
+         "text": "At least once a month"
+        },
+        {
+         "value": "few",
+         "text": "At least several times a year"
+        },
+        {
+         "value": "rare",
+         "text": "Once a year or less"
+        }
+       ]
+      },
+      {
+       "type": "checkbox",
+       "name": "visit_livestock_type",
+       "visibleIf": "{panel.visit_type} anyof ['other_farmer', 'farm_worker', 'other', 'farmer_visit']",
+       "title": "What type of livestock they own or work with?",
+       "setValueIf": "{panel.visit_panel_n} anyof ['vet', 'animal_professional ']",
+       "setValueExpression": "cattle",
+       "choices": [
+        {
+         "value": "cattle",
+         "text": "Cattle"
+        },
+        {
+         "value": "sheep",
+         "text": "Sheep"
+        },
+        {
+         "value": "goats",
+         "text": "Goats"
+        },
+        {
+         "value": "pigs",
+         "text": "Pigs"
+        },
+        {
+         "value": "poultry",
+         "text": "Poultry"
+        }
+       ]
+      },
+      {
+       "type": "radiogroup",
+       "name": "visit_boots_enter",
+       "title": "Do you provide them boots?",
+       "choices": [
+        {
+         "value": "never",
+         "text": "Always"
+        },
+        {
+         "value": "sometimes",
+         "text": "Sometimes"
+        },
+        {
+         "value": "always",
+         "text": "Never"
+        }
+       ]
+      },
+      {
+       "type": "radiogroup",
+       "name": "visit_boots_cleaning",
+       "visibleIf": "{panel.visit_boots_enter} anyof ['sometimes', 'always']",
+       "title": "If they use their own boots, are they clean and disinfected when they enter the farm?",
+       "choices": [
+        {
+         "value": "always",
+         "text": "Always"
+        },
+        {
+         "value": "sometimes",
+         "text": "Sometimes"
+        },
+        {
+         "value": "never",
+         "text": "Never"
+        },
+        {
+         "value": "unk",
+         "text": "Don't know"
+        }
+       ]
+      },
+      {
+       "type": "radiogroup",
+       "name": "visit_equipment_enter",
+       "title": "Do they bring their own equipment that they have used on other farms?",
+       "choices": [
+        {
+         "value": "always",
+         "text": "Always"
+        },
+        {
+         "value": "sometimes",
+         "text": "Sometimes"
+        },
+        {
+         "value": "never",
+         "text": "Never"
+        }
+       ]
+      },
+      {
+       "type": "radiogroup",
+       "name": "visit_equipment_cleaning",
+       "visibleIf": "{panel.visit_equipment_enter} = TRUE",
+       "title": "If they use their own equipment, is it clean and disinfected when they enter the farm?",
+       "choices": [
+        {
+         "value": "always",
+         "text": "Always"
+        },
+        {
+         "value": "sometimes",
+         "text": "Sometimes"
+        },
+        {
+         "value": "never",
+         "text": "Never"
+        },
+        {
+         "value": "unk",
+         "text": "Don't know"
+        }
+       ]
+      }
+     ],
+     "templateTabTitle": "",
+     "allowAddPanel": false,
+     "allowRemovePanel": false,
+     "maxPanelCount": 10
+    }
+   ],
+   "title": "People visits"
+  },
+  {
+   "name": "visits_veh",
+   "elements": [
+    {
+     "type": "checkbox",
+     "name": "visit_veh_list",
+     "title": "What vehicles enter into the farm perimeter?",
+     "choices": [
+      {
+       "value": "slaughter_veh",
+       "text": "Slaughterhouse vehicle"
+      },
+      {
+       "value": "rendering_veh",
+       "text": "Rendering vehicle"
+      },
+      {
+       "value": "feed_veh",
+       "text": "Feed vehicle"
+      },
+      {
+       "value": "milk_veh",
+       "text": "Milk collection vehicle"
+      },
+      {
+       "value": "calf_veh",
+       "text": "Calf transport vehicle"
+      },
+      {
+       "value": "adult_veh",
+       "text": "Adult cattle transport vehicle"
+      }
+     ]
+    },
+    {
+     "type": "expression",
+     "name": "visit_veh_type_n",
+     "visible": false,
+     "title": "Number of visit types",
+     "clearIfInvisible": "none",
+     "expression": "count({visit_veh_list})"
+    },
+    {
+     "type": "paneldynamic",
+     "name": "visit_veh_info",
+     "title": "Vehicles entering the farm",
+     "bindings": {
+      "pos": {
+       "pos": {
+        "pos": {
+         "pos": {
+          "pos": {
+           "pos": {
+            "pos": {
+             "pos": {
+              "start": 167218,
+              "end": 167289
+             },
+             "start": 166417,
+             "end": 167358
+            },
+            "start": 166219,
+            "end": 167424
+           },
+           "start": 171278,
+           "end": 167487
+          },
+          "start": 170719,
+          "end": 167547
+         },
+         "start": 169333,
+         "end": 167604
+        },
+        "start": 162682,
+        "end": 167657
+       },
+       "start": 62101,
+       "end": 167704
+      },
+      "panelCount": "visit_veh_type_n"
+     },
+     "templateElements": [
+      {
+       "type": "expression",
+       "name": "visit_veh_panel_n",
+       "visible": false,
+       "title": "visit_veh_panel_n",
+       "expression": "{panelIndex}"
+      },
+      {
+       "type": "dropdown",
+       "name": "visit_veh_type",
+       "title": "Type of vehicle",
+       "defaultValueExpression": "iif({panel.visit_veh_panel_n}==0, {visit_veh_list[0]}, \niif({panel.visit_veh_panel_n}==1, {visit_veh_list[1]}, \niif({panel.visit_veh_panel_n}==2, {visit_veh_list[2]},\niif({panel.visit_veh_panel_n}==3, {visit_veh_list[3]},\niif({panel.visit_veh_panel_n}==4, {visit_veh_list[4]},\niif({panel.visit_veh_panel_n}==5, {visit_veh_list[5]},\niif({panel.visit_veh_panel_n}==6, {visit_veh_list[6]},\niif({panel.visit_veh_panel_n}==7, {visit_veh_list[7]},\niif({panel.visit_veh_panel_n}==8, {visit_veh_list[8]},'error'))",
+       "choicesFromQuestion": "visit_veh_list",
+       "choices": [
+        "Item 1",
+        "Item 2",
+        "Item 3"
+       ],
+       "choicesFromQuestionMode": "selected",
+       "allowClear": false
+      },
+      {
+       "type": "boolean",
+       "name": "visit_veh_own",
+       "visibleIf": "{panel.visit_veh_type} anyof ['slaughter_veh', 'calf_veh', 'adult_veh']",
+       "title": "Is it a vehicle that you own and do not share with anyone?",
+       "description": "i.e. only animals from your farm use it",
+       "setValueIf": "{panel.visit_veh_type} anyof ['rendering_veh', 'feed_veh', 'milk_veh']",
+       "setValueExpression": "false"
+      },
+      {
+       "type": "radiogroup",
+       "name": "visit_veh_frequency",
+       "visibleIf": "{panel.visit_veh_own} = false",
+       "title": "Visit frequency",
+       "choices": [
+        {
+         "value": "daily",
+         "text": "Daily or several times a week"
+        },
+        {
+         "value": "weekly",
+         "text": "At least once a week"
+        },
+        {
+         "value": "monthly",
+         "text": "At least once a month"
+        },
+        {
+         "value": "few",
+         "text": "At least several times a year"
+        },
+        {
+         "value": "rare",
+         "text": "Once a year or less"
+        }
+       ]
+      },
+      {
+       "type": "boolean",
+       "name": "visit_veh_direct",
+       "visibleIf": "{panel.visit_veh_type} anyof ['slaughter_veh', 'calf_veh', 'adult_veh'] and {panel.visit_veh_own} = false",
+       "title": "Does the driver come into contact with your animals?"
+      },
+      {
+       "type": "radiogroup",
+       "name": "visit_veh_boots_enter",
+       "visibleIf": "{panel.visit_veh_direct} = TRUE and {panel.visit_veh_own} = false",
+       "title": "Do you provide them boots?",
+       "choices": [
+        {
+         "value": "never",
+         "text": "Always"
+        },
+        {
+         "value": "sometimes",
+         "text": "Sometimes"
+        },
+        {
+         "value": "always",
+         "text": "Never"
+        }
+       ]
+      },
+      {
+       "type": "radiogroup",
+       "name": "visit_veh_boots_cleaning",
+       "visibleIf": "{panel.visit_veh_boots_enter} anyof ['sometimes', 'always'] and {panel.visit_veh_own} = false",
+       "title": "If they use their own boots, are they clean and disinfected when they enter the farm?",
+       "choices": [
+        {
+         "value": "always",
+         "text": "Always"
+        },
+        {
+         "value": "sometimes",
+         "text": "Sometimes"
+        },
+        {
+         "value": "never",
+         "text": "Never"
+        },
+        {
+         "value": "unk",
+         "text": "Don't know"
+        }
+       ]
+      }
+     ],
+     "templateTabTitle": "",
+     "allowAddPanel": false,
+     "allowRemovePanel": false,
+     "maxPanelCount": 10
+    }
+   ],
+   "title": "Vehicle visits"
+  },
+  {
+   "name": "trasnport",
+   "elements": [
+    {
+     "type": "boolean",
+     "name": "veh_farm",
+     "title": "Does the farm have its own vehicles for animal transport?"
+    },
+    {
+     "type": "text",
+     "name": "veh_n",
+     "visibleIf": "{veh_farm} = true",
+     "title": "Number of vehicles",
+     "defaultValue": 1,
+     "inputType": "number",
+     "min": 1,
+     "max": 10,
+     "maxErrorText": "You can only register up to {0} vehicles. Please register the {0} vehicles you use most often.",
+     "step": 1
+    },
+    {
+     "type": "paneldynamic",
+     "name": "veh_info",
+     "visibleIf": "{veh_farm} = true",
+     "title": "Vehicle information",
+     "bindings": {
+      "pos": {
+       "pos": {
+        "pos": {
+         "pos": {
+          "pos": {
+           "pos": {
+            "pos": {
+             "pos": {
+              "start": 172259,
+              "end": 172330
+             },
+             "start": 171336,
+             "end": 172399
+            },
+            "start": 171049,
+            "end": 172465
+           },
+           "start": 176184,
+           "end": 172528
+          },
+          "start": 175540,
+          "end": 172588
+         },
+         "start": 173450,
+         "end": 172645
+        },
+        "start": 166583,
+        "end": 172698
+       },
+       "start": 50573,
+       "end": 172734
+      },
+      "panelCount": "veh_n"
+     },
+     "templateElements": [
+      {
+       "type": "dropdown",
+       "name": "veh_id",
+       "title": "Vehicle key ",
+       "description": "Remember this key to identify this vehicle in the movements survey",
+       "requiredIf": "{veh_farm} = true and {survey_mode} = true",
+       "choices": [
+        {
+         "value": "a",
+         "text": "🚚 Vehicle A"
+        },
+        {
+         "value": "b",
+         "text": "🛻 Vehicle B"
+        },
+        {
+         "value": "c",
+         "text": "🚛 Vehicle C"
+        },
+        {
+         "value": "d",
+         "text": "🚌 Vehicle D"
+        },
+        {
+         "value": "e",
+         "text": "🛺 Vehicle E"
+        },
+        {
+         "value": "f",
+         "text": "🚜 Vehicle F"
+        },
+        {
+         "value": "g",
+         "text": "🚙 Vehicle G"
+        },
+        {
+         "value": "h",
+         "text": "🚐 Vehicle H"
+        },
+        {
+         "value": "i",
+         "text": "🚗 Vehicle H"
+        }
+       ]
+      },
+      {
+       "type": "text",
+       "name": "veh_name",
+       "title": "Vehicle name",
+       "description": "Open field to clarify which vehicle you are referring to"
+      },
+      {
+       "type": "dropdown",
+       "name": "veh_size",
+       "title": "Vehicle size",
+       "choices": [
+        {
+         "value": "10",
+         "text": "10 m2"
+        },
+        {
+         "value": "20",
+         "text": "20 m2"
+        },
+        {
+         "value": "30",
+         "text": "30 m2"
+        },
+        {
+         "value": "40",
+         "text": "40 m2"
+        },
+        {
+         "value": "50",
+         "text": "50 m2"
+        },
+        {
+         "value": "60",
+         "text": "60 m2"
+        },
+        {
+         "value": "70",
+         "text": "70 m2"
+        },
+        {
+         "value": "80",
+         "text": "80 m2"
+        },
+        {
+         "value": "90",
+         "text": "90 m2"
+        },
+        {
+         "value": "100",
+         "text": "100 m2"
+        },
+        {
+         "value": "110",
+         "text": "110 m2"
+        },
+        {
+         "value": "120",
+         "text": "120 m2"
+        },
+        {
+         "value": "130",
+         "text": "130 m2"
+        },
+        {
+         "value": "140",
+         "text": "140 m2"
+        },
+        {
+         "value": "150",
+         "text": "150 m2"
+        },
+        {
+         "value": "160",
+         "text": "160 m2"
+        },
+        {
+         "value": "170",
+         "text": "170 m2"
+        },
+        {
+         "value": "180",
+         "text": "180 m2"
+        },
+        {
+         "value": "190",
+         "text": "190 m2"
+        },
+        {
+         "value": "200",
+         "text": "200 m2"
+        }
+       ]
+      },
+      {
+       "type": "boolean",
+       "name": "veh_otherfarms",
+       "title": "Is the vehicle shared with other ruminant farms?"
+      },
+      {
+       "type": "checkbox",
+       "name": "veh_otherfarms_species",
+       "visibleIf": "{panel.veh_otherfarms} = TRUE",
+       "title": "With farms of which species?",
+       "choices": [
+        {
+         "value": "cattle",
+         "text": "Cattle"
+        },
+        {
+         "value": "sheep",
+         "text": "Sheep"
+        },
+        {
+         "value": "goats",
+         "text": "Goats"
+        }
+       ]
+      },
+      {
+       "type": "panel",
+       "name": "veh_otherfarms_n",
+       "elements": [
+        {
+         "type": "text",
+         "name": "veh_otherfarms_cattle_n",
+         "visibleIf": "{panel.veh_otherfarms_species} contains 'cattle'",
+         "title": "Cattle farms",
+         "inputType": "number",
+         "step": 1
+        },
+        {
+         "type": "text",
+         "name": "veh_otherfarms_sruminants_n",
+         "visibleIf": "{panel.veh_otherfarms_species} anyof ['sheep', 'goats']",
+         "title": "Small ruminants farms",
+         "inputType": "number"
+        }
+       ],
+       "visibleIf": "{panel.veh_otherfarms} = TRUE",
+       "title": "Number of farms"
+      },
+      {
+       "type": "radiogroup",
+       "name": "veh_cleaning",
+       "title": "When is the vehicle cleaned?",
+       "choices": [
+        {
+         "value": "each",
+         "text": "Each time the vehicle is used"
+        },
+        {
+         "value": "frequency",
+         "text": "From time to  time"
+        },
+        {
+         "value": "never",
+         "text": "Never"
+        }
+       ]
+      }
+     ],
+     "templateTitle": "Vehicle {panelIndex}",
+     "panelCount": 1,
+     "maxPanelCount": 10
+    }
+   ],
+   "title": "Animal transport",
+   "navigationTitle": "Animal transport"
+  },
+  {
+   "name": "complete_survey",
+   "elements": [
+    {
+     "type": "comment",
+     "name": "complete_comments",
+     "title": "Additional comments and feedback about the Demo survey",
+     "autoGrow": true
+    }
+   ],
+   "title": "Complete survey"
+  }
+ ],
+ "sendResultOnPageNext": true,
+ "progressBarType": "buttons",
+ "progressBarShowPageTitles": true,
+ "showTOC": true,
+ "checkErrorsMode": "onValueChanged",
+ "autoGrowComment": true
+}

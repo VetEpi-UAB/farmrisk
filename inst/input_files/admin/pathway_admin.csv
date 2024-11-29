@@ -1,0 +1,11 @@
+﻿pathway;module
+purchase;mod_farm
+purchase;mod_transport
+purchase;mod_quarantine
+pasture;mod_farm
+pasture;mod_transport
+pasture;mod_quarantine
+pasture;mod_wildlife
+pasture;mod_pasture
+pasture;mod_neighbours
+visits;mod_visits

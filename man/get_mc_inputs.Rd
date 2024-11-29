@@ -4,7 +4,7 @@
 \alias{get_mc_inputs}
 \title{Get Monte Carlo Input Variables from CSV Files}
 \usage{
-get_mc_inputs(path = "input_files/", mctable = mcnode_admin)
+get_mc_inputs(path = input_path, mctable = mcnode_admin)
 }
 \arguments{
 \item{path}{Character string specifying the path to input files. Default is "input_files/".}

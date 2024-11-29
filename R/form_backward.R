@@ -58,7 +58,7 @@ form_version <- function(data) {
 
 bsg_backward <- function(data) {
   # Get latest version from forms directory
-  version_list <- list.files("forms", pattern="^bsg_form.*\\.json$")
+  version_list <- list.files(forms_path, pattern="^bsg_form.*\\.json$")
   last_version <- max(form_version(version_list))
   last_version_name <- gsub("bsg_form_|\\.json","",
                             version_list[form_version(version_list)==last_version])
@@ -118,7 +118,7 @@ bsg_backward <- function(data) {
 
 mov_backward <- function(data) {
   # Get latest version from forms directory
-  version_list <- list.files("forms", pattern="^mov_form.*\\.json$")
+  version_list <- list.files(forms_path, pattern="^mov_form.*\\.json$")
   last_version <- max(form_version(version_list))
   last_version_name <- gsub("mov_form_|\\.json","",
                             version_list[form_version(version_list)==last_version])

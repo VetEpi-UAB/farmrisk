@@ -17,7 +17,7 @@ save_mc_summary <- function(mcmodule, mcnodes) {
   }
   
   # Create output directory if needed
-  output_folder_id <- file.path("output_files", farm_id)
+  output_folder_id <- file.path(output_path, farm_id)
   dir.create(output_folder_id, showWarnings = FALSE, recursive = TRUE)
   
   # Save summaries to CSV
@@ -38,7 +38,7 @@ save_mc_summary <- function(mcmodule, mcnodes) {
 #' @return None (saves files to disk)
 save_table_summary <- function(tables) {
   # Create output directory if needed  
-  output_folder_id <- file.path("output_files", farm_id)
+  output_folder_id <- file.path(output_path, farm_id)
   dir.create(output_folder_id, showWarnings = FALSE, recursive = TRUE)
   
   # Save tables to CSV

@@ -15,10 +15,10 @@
 #'   mc_inputs <- get_mc_inputs()
 #'   mc_inputs <- get_mc_inputs(path = "my_files/", mctable = my_mc_table)
 #' }
-get_mc_inputs <- function(path = "input_files/", mctable = mcnode_admin) {
+get_mc_inputs <- function(path = input_path, mctable = mcnode_admin) {
   # Load data files as list
   suppressMessages(
-    data_list <- load_input_files(user_id = user_id, 
+    data_list <- load_input_files(farm_id = farm_id,
                                   path = path, 
                                   create_df = FALSE)
     

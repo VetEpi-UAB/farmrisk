@@ -4,27 +4,12 @@
 \alias{set_up_simulation}
 \title{Set up simulation for farm risk analysis}
 \usage{
-set_up_simulation(
-  user_id,
-  calc_summary = TRUE,
-  admin_wif = TRUE,
-  model_analysis = FALSE,
-  alternative_params = NULL,
-  alternative_formula = NULL
-)
+set_up_simulation(user_id = NULL, farm_id = NULL, ...)
 }
 \arguments{
 \item{user_id}{Character string. User identifier for the simulation.}
 
-\item{calc_summary}{Logical. Whether to calculate summary for all nodes. Default: TRUE}
-
-\item{admin_wif}{Logical. Whether to run all admin what-if scenarios. Default: TRUE}
-
-\item{model_analysis}{Logical. Whether to run model analysis. Default: FALSE}
-
-\item{alternative_params}{List. Optional alternative parameters for simulation}
-
-\item{alternative_formula}{Formula. Optional formula for parameter modifications}
+\item{farm_id}{Character. Unique identifier for the farm}
 }
 \value{
 None. All variables are assigned to parent environment

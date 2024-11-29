@@ -1,0 +1,13 @@
+﻿module_0;module_1;module_2;module_3;module_4;add_key;hg_0;hg_1;hg_2;hg_3;hg_4
+intro;no_mov;visit;;;visit_veh;pathogen;visit_type;fomite_type;;
+intro;no_mov;surroundings;wildlife;area;;pathogen;wildlife_species;;;
+intro;no_mov;surroundings;wildlife;water;;pathogen;wildlife_species;risk_point;;
+intro;no_mov;surroundings;neighbour;;;pathogen;;;;
+intro;mov;pasture;transport;dir_contact;;pathogen;movement_id; region_code;animal_category;
+intro;mov;pasture;transport;indir_contact;;pathogen;movement_id; region_code;animal_category;
+intro;mov;pasture;mix;;;pathogen;movement_id; region_code;animal_category;health_status
+intro;mov;pasture;wildlife;water;;pathogen;wildlife_species;risk_point;;
+intro;mov;pasture;wildlife;area;;pathogen;wildlife_species;;;
+intro;mov;purchase;transport;dir_contact;;pathogen;movement_id; region_code;animal_category;health_status
+intro;mov;purchase;transport;indir_contact;;pathogen;movement_id; region_code;animal_category;health_status
+intro;mov;purchase;farm;;;pathogen;movement_id; region_code;animal_category;health_status

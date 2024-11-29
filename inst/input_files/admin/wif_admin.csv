@@ -1,0 +1,20 @@
+pathway;key;wif;lit;description
+current;0;0;Current;Current scenario
+purchase;PU1;test;Test before transport;Test before transport
+purchase;PU2;own_veh;Own vehicle;Use, and not share, your own vehicle (purchase)
+purchase;PU3;no_share_veh;No shared purchase transport;No shared purchase transport
+purchase;PU4;clean;Vehicle disinfection;Clean and disinfect the vehicle between transports
+purchase;PU5;quarantine;Quarantine;Quarantine new animals
+purchase;PU6;quarantine+test;Quarantine testing;Test during quarantine
+purchase;PU7;quarantine+clean;Quarantine hygiene;Clean and disinfect quarantine equipment
+purchase;PU8;quarantine+exclusive_material;Exclusive quarantine material;Exclusive quarantine material
+purchase;PU9;quarantine+test+exclusive_material;Comprehensive quarantine;Test during quarantine with exclusive material
+pasture;PA1;wif_no_share_veh;No shared pasture transport;No shared pasture transport
+pasture;PA2;wif_test;Screening before pasture;Screening before pasture
+pasture;PA3;wif_no_share_pasture;No share pasture;No share pasture with other farms
+visit;VI1;no_fomites;No vehicle entry;Do not allow vehicles to enter in the farm perimeter
+visit;VI2;no_fomites;Provide boots;Provide boots to all visitors
+visit;VI3;no_fomites;No shared equipment;Do not share equipment with other farms
+neighbour;NE1;no_dc;No neighbor contact;Do not allow direct contact with neighbour farms
+wildlife;WI1;no_mud;Avoid mud on wateres;Avoid mud on wateres
+wildlife;WI2;high_waterer;Elevated watereres;Use high wateres
