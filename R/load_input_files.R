@@ -56,9 +56,11 @@ load_input_files <- function(user_id = NULL,
     # Store user information in envir environment
     assign("farm_id", user_config[1,1], envir = envir)
     assign("risk_days", user_config[1,2] * 30, envir = envir)
+
     
     # Process user files
-    user_path <- paste0(path, "user/", get("farm_id", envir = envir), "/")
+    farm_id<-user_config[1,1]
+    user_path <- paste0(path, "user/", farm_id, "/")
     user_files_info <- file.info(paste0(user_path, list.files(user_path)))
     
     # Check for file modifications
@@ -67,27 +69,26 @@ load_input_files <- function(user_id = NULL,
     if (process_json && from_json) {
       process_json_files(user_path, envir)
     }
+  }
     
-    # Update file lists
+    
+
+  if(!is.null(farm_id)){
+    #Stop if farm data was requested and not found
+    if(!farm_id%in%list.files(path = paste0(path, "user/"))) stop(farm_id," not found in ",paste0(path, "user/"))
+                                                                 
+    # Process admin files
+    user_path <- paste0(path, "user/",farm_id,"/")
     user_names <- list.files(path = user_path, pattern = "*.csv", recursive = TRUE)
     user_files <- paste(user_path, user_names, sep = "")
+    
     file_names <- c(admin_names, user_names)
     file_list <- c(admin_files, user_files)
-    
-  } else {
-    if(!is.null(farm_id)){
-      # Process admin files
-      user_path <- paste0(path, "user/",farm_id,"/")
-      user_names <- list.files(path = user_path, pattern = "*.csv", recursive = TRUE)
-      user_files <- paste(user_path, user_names, sep = "")
-      
-      file_names <- c(admin_names, user_names)
-      file_list <- c(admin_files, user_files)
-    }else{
-      file_names <- admin_names
-      file_list <- admin_files
-    }
+  }else{
+    file_names <- admin_names
+    file_list <- admin_files
   }
+    
   
   # Load all CSV files
   data_list <- lapply(
@@ -97,6 +98,7 @@ load_input_files <- function(user_id = NULL,
     stringsAsFactors = TRUE,
     na.strings = c(NA, "NA", "")
   )
+  
   names(data_list) <- sub(".csv", "", file_names)
   
   # Assign data to envir environment
@@ -104,7 +106,13 @@ load_input_files <- function(user_id = NULL,
     for (name in names(data_list)) {
       assign(name, data_list[[name]], envir = envir)
     }
-    message("\nData loaded for user: ", user_id)
+    message("\nAdmin data loaded")
+    if(is.null(user_id)){
+      message("\nUser data loaded: ", farm_id)
+    }else{
+      message("\nUser data loaded: ", farm_id," (user: ",user_id,")")
+    }
+    
   }
   
   invisible(data_list)

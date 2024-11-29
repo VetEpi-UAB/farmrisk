@@ -1,81 +1,81 @@
 "pathogen";"scenario_id";"total";"yesno";"value"
 "IBR";"0";0.999999;"yes";0.999999
 "IBR";"0";0.999999;"no";1.00000000002876e-06
-"IBR";"Screening before pasture";0.2937681307236;"yes";0.2937681307236
-"IBR";"Screening before pasture";0.2937681307236;"no";0.7062318692764
-"IBR";"No share pasture";0.0978043369901086;"yes";0.0978043369901086
-"IBR";"No share pasture";0.0978043369901086;"no";0.902195663009891
-"IBR";"Test before transport";0.963809125163816;"yes";0.963809125163816
-"IBR";"Test before transport";0.963809125163816;"no";0.0361908748361839
-"IBR";"No shared purchase transport";0.998190184903713;"yes";0.998190184903713
-"IBR";"No shared purchase transport";0.998190184903713;"no";0.00180981509628697
+"IBR";"Screening before pasture";0.285400743414768;"yes";0.285400743414768
+"IBR";"Screening before pasture";0.285400743414768;"no";0.714599256585232
+"IBR";"No share pasture";0.096015830351608;"yes";0.096015830351608
+"IBR";"No share pasture";0.096015830351608;"no";0.903984169648392
+"IBR";"Test before transport";0.966734536550531;"yes";0.966734536550531
+"IBR";"Test before transport";0.966734536550531;"no";0.0332654634494686
+"IBR";"No shared purchase transport";0.999789387238016;"yes";0.999789387238016
+"IBR";"No shared purchase transport";0.999789387238016;"no";0.000210612761984197
 "IBR";"Quarantine new animals";0.999999;"yes";0.999999
 "IBR";"Quarantine new animals";0.999999;"no";1.00000000002876e-06
-"IBR";"Test during quarantine";0.941214136866348;"yes";0.941214136866348
-"IBR";"Test during quarantine";0.941214136866348;"no";0.0587858631336521
+"IBR";"Test during quarantine";0.943065060486095;"yes";0.943065060486095
+"IBR";"Test during quarantine";0.943065060486095;"no";0.0569349395139054
 "IBR";"Exclusive quarantine material";0.999999;"yes";0.999999
 "IBR";"Exclusive quarantine material";0.999999;"no";1.00000000002876e-06
-"IBR";"Test during quarantine with exclusive material";0.940272129335515;"yes";0.940272129335515
-"IBR";"Test during quarantine with exclusive material";0.940272129335515;"no";0.0597278706644849
+"IBR";"Test during quarantine with exclusive material";0.94388069464545;"yes";0.94388069464545
+"IBR";"Test during quarantine with exclusive material";0.94388069464545;"no";0.0561193053545497
 "BVD";"0";0.999999;"yes";0.999999
 "BVD";"0";0.999999;"no";1.00000000002876e-06
 "BVD";"Avoid mud on wateres";0.999999;"yes";0.999999
 "BVD";"Avoid mud on wateres";0.999999;"no";1.00000000002876e-06
 "BVD";"Use high wateres";0.999999;"yes";0.999999
 "BVD";"Use high wateres";0.999999;"no";1.00000000002876e-06
-"BVD";"Screening before pasture";0.590482484362643;"yes";0.590482484362643
-"BVD";"Screening before pasture";0.590482484362643;"no";0.409517515637357
-"BVD";"No share pasture";0.109184133977716;"yes";0.109184133977716
-"BVD";"No share pasture";0.109184133977716;"no";0.890815866022284
-"BVD";"Test before transport";0.996683306981647;"yes";0.996683306981647
-"BVD";"Test before transport";0.996683306981647;"no";0.00331669301835336
+"BVD";"Screening before pasture";0.593856048622879;"yes";0.593856048622879
+"BVD";"Screening before pasture";0.593856048622879;"no";0.406143951377121
+"BVD";"No share pasture";0.10971535612106;"yes";0.10971535612106
+"BVD";"No share pasture";0.10971535612106;"no";0.89028464387894
+"BVD";"Test before transport";0.996646075429965;"yes";0.996646075429965
+"BVD";"Test before transport";0.996646075429965;"no";0.00335392457003469
 "BVD";"No shared purchase transport";0.999999;"yes";0.999999
 "BVD";"No shared purchase transport";0.999999;"no";1.00000000002876e-06
 "BVD";"Quarantine new animals";0.999999;"yes";0.999999
 "BVD";"Quarantine new animals";0.999999;"no";1.00000000002876e-06
-"BVD";"Test during quarantine";0.996666117791393;"yes";0.996666117791393
-"BVD";"Test during quarantine";0.996666117791393;"no";0.00333388220860742
+"BVD";"Test during quarantine";0.996597007055285;"yes";0.996597007055285
+"BVD";"Test during quarantine";0.996597007055285;"no";0.00340299294471524
 "BVD";"Exclusive quarantine material";0.999999;"yes";0.999999
 "BVD";"Exclusive quarantine material";0.999999;"no";1.00000000002876e-06
-"BVD";"Test during quarantine with exclusive material";0.996676897148286;"yes";0.996676897148286
-"BVD";"Test during quarantine with exclusive material";0.996676897148286;"no";0.00332310285171367
+"BVD";"Test during quarantine with exclusive material";0.996602528574022;"yes";0.996602528574022
+"BVD";"Test during quarantine with exclusive material";0.996602528574022;"no";0.00339747142597813
 "TB";"0";0.999999;"yes";0.999999
 "TB";"0";0.999999;"no";1.00000000002876e-06
-"TB";"Avoid mud on wateres";0.99069939686359;"yes";0.99069939686359
-"TB";"Avoid mud on wateres";0.99069939686359;"no";0.00930060313640968
-"TB";"Use high wateres";0.998083492783555;"yes";0.998083492783555
-"TB";"Use high wateres";0.998083492783555;"no";0.00191650721644521
-"TB";"Screening before pasture";0.396848613609638;"yes";0.396848613609638
-"TB";"Screening before pasture";0.396848613609638;"no";0.603151386390361
-"TB";"No share pasture";0.0520664030272182;"yes";0.0520664030272182
-"TB";"No share pasture";0.0520664030272182;"no";0.947933596972782
-"TB";"Test before transport";0.998235573862778;"yes";0.998235573862778
-"TB";"Test before transport";0.998235573862778;"no";0.00176442613722239
-"TB";"No shared purchase transport";0.999590652503928;"yes";0.999590652503928
-"TB";"No shared purchase transport";0.999590652503928;"no";0.000409347496072354
+"TB";"Avoid mud on wateres";0.999999;"yes";0.999999
+"TB";"Avoid mud on wateres";0.999999;"no";1.00000000002876e-06
+"TB";"Use high wateres";0.99877613570677;"yes";0.99877613570677
+"TB";"Use high wateres";0.99877613570677;"no";0.00122386429323029
+"TB";"Screening before pasture";0.393033254244866;"yes";0.393033254244866
+"TB";"Screening before pasture";0.393033254244866;"no";0.606966745755134
+"TB";"No share pasture";0.0517310464147216;"yes";0.0517310464147216
+"TB";"No share pasture";0.0517310464147216;"no";0.948268953585278
+"TB";"Test before transport";0.998626448530337;"yes";0.998626448530337
+"TB";"Test before transport";0.998626448530337;"no";0.00137355146966289
+"TB";"No shared purchase transport";0.999999;"yes";0.999999
+"TB";"No shared purchase transport";0.999999;"no";1.00000000002876e-06
 "TB";"Quarantine new animals";0.999999;"yes";0.999999
 "TB";"Quarantine new animals";0.999999;"no";1.00000000002876e-06
-"TB";"Test during quarantine";0.997287919038175;"yes";0.997287919038175
-"TB";"Test during quarantine";0.997287919038175;"no";0.00271208096182474
+"TB";"Test during quarantine";0.998376163995764;"yes";0.998376163995764
+"TB";"Test during quarantine";0.998376163995764;"no";0.00162383600423577
 "TB";"Exclusive quarantine material";0.999999;"yes";0.999999
 "TB";"Exclusive quarantine material";0.999999;"no";1.00000000002876e-06
-"TB";"Test during quarantine with exclusive material";0.997629335946541;"yes";0.997629335946541
-"TB";"Test during quarantine with exclusive material";0.997629335946541;"no";0.00237066405345943
-"IBR";"Do not allow vehicles to enter in the farm perimeter";0.999984287488002;"yes";0.999984287488002
-"IBR";"Do not allow vehicles to enter in the farm perimeter";0.999984287488002;"no";1.57125119979451e-05
-"BVD";"Do not allow vehicles to enter in the farm perimeter";0.999999674318599;"yes";0.999999674318599
-"BVD";"Do not allow vehicles to enter in the farm perimeter";0.999999674318599;"no";3.25681400625832e-07
+"TB";"Test during quarantine with exclusive material";0.998483428111992;"yes";0.998483428111992
+"TB";"Test during quarantine with exclusive material";0.998483428111992;"no";0.00151657188800813
+"IBR";"Do not allow vehicles to enter in the farm perimeter";0.999999;"yes";0.999999
+"IBR";"Do not allow vehicles to enter in the farm perimeter";0.999999;"no";1.00000000002876e-06
+"BVD";"Do not allow vehicles to enter in the farm perimeter";0.999999;"yes";0.999999
+"BVD";"Do not allow vehicles to enter in the farm perimeter";0.999999;"no";1.00000000002876e-06
 "TB";"Do not allow vehicles to enter in the farm perimeter";0.999999;"yes";0.999999
 "TB";"Do not allow vehicles to enter in the farm perimeter";0.999999;"no";1.00000000002876e-06
-"IBR";"Provide boots to all visitors";0.999524177633585;"yes";0.999524177633585
-"IBR";"Provide boots to all visitors";0.999524177633585;"no";0.000475822366415413
-"BVD";"Provide boots to all visitors";0.999992231433102;"yes";0.999992231433102
-"BVD";"Provide boots to all visitors";0.999992231433102;"no";7.76856689777006e-06
-"TB";"Provide boots to all visitors";0.999617434733894;"yes";0.999617434733894
-"TB";"Provide boots to all visitors";0.999617434733894;"no";0.00038256526610625
-"IBR";"Do not share equipment with other farms";0.999988522220938;"yes";0.999988522220938
-"IBR";"Do not share equipment with other farms";0.999988522220938;"no";1.14777790621856e-05
-"BVD";"Do not share equipment with other farms";0.999997699213886;"yes";0.999997699213886
-"BVD";"Do not share equipment with other farms";0.999997699213886;"no";2.30078611362927e-06
-"TB";"Do not share equipment with other farms";0.999921079412023;"yes";0.999921079412023
-"TB";"Do not share equipment with other farms";0.999921079412023;"no";7.89205879766497e-05
+"IBR";"Provide boots to all visitors";0.999570908596611;"yes";0.999570908596611
+"IBR";"Provide boots to all visitors";0.999570908596611;"no";0.000429091403388648
+"BVD";"Provide boots to all visitors";0.999995810732898;"yes";0.999995810732898
+"BVD";"Provide boots to all visitors";0.999995810732898;"no";4.18926710199496e-06
+"TB";"Provide boots to all visitors";0.999353387629081;"yes";0.999353387629081
+"TB";"Provide boots to all visitors";0.999353387629081;"no";0.00064661237091912
+"IBR";"Do not share equipment with other farms";0.999999;"yes";0.999999
+"IBR";"Do not share equipment with other farms";0.999999;"no";1.00000000002876e-06
+"BVD";"Do not share equipment with other farms";0.999999398732107;"yes";0.999999398732107
+"BVD";"Do not share equipment with other farms";0.999999398732107;"no";6.01267893363122e-07
+"TB";"Do not share equipment with other farms";0.99982209958425;"yes";0.99982209958425
+"TB";"Do not share equipment with other farms";0.99982209958425;"no";0.000177900415749943

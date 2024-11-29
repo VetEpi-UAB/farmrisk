@@ -559,7 +559,7 @@ mix_link_expression<-quote({
   
 })
 
-set_up_simulation(farm_id = farm_id)
+set_up_simulation(farm_id = farm_id, envir = parent.frame(n = 2))
 if(exists('mov')&&'pasture'%in%mov$mov_type){
 # ---
 # title: "Animal pasture pathogen introduction pathway"
@@ -576,13 +576,13 @@ if(exists('mov')&&'pasture'%in%mov$mov_type){
 # 
 # This pathway analyses the probability of pathogen introduction when animals go to pastured. The pathway consists of several modules. Each module has its own set of data preparation, evaluation and combination steps. The risk of introduction is also assessed under different what-if biosecurity scenarios.
 # 
-## -------------------------------------------------------------------------------------------------------------
+## ------------------------------------------------------------------------------------------------------------
 message("\nPASTURE PATHWAY: ")
 
 # 
 # ## Risk days
 # 
-## -------------------------------------------------------------------------------------------------------------
+## ------------------------------------------------------------------------------------------------------------
 from_date<-mov$pasture_from_date[!is.na(mov$pasture_from_date)]
 to_date<-mov$pasture_to_date[!is.na(mov$pasture_to_date)]
 mov$pasture_days<-mov$pasture_to_date-mov$pasture_from_date
@@ -615,7 +615,7 @@ risk_days<-risk_days-pasture_risk_days$sum
 # 
 # Tidy data from biosecurity and movements surveys
 # 
-## -------------------------------------------------------------------------------------------------------------
+## ------------------------------------------------------------------------------------------------------------
 #Tidy number of animals by animal category
 pasture_animal<-mov%>%
   filter(mov_type=="pasture")%>%
@@ -673,7 +673,7 @@ pasture_veh<-bind_rows(pasture_to_veh, pasture_from_veh)%>%
 # 
 # Merge tidy user data with admin inputs
 # 
-## -------------------------------------------------------------------------------------------------------------
+## ------------------------------------------------------------------------------------------------------------
 #Origin
 pasture_origin_data<-pasture_animal%>%
   left_join(pasture_region)%>%
@@ -684,7 +684,7 @@ pasture_origin_data<-pasture_animal%>%
   left_join(pathogen_status)
 
 # 
-## -------------------------------------------------------------------------------------------------------------
+## ------------------------------------------------------------------------------------------------------------
 #Test
 pasture_test_data<-pasture_test_origin%>%
   left_join(pathogen_test)
@@ -716,7 +716,7 @@ pasture_veh_animal<-pasture_veh%>%
 # 
 # #### Merge all
 # 
-## -------------------------------------------------------------------------------------------------------------
+## ------------------------------------------------------------------------------------------------------------
 #All data
 pasture_data<-pasture_origin_data%>%
   left_join(pasture_test_data)%>%
@@ -728,7 +728,7 @@ pasture_data<-pasture_origin_data%>%
 # 
 # #### Separate data by vehicle (direction)
 # 
-## -------------------------------------------------------------------------------------------------------------
+## ------------------------------------------------------------------------------------------------------------
 #Separate data by vehicle (direction)
 pasture_data_to<-filter(pasture_data, veh_direction=="pasture_to")
 message("\npasture_data_to (",paste(dim(pasture_data_to), collapse=", "),") created")
@@ -739,7 +739,7 @@ message("\npasture_data_from (",paste(dim(pasture_data_from), collapse=", "),") 
 # 
 # #### Admin what-if
 # 
-## -------------------------------------------------------------------------------------------------------------
+## ------------------------------------------------------------------------------------------------------------
 if(admin_wif){
   #There are no admin what-ifs in this module, but we set up wif for compatibility
   pasture_data_to<-set_up_wif(pasture_data_to)
@@ -752,7 +752,7 @@ if(admin_wif){
 # 
 # ### Prepare data
 # 
-## -------------------------------------------------------------------------------------------------------------
+## ------------------------------------------------------------------------------------------------------------
 #Other origin keys
 unk_origin_by<-c("mov_id", "farm_id","animal_category", "pathogen")
 #Other origin
@@ -779,7 +779,7 @@ pasture_from_unk_origin_data<-filter(pasture_unk_origin_data, veh_direction=="pa
 message("\npasture_from_unk_origin_data (",paste(dim(pasture_from_unk_origin_data), collapse=", "),") created")
 
 # 
-## -------------------------------------------------------------------------------------------------------------
+## ------------------------------------------------------------------------------------------------------------
 pasture_to_unk_origin_data<-group_match(pasture_to_unk_origin_data,pasture_data_to,unk_origin_by)
 
 pasture_from_unk_origin_data<-group_match(pasture_from_unk_origin_data,pasture_data_from,unk_origin_by)
@@ -787,7 +787,7 @@ pasture_from_unk_origin_data<-group_match(pasture_from_unk_origin_data,pasture_d
 # 
 # ### Evaluate (to)
 # 
-## -------------------------------------------------------------------------------------------------------------
+## ------------------------------------------------------------------------------------------------------------
 unk_origin_expression<-c(unk_link=unk_link_expression,
                          unk_origin=origin_expression)
 
@@ -831,7 +831,7 @@ pasture_to_unk_farm<-add_prefix(pasture_to_unk_farm)
 # 
 # ### Evaluate (from)
 # 
-## -------------------------------------------------------------------------------------------------------------
+## ------------------------------------------------------------------------------------------------------------
 #Check if trasnport to and from are equal
 from_equal_to<-all(
   pasture_data_to[, !names(pasture_data_to) %in% c("veh_direction")]==
@@ -886,7 +886,7 @@ if(!from_equal_to){
 # 
 # ### Evaluate (to)
 # 
-## -------------------------------------------------------------------------------------------------------------
+## ------------------------------------------------------------------------------------------------------------
 transport_expression<-c(transport_link=transport_link_expression,
                         dir_contact_transport= dir_contact_expression,
                         indir_contact_transport=indir_contact_expression)
@@ -918,7 +918,7 @@ pasture_to_transport<-add_prefix(pasture_to_transport)
 # 
 # ### Evaluate (from)
 # 
-## -------------------------------------------------------------------------------------------------------------
+## ------------------------------------------------------------------------------------------------------------
 #If it is equal copy unk farm "to" module
 if(from_equal_to){
   pasture_from_transport<-add_prefix(pasture_to_transport, 
@@ -956,7 +956,7 @@ if(from_equal_to){
 # 
 # ### Combine modules transport from and to pasture
 # 
-## -------------------------------------------------------------------------------------------------------------
+## ------------------------------------------------------------------------------------------------------------
 pasture_transport<-combine_modules(pasture_to_unk_farm, pasture_to_transport)
 pasture_transport<-combine_modules(pasture_transport, pasture_from_transport)
 
@@ -986,7 +986,7 @@ pasture_transport<-add_prefix(pasture_transport)
 # 
 # ### Admin what-if
 # 
-## -------------------------------------------------------------------------------------------------------------
+## ------------------------------------------------------------------------------------------------------------
 pasture_data_to<-pasture_data_to%>%
   mutate(pregnant_p=0.5) #Does not affect risk but needed to calc origin_expression
 
@@ -1005,7 +1005,7 @@ if(admin_wif){
 # 
 # ### Evaluate
 # 
-## -------------------------------------------------------------------------------------------------------------
+## ------------------------------------------------------------------------------------------------------------
 pasture_expression<-c(farm_link=farm_link_expression,
                        origin = origin_expression,
                        test_origin = test_expression)
@@ -1039,7 +1039,7 @@ pasture_herd<-add_prefix(pasture_herd)
 # 
 # ### Evaluate
 # 
-## -------------------------------------------------------------------------------------------------------------
+## ------------------------------------------------------------------------------------------------------------
 mix_expression<-c(mix_link=mix_link_expression,
                   dir_contact_mix= dir_contact_expression)
 
@@ -1062,7 +1062,7 @@ pasture_mix<-add_prefix(pasture_mix)
 # 
 # ### Combine modules pasture herd, mix and transport
 # 
-## -------------------------------------------------------------------------------------------------------------
+## ------------------------------------------------------------------------------------------------------------
 pasture<-combine_modules(pasture_herd, pasture_mix)
 
 pasture<-combine_modules(pasture_transport, pasture)
@@ -1093,7 +1093,7 @@ pasture<-at_least_one(mcmodule=pasture, mcnodes=c("pasture_transport_b_contact_a
 # 
 # ### Prepare data
 # 
-## -------------------------------------------------------------------------------------------------------------
+## ------------------------------------------------------------------------------------------------------------
 pasture_wildlife_area_data<-pasture_region%>%
   left_join(tidy_panel(bsg, "pasture"))%>%
   left_join(tidy_prefix(mov, "pasture_days",rm_prefix = FALSE))%>%
@@ -1116,7 +1116,7 @@ message("\npasture_wildlife_area_data (",paste(dim(pasture_wildlife_area_data), 
 # 
 # ### Prepare what-if
 # 
-## -------------------------------------------------------------------------------------------------------------
+## ------------------------------------------------------------------------------------------------------------
 if(admin_wif){
   #There are no admin what-ifs in this module, but we set up wif for compatibility
   pasture_wildlife_area_data<-set_up_wif(pasture_wildlife_area_data)
@@ -1125,7 +1125,7 @@ if(admin_wif){
 # 
 # ### Evaluate
 # 
-## -------------------------------------------------------------------------------------------------------------
+## ------------------------------------------------------------------------------------------------------------
 wildlife_area_expression<-c(wildlife_area_link = wildlife_area_link_expression,                         area_inf_wildlife_area=area_inf_expression)  
 
 pasture_wildlife<-eval_model_expression(model_expression = wildlife_area_expression,                              data=pasture_wildlife_area_data,
@@ -1142,7 +1142,7 @@ pasture_wildlife<-add_prefix(pasture_wildlife)
 # 
 # ### Prepare data
 # 
-## -------------------------------------------------------------------------------------------------------------
+## ------------------------------------------------------------------------------------------------------------
 pasture_wildlife_water_data<-pasture_wildlife_area_data%>%
   pivot_longer(
     cols = ends_with("_p")&!pasture_mud_p&!pasture_sum_p,
@@ -1166,7 +1166,7 @@ message("\npasture_wildlife_water_data (",paste(dim(pasture_wildlife_water_data)
 # 
 # ### Admin what-if
 # 
-## -------------------------------------------------------------------------------------------------------------
+## ------------------------------------------------------------------------------------------------------------
 if(admin_wif){
   #Avoid mud on wateres
   pasture_wildlife_water_data<-wif_no_mud(pasture_wildlife_water_data, scenario="Avoid mud on wateres")
@@ -1176,7 +1176,7 @@ if(admin_wif){
 # 
 # ### Evaluate
 # 
-## -------------------------------------------------------------------------------------------------------------
+## ------------------------------------------------------------------------------------------------------------
 wildlife_water_expression<-c(
   wildlife_link = wildlife_water_link_expression,
                             time_wildlife = time_expression,
@@ -1200,7 +1200,7 @@ pasture_wildlife_water<-add_prefix(pasture_wildlife_water)
 # 
 # ## Combine modules wildlife area, waterpoints and pasture
 # 
-## -------------------------------------------------------------------------------------------------------------
+## ------------------------------------------------------------------------------------------------------------
 pasture_wildlife<-combine_modules(pasture_wildlife, pasture_wildlife_water)
 
 pasture_wildlife<-at_least_one(mcmodule=pasture_wildlife, mcnodes=c("pasture_wildlife_area_inf_agg","pasture_wildlife_water_b_indir_contact_agg"), name="pasture_wildlife_inf_agg")
@@ -1237,7 +1237,7 @@ if(exists('mov')&&'purchase'%in%mov$mov_type){
 # 
 # This pathway analyses the probability of pathogen introduction when animals are purchased. The pathway consists of several modules such as farm, quarantine, transport and fattening. Each module has its own set of data preparation, evaluation and combination steps. The risk of introduction is also assessed under different what-if biosecurity scenarios.
 # 
-## -------------------------------------------------------------------------------------------------------------
+## ------------------------------------------------------------------------------------------------------------
 message("\nPURCHASE PATHWAY: ")
 
 # 
@@ -1247,7 +1247,7 @@ message("\nPURCHASE PATHWAY: ")
 # 
 # Tidy data from biosecurity and movements surveys
 # 
-## -------------------------------------------------------------------------------------------------------------
+## ------------------------------------------------------------------------------------------------------------
 #Tidy number of animals by animal category
 purchase_animal<-tidy_animal_table(pathway = "purchase")
 
@@ -1280,7 +1280,7 @@ purchase_veh<-filter(mov, mov_type=="purchase")%>%
 # 
 # Merge tidy user data with admin inputs
 # 
-## -------------------------------------------------------------------------------------------------------------
+## ------------------------------------------------------------------------------------------------------------
 #Origin
 purchase_origin_data<-purchase_animal%>%
   left_join(purchase_region)%>%
@@ -1292,7 +1292,7 @@ purchase_origin_data<-purchase_animal%>%
   left_join(pathogen_status)
 
 # 
-## -------------------------------------------------------------------------------------------------------------
+## ------------------------------------------------------------------------------------------------------------
 #Test
 purchase_test_data<-purchase_test_origin%>%
   left_join(pathogen_test)
@@ -1324,7 +1324,7 @@ purchase_veh_animal<-purchase_veh%>%
 # 
 # #### Merge all
 # 
-## -------------------------------------------------------------------------------------------------------------
+## ------------------------------------------------------------------------------------------------------------
 #All data
 purchase_data<-purchase_origin_data%>%
   left_join(purchase_test_data)%>%
@@ -1336,7 +1336,7 @@ message("\npurchase_data (",paste(dim(purchase_data), collapse=", "),") created"
 # 
 # #### Admin what-if
 # 
-## -------------------------------------------------------------------------------------------------------------
+## ------------------------------------------------------------------------------------------------------------
 if(admin_wif){
   #Test  before transport
   purchase_data<-wif_test(purchase_data, scenario="Test before transport")
@@ -1355,7 +1355,7 @@ if(admin_wif){
 # 
 # ### Evaluate
 # 
-## -------------------------------------------------------------------------------------------------------------
+## ------------------------------------------------------------------------------------------------------------
 purchase_expression<-c(farm_link=farm_link_expression,
                        origin = origin_expression,
                        test_origin = test_expression)
@@ -1382,7 +1382,7 @@ farm<-add_prefix(farm)
 # 
 # ### Prepare data
 # 
-## -------------------------------------------------------------------------------------------------------------
+## ------------------------------------------------------------------------------------------------------------
 #Other origin keys
 unk_origin_by<-c("mov_id", "farm_id","animal_category", "pathogen")
 #Other origin
@@ -1400,13 +1400,13 @@ purchase_unk_origin_data<-purchase_animal%>%
 message("\npurchase_unk_origin_data (",paste(dim(purchase_unk_origin_data), collapse=", "),") created")
 
 # 
-## -------------------------------------------------------------------------------------------------------------
+## ------------------------------------------------------------------------------------------------------------
 purchase_unk_origin_data<-group_match(purchase_unk_origin_data,purchase_data,unk_origin_by)
 
 # 
 # ### Evaluate
 # 
-## -------------------------------------------------------------------------------------------------------------
+## ------------------------------------------------------------------------------------------------------------
 unk_origin_expression<-c(unk_link=unk_link_expression,
                          unk_origin=origin_expression)
 
@@ -1450,7 +1450,7 @@ unk_farm<-add_prefix(unk_farm)
 # 
 # ### Combine modules farm and unknown farm
 # 
-## -------------------------------------------------------------------------------------------------------------
+## ------------------------------------------------------------------------------------------------------------
 purchase<-combine_modules(farm, unk_farm)
 
 # 
@@ -1460,7 +1460,7 @@ purchase<-combine_modules(farm, unk_farm)
 # 
 # ### Evaluate
 # 
-## -------------------------------------------------------------------------------------------------------------
+## ------------------------------------------------------------------------------------------------------------
 transport_expression<-c(transport_link=transport_link_expression,
                         dir_contact_transport= dir_contact_expression,
                         indir_contact_transport=indir_contact_expression)
@@ -1485,7 +1485,7 @@ transport<-add_prefix(transport)
 # 
 # ### Combine modules purchase and transport
 # 
-## -------------------------------------------------------------------------------------------------------------
+## ------------------------------------------------------------------------------------------------------------
 purchase<-combine_modules(purchase, transport)
 
 purchase<-get_totals(mcmodule=purchase, mcnodes=c("transport_a_contact_all","farm_a_no_detect_all"), animals_n="farm_animals_n", name="purchase_a_inf_all")
@@ -1497,7 +1497,7 @@ purchase<-get_totals(mcmodule=purchase, mcnodes=c("transport_a_contact_all","far
 # 
 # ### Prepare data
 # 
-## -------------------------------------------------------------------------------------------------------------
+## ------------------------------------------------------------------------------------------------------------
 #Tidy diagnostic tests before transport by disease, farm and type of test
 purchase_test_quarantine<-tidy_test_table(pathway="purchase", module="quarantine")
 
@@ -1518,7 +1518,7 @@ message("\nquarantine_data (",paste(dim(quarantine_data), collapse=", "),") crea
 # 
 # ### Admin what-if
 # 
-## -------------------------------------------------------------------------------------------------------------
+## ------------------------------------------------------------------------------------------------------------
 if(admin_wif){
   #Match index
   quarantine_by<-c("mov_id", "farm_id","animal_category", "pathogen","status")
@@ -1545,7 +1545,7 @@ if(admin_wif){
 # 
 # ### Evaluate I
 # 
-## -------------------------------------------------------------------------------------------------------------
+## ------------------------------------------------------------------------------------------------------------
 quarantine_I_expression<-c(quarantine_I_link=quarantine_I_link_expression,
                      test_quarantine=test_expression)
 
@@ -1572,13 +1572,13 @@ quarantine_I<-add_prefix(quarantine_I)
 # 
 # ### Combine modules purchase and quarantine I
 # 
-## -------------------------------------------------------------------------------------------------------------
+## ------------------------------------------------------------------------------------------------------------
 purchase<-combine_modules(purchase, quarantine_I)
 
 # 
 # ### Evaluate II
 # 
-## -------------------------------------------------------------------------------------------------------------
+## ------------------------------------------------------------------------------------------------------------
 quarantine_II_expression<-c(quarantine_II_link=quarantine_II_link_expression,
                             indir_contact_quarantine=indir_contact_expression,
                      quarantine_weight=quarantine_weight_expression)
@@ -1608,7 +1608,7 @@ quarantine_II<-add_prefix(quarantine_II)
 # 
 # ### Combine modules quarantine I and quarantine II
 # 
-## -------------------------------------------------------------------------------------------------------------
+## ------------------------------------------------------------------------------------------------------------
 quarantine<-combine_modules(quarantine_I, quarantine_II)
 
 
@@ -1628,7 +1628,7 @@ quarantine<-add_prefix(quarantine)
 # 
 # ### Combine modules purchase and quarantine
 # 
-## -------------------------------------------------------------------------------------------------------------
+## ------------------------------------------------------------------------------------------------------------
 purchase<-combine_modules(purchase, quarantine)
 
 # 
@@ -1636,7 +1636,7 @@ purchase<-combine_modules(purchase, quarantine)
 # 
 # ### Prepare data
 # 
-## -------------------------------------------------------------------------------------------------------------
+## ------------------------------------------------------------------------------------------------------------
 #Tidy quarantine parameters
 fattening_bsg_data<-tidy_prefix(bsg, module="fattening", rm_prefix = FALSE)
 
@@ -1652,7 +1652,7 @@ message("\nfattening_data (",paste(dim(fattening_data), collapse=", "),") create
 # 
 # ### Admin what-if
 # 
-## -------------------------------------------------------------------------------------------------------------
+## ------------------------------------------------------------------------------------------------------------
 if(admin_wif){
   #Test  before transport
   fattening_by<-quarantine_by
@@ -1662,7 +1662,7 @@ if(admin_wif){
 # 
 # ### Evaluate
 # 
-## -------------------------------------------------------------------------------------------------------------
+## ------------------------------------------------------------------------------------------------------------
 fattening_expression<-c(fattening_link=fattening_link_expression,
                      indir_contact_fattening=indir_contact_expression)
 
@@ -1685,7 +1685,7 @@ fattening<-add_prefix(fattening)
 # 
 # ### Combine modules purchase and fattening
 # 
-## -------------------------------------------------------------------------------------------------------------
+## ------------------------------------------------------------------------------------------------------------
 purchase<-combine_modules(purchase, fattening)
 
 purchase<-get_totals(mcmodule=purchase, mcnodes=c("quarantine_a_entry_all_all","fattening_a_indir_contact_all"), name = "a_entry", data_name = "quarantine")
@@ -1727,7 +1727,7 @@ if(sum(bsg$visit_type_n,bsg$visit_veh_type_n)>0){
 # 
 # ## Description
 # 
-## -------------------------------------------------------------------------------------------------------------
+## ------------------------------------------------------------------------------------------------------------
 message("\nVISITS PATHWAY: ")
 
 # 
@@ -1735,7 +1735,7 @@ message("\nVISITS PATHWAY: ")
 # 
 # ### Prepare data
 # 
-## -------------------------------------------------------------------------------------------------------------
+## ------------------------------------------------------------------------------------------------------------
 visit_data<-get_region_code(bsg, pathway = "farm")
 
 visit_veh_data<-visit_data%>%
@@ -1820,7 +1820,7 @@ visit_data<-visit_data%>%
 # 
 # ### Admin what-if
 # 
-## -------------------------------------------------------------------------------------------------------------
+## ------------------------------------------------------------------------------------------------------------
 if(admin_wif){
   #Do not allow vehicles to enter in the farm perimeter
   visit_data<-wif_no_fomites(visit_data, fomites="wheels", scenario="Do not allow vehicles to enter in the farm perimeter")
@@ -1836,7 +1836,7 @@ if(admin_wif){
 # 
 # ### Evaluate I
 # 
-## -------------------------------------------------------------------------------------------------------------
+## ------------------------------------------------------------------------------------------------------------
 visit_farm_expression<-c(visit_link = visit_link_expression,
                          visit_origin = origin_expression)
 
@@ -1861,7 +1861,7 @@ visit<-get_agg_totals(mcmodule=visit,
 # 
 # ### Evaluate II
 # 
-## -------------------------------------------------------------------------------------------------------------
+## ------------------------------------------------------------------------------------------------------------
 visit_indir_expression<-c(visit_indir_contact=indir_contact_expression)
 
 visit_indir<-eval_model_expression(model_expression = visit_indir_expression,
@@ -1903,7 +1903,7 @@ message("\nVISITS PATHWAY OK!")
 # 
 
 # 
-## -------------------------------------------------------------------------------------------------------------
+## ------------------------------------------------------------------------------------------------------------
 message("\nNEIGHBOURS PATHWAY: ")
 
 # 
@@ -1911,7 +1911,7 @@ message("\nNEIGHBOURS PATHWAY: ")
 # 
 # ### Prepare data
 # 
-## -------------------------------------------------------------------------------------------------------------
+## ------------------------------------------------------------------------------------------------------------
 neighbour_data<-get_region_code(bsg, pathway = "farm")
 
 neighbour_data<-neighbour_data%>%
@@ -1922,7 +1922,7 @@ neighbour_data<-neighbour_data%>%
 # 
 # ### Admin what-if
 # 
-## -------------------------------------------------------------------------------------------------------------
+## ------------------------------------------------------------------------------------------------------------
 if(admin_wif){
   #Do not allow direct contact with neighbour farms
   neighbour_data<-wif_no_dc(neighbour_data, scenario="Do not allow direct contact with neighbour farms")
@@ -1932,7 +1932,7 @@ if(admin_wif){
 # 
 # ### Evaluate
 # 
-## -------------------------------------------------------------------------------------------------------------
+## ------------------------------------------------------------------------------------------------------------
 neighbour_expression<-c(neighbour_link = neighbour_link_expression,
                         dir_contact_neighbour=dir_contact_expression,
                         area_inf_neighbour=area_inf_expression)
@@ -1963,7 +1963,7 @@ if(bsg$outdoors_access&&any(!bsg$outdoors_fencing_perimeter,bsg$outdoors_fencing
 # 
 
 # 
-## -------------------------------------------------------------------------------------------------------------
+## ------------------------------------------------------------------------------------------------------------
 message("\nFARM WILDLIFE PATHWAY: ")
 
 # 
@@ -1971,7 +1971,7 @@ message("\nFARM WILDLIFE PATHWAY: ")
 # 
 # ### Prepare data
 # 
-## -------------------------------------------------------------------------------------------------------------
+## ------------------------------------------------------------------------------------------------------------
 wildlife_area_data<-get_region_code(bsg, pathway = "farm")%>%
   left_join(tidy_prefix(bsg, "outdoors"))
 
@@ -1992,7 +1992,7 @@ message("\nwildlife_area_data (",paste(dim(wildlife_area_data), collapse=", "),"
 # 
 # ### Prepare what-if
 # 
-## -------------------------------------------------------------------------------------------------------------
+## ------------------------------------------------------------------------------------------------------------
 if(admin_wif){
   #There are no admin what-ifs in this module, but we set up wif for compatibility
   wildlife_area_data<-set_up_wif(wildlife_area_data)
@@ -2001,7 +2001,7 @@ if(admin_wif){
 # 
 # ### Evaluate
 # 
-## -------------------------------------------------------------------------------------------------------------
+## ------------------------------------------------------------------------------------------------------------
 wildlife_area_expression<-c(wildlife_area_link = wildlife_area_link_expression,                         area_inf_wildlife_area=area_inf_expression)  
 
 wildlife<-eval_model_expression(model_expression = wildlife_area_expression,                              data=wildlife_area_data)  
@@ -2015,7 +2015,7 @@ wildlife<-add_prefix(wildlife)
 # 
 # ### Prepare data
 # 
-## -------------------------------------------------------------------------------------------------------------
+## ------------------------------------------------------------------------------------------------------------
 farm_census_data<-tidy_prefix(bsg, "farm_census")%>%
   pivot_longer(
       cols = starts_with("cattle"),
@@ -2050,7 +2050,7 @@ message("\nwildlife_water_data (",paste(dim(wildlife_water_data), collapse=", ")
 # 
 # ### Admin what-if
 # 
-## -------------------------------------------------------------------------------------------------------------
+## ------------------------------------------------------------------------------------------------------------
 if(admin_wif){
   #Avoid mud on wateres
   wildlife_water_data<-wif_no_mud(wildlife_water_data, scenario="Avoid mud on wateres")
@@ -2060,7 +2060,7 @@ if(admin_wif){
 # 
 # ### Evaluate
 # 
-## -------------------------------------------------------------------------------------------------------------
+## ------------------------------------------------------------------------------------------------------------
 wildlife_water_expression<-c(
   wildlife_link = wildlife_water_link_expression,
                             time_wildlife = time_expression,
@@ -2080,7 +2080,7 @@ wildlife_water<-add_prefix(wildlife_water)
 # 
 # ## Combine modules
 # 
-## -------------------------------------------------------------------------------------------------------------
+## ------------------------------------------------------------------------------------------------------------
 wildlife<-combine_modules(wildlife, wildlife_water)
 
 wildlife<-at_least_one(mcmodule=wildlife, mcnodes=c("wildlife_area_inf_agg","wildlife_water_b_indir_contact_agg"), name="wildlife_inf_agg")
@@ -2104,11 +2104,11 @@ message("\nFARM WILDLIFE PATHWAY OK!")
 # 
 # ### Combine all pathways
 # 
-## -------------------------------------------------------------------------------------------------------------
+## ------------------------------------------------------------------------------------------------------------
 message("\nOUTPUTS: ")
 
 # 
-## -------------------------------------------------------------------------------------------------------------
+## ------------------------------------------------------------------------------------------------------------
 message("\nMerging mcmodules: ")
 #rm(wildlife)
 #message("\nWILDLIFE MODULE REMOVED UNTIL #143 BUG IS SOLVED")
@@ -2251,7 +2251,7 @@ class(intro)<-"mcmodule"
 # 
 # ### Select result mcnodes
 # 
-## -------------------------------------------------------------------------------------------------------------
+## ------------------------------------------------------------------------------------------------------------
 outputs_all<-c(neighbour_total="neighbour_inf_agg",
                wildlife_total="wildlife_inf_agg",
                visit_total="visit_a_indir_contact_all_agg",
@@ -2282,7 +2282,7 @@ outputs<-c(outputs_pasture,
 # 
 # ### Output by hg (all simulations)
 # 
-## -------------------------------------------------------------------------------------------------------------
+## ------------------------------------------------------------------------------------------------------------
 if(exists("hg_csv")&&hg_csv){
   outputs_hg<-c(outputs_hg_pasture,
            outputs_hg_purchase,
@@ -2307,7 +2307,7 @@ for(i in 1:length(outputs_hg)){
 # 
 # ### Output medians
 # 
-## -------------------------------------------------------------------------------------------------------------
+## ------------------------------------------------------------------------------------------------------------
 
 #Create a table with the mean of the selected mcnodes
 wif_median<-intro$node_list[[outputs["total"]]][["summary"]]%>%
@@ -2354,7 +2354,7 @@ wif_median[is.na(wif_median)]<-0
 # 
 # #### Output by scenario
 # 
-## -------------------------------------------------------------------------------------------------------------
+## ------------------------------------------------------------------------------------------------------------
 #Current risk table
 current_median <- wif_median%>%
   filter(scenario_id=="0")%>%
@@ -2399,7 +2399,7 @@ current_median <- wif_median%>%
          
 
 # 
-## -------------------------------------------------------------------------------------------------------------
+## ------------------------------------------------------------------------------------------------------------
 summary_median<-wif_median%>%
   arrange(relative)%>%
   transmute(Pathogen=pathogen,
@@ -2417,13 +2417,16 @@ summary_median[summary_median=="NA%"]<-"-"
 # 
 # #### Save summary tables
 # 
-## -------------------------------------------------------------------------------------------------------------
-save_table_summary(c("wif_median", "wif_median_plot", "current_median", "summary_median"))
+## ------------------------------------------------------------------------------------------------------------
+save_table_summary(list(wif_median=wif_median, 
+                        wif_median_plot=wif_median_plot, 
+                        current_median=current_median,
+                        summary_median=summary_median))
 
 # 
 # ### Print-cat summary
 # 
-## -------------------------------------------------------------------------------------------------------------
+## ------------------------------------------------------------------------------------------------------------
 cat("\nResults")
 print_summary<-unique(summary_median[summary_median$Scenario=="Current",
                                      !names(summary_median)%in%"Scenario"])
@@ -2439,6 +2442,5 @@ cat("\n\nTB current median:\n")
 print.table(print_summary[print_summary$Pathogen=="TB",
                           !names(print_summary)%in%"Pathogen"])
 
-assign("intro",intro,envir=parent.frame)
-invisible(intro)
+assign("intro",intro,envir=parent.frame())
 }

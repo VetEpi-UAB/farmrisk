@@ -4,20 +4,24 @@
 \alias{set_up_simulation}
 \title{Set up simulation for farm risk analysis}
 \usage{
-set_up_simulation(user_id = NULL, farm_id = NULL, ...)
+set_up_simulation(user_id = NULL, farm_id = NULL, envir = parent.frame(), ...)
 }
 \arguments{
-\item{user_id}{Character string. User identifier for the simulation.}
+\item{user_id}{Character string. User identifier. Must be provided if farm_id is NULL.}
 
-\item{farm_id}{Character. Unique identifier for the farm}
+\item{farm_id}{Character. Farm identifier. Must be provided if user_id is NULL.}
+
+\item{envir}{Environment. The environment where simulation variables will be assigned. Defaults to parent.frame().}
+
+\item{...}{Additional arguments passed to internal functions.}
 }
 \value{
-None. All variables are assigned to parent environment
+None. All variables are assigned to envir environment
 }
 \description{
 Initializes and configures a new simulation environment for farm risk analysis.
 Sets up parameters, loads required input files, and processes biosecurity and movement data.
-Assigns all simulation variables and states to the parent environment.
+Assigns all simulation variables and states to the envir environment.
 }
 \details{
 Farm Risk Analysis Simulation Setup
