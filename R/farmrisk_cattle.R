@@ -50,6 +50,9 @@ farmrisk_cattle<-function(farm_id=NULL,
                    input_path=paste0(system.file("input_files/",package="farmrisk"),"/"),
                    output_path=paste0(system.file("output_files/",package="farmrisk"),"/"),
                    forms_path=paste0(system.file("forms/",package="farmrisk"),"/")){
+  
+  #Remove previous farm bsg or mov tables
+  rm(list = c("bsg","mov"),envir=parent.frame())
 
 #### Origin #### 
 

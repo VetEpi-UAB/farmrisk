@@ -254,7 +254,7 @@ eval_model_expression <- function(model_expression, data, param_names = NULL,
   
   node_list <- list()
   modules <- c()
-  mc_list <- list()
+  if(analysis) mc_list <- list()
   
   # Process each expression
   for(i in 1:length(model_expression_list)) {
@@ -344,7 +344,7 @@ eval_model_expression <- function(model_expression, data, param_names = NULL,
     eval(model_expression_i)
     message("\n", module, " evaluated")
     
-    mc_list_i <- list()
+    if(analysis) mc_list_i <- list()
     
     # Complete node list
     for(j in 1:length(node_list)) {
@@ -409,7 +409,7 @@ eval_model_expression <- function(model_expression, data, param_names = NULL,
       }
     }
     
-    mc_list[[module]] <- mc_list_i
+    if(analysis) mc_list[[module]] <- mc_list_i
   }
   
   # Clean up previous nodes
@@ -422,9 +422,10 @@ eval_model_expression <- function(model_expression, data, param_names = NULL,
       data = data,
       model_expression = model_expression,
       node_list = node_list,
-      mc_list = mc_list,
       modules = modules
     )
+    
+    if(analysis) mcmodule$mc_list<-mc_list
     
     class(mcmodule) <- "mcmodule"
     
