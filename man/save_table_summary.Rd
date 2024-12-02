@@ -7,7 +7,7 @@
 save_table_summary(tables)
 }
 \arguments{
-\item{tables}{Character vector of table names to save}
+\item{tables}{Named list of data frames to save}
 }
 \value{
 None (saves files to disk)
