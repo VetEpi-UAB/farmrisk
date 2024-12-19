@@ -15,8 +15,8 @@ You can install the development version of farmrisk from
 [GitHub](https://github.com/) with:
 
 ``` r
-# install.packages("pak")
-pak::pak("VetEpi-UAB/farmrisk")
+# install.packages("devtools")
+devtools::install_github("VetEpi-UAB/farmrisk")
 ```
 
 ## Example
