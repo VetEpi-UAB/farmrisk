@@ -4,6 +4,9 @@
 # farmrisk
 
 <!-- badges: start -->
+
+[![DOI:10.5281/zenodo.17225949](https://zenodo.org/badge/doi/10.5281/zenodo.4018965.svg)](https://doi.org/10.5281/zenodo.17225949)
+
 <!-- badges: end -->
 
 This package provides tools for performing quantitative risk analysis to
